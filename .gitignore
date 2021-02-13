@@ -128,4 +128,4 @@ Temporary Items
 *.code-workspace
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij+all,macos,vscode
-!/git-init.ps1
+/git-init.ps1
