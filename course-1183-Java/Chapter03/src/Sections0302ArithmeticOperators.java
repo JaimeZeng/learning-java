@@ -1,4 +1,7 @@
-public class Section0302ArithmeticOperators {
+/**
+ * @author Jaime
+ */
+public class Sections0302ArithmeticOperators {
     public static void main(String[] args) {
         int age1 = 24;
         int age2 = 18;
