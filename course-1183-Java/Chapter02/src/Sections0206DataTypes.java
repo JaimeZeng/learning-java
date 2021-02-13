@@ -1,3 +1,6 @@
+/**
+ * @author Jaime
+ */
 public class Sections0206DataTypes {
     public static void main(String[] args) {
         String name = "爱慕课";
