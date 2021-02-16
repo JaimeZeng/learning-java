@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+</head>
+<body>
+<form action="" method="post">
+    <table border="0px" width="666px">
+        <tr>
+            <td align="right">请输入用户名 :</td>
+            <td>
+                <label for="username"></label>
+                <input type="text" name="username" id="username" placeholder="Enter Username"/>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">请输入密码 :</td>
+            <td>
+                <label for="passwd"></label>
+                <input type="text" name="passwd" id="passwd" placeholder="Enter Password"/>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">请再次输入密码 :</td>
+            <td>
+                <label for="passwd1"></label>
+                <input type="text" name="passwd1" id="passwd1" placeholder="Enter Password Again"/>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">性别 :</td>
+            <td>
+                <label for="male"></label>
+                <input type="radio" name="sex" id="male" value="male"/>男
+                <label for="female"></label>
+                <input type="radio" name="sex" id="female" value="female"/>女
+            </td>
+        </tr>
+        <tr>
+            <td align="right">兴趣爱好 :</td>
+            <td>
+                <label for="read"></label>
+                <input type="checkbox" name="hobby1" id="read" value="read"/>读书
+                <label for="climb"></label>
+                <input type="checkbox" name="hobby1" id="climb" value="climb"/>爬山
+                <label for="travel"></label>
+                <input type="checkbox" name="hobby1" id="travel" value="travel"/>旅游
+                <label for="swim"></label>
+                <input type="checkbox" name="hobby1" id="swim" value="swim"/>游泳
+            </td>
+        </tr>
+        <tr>
+            <td align="right">生日 :</td>
+            <td>
+                <label for="birthday-year"></label>
+                <select name="birthday-year" id="birthday-year">
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017" selected>2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                </select>年
+                <label for="birthday-month"></label>
+                <select name="birthday-month" id="birthday-month">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>月
+                <label for="birthday-day"></label>
+                <select name="birthday-day" id="birthday-day">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>日
+            </td>
+        </tr>
+        <tr>
+            <td align="right">头像 :</td>
+            <td>
+                <label for="headshotId"></label>
+                <img src="headshots.png" alt="headshot">
+                <select name="headshotId" id="headshotId">
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13" selected>13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                </select><br>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <label for="submitBtn"></label>
+                <input type="submit" name="submitBtn" id="submitBtn" value="Submit"/>
+                <label for="resetBtn"></label>
+                <input type="reset" name="resetBtn" id="resetBtn" value="Reset"/>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
