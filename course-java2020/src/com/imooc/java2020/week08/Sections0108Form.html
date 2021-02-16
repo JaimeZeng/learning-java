@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+<!--
+    name 控件名称，可重复       id 标签      value 控件值
+    text 文本域    password 密码字段    label 输入标题
+    radio 单选按钮      checkbox 复选框     checked 复选框默认被选中的项目
+    button 按钮   submit 提交按钮     reset 重置按钮
+
+    select 列表框      selected 列表框默认被选中的项目    option 下拉列表选项
+    src 图片框的图片来源
+    onclick 鼠标单击事件
+    disabled 禁用该控件
+    multiple 允许多选，适合普通列表框
+-->
+<form action="" method="post">
+    <label for="username">请输入姓名: </label>
+    <input type="text" name="userName" id="username" placeholder="请输入姓名"/><br>
+    <label for="passwd">请输入密码:</label>
+    <input type="password" name="passwd" id="passwd" placeholder="请输入密码"/><br>
+    <label for="passwd1">请重复密码:</label>
+    <input type="password" name="passwd1" id="passwd1" placeholder="请重复密码"/><br>
+    <label for="male">性别: </label>
+    <input type="radio" name="sex" id="male" value="male">男
+    <label for="female">性别: </label>
+    <input type="radio" name="sex" id="female" value="female">女 <br>
+    <label for="read">兴趣爱好:</label>
+    <input type="checkbox" name="hobby1" id="read" value="read"/>看书
+    <label for="travel"></label>
+    <input type="checkbox" name="hobby2" id="travel" value="travel"/>旅游
+    <label for="reflect"></label>
+    <input type="checkbox" name="hobby3" id="reflect" value="reflect"/>思考
+    <label for="climb"></label>
+    <input type="checkbox" name="hobby4" id="climb" value="climb"/>爬山 <br>
+    <label for="birthday-year">生日:</label>
+    <select name="birthday-year" id="birthday-year">
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017" selected>2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+    </select>年
+    <label for="birthday-month"></label>
+    <select name="birthday-month" id="birthday-month">
+        <option value="1" selected>1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>月
+    <label for="birthday-day"></label>
+    <select name="birthday-day" id="birthday-day">
+        <option value="1" selected>1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>日 <br>
+    <label for="headshotId">头像:</label>
+    <img src="headshots.png" alt="headshot">
+    <select name="headshotId" id="headshotId">
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13" selected>13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+    </select><br>
+    <input type="button" value="普通按钮"/>
+    <input type="submit" value="提交按钮"/>
+    <input type="reset" value="重置按钮"/><br>
+    <label>
+        <input type="search" value="搜索"/>
+    </label>
+</form>
+<hr>
+<!--多行文本框-->
+<label for="textArea">多行文本框</label>
+<textarea name="textArea" id="textArea" cols="30" rows="10">请输入...</textarea><br>
+<hr>
+<!--文件上传-->
+<label for="fileUpload">文件上传</label>
+<input type="file" name="fileUpload" id="fileUpload"><input type="button" value="上传"/><br>
+<hr>
+<!--隐藏域-->
+<label for="hiddenField">隐藏域</label>
+888<input type="hidden" name="hiddenField" id="hiddenField"/>666 <br>
+<hr>
+<!--普通列表框-->
+<label for="listBox">普通列表框</label>
+<select name="listBox" id="listBox" size="3"> <!--multiple="true"-->
+    <option value="2015">2015</option>
+    <option value="2016">2016</option>
+    <option value="2017" selected>2017</option>
+    <option value="2018">2018</option>
+    <option value="2019">2019</option>
+    <option value="2020">2020</option>
+</select><br>
+<hr>
+</body>
+</html>

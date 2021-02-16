@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+</head>
+<body>
+<!--
+    table 表格        border 表格边框     width 表格宽度
+        bgcolor 表格背景颜色  align 表格内容对齐方式(left,center,right)
+        cellpadding 内容和边框之间的间距      cellspacing 单元格之间的间距
+        frame 表格外边框
+            viod 不显示外边框     border 四周都显示
+            above 显示上部外边框   below 显示下部外边框   hsides 显示上下的外边框
+            lhs 显示左边的外边框    rhs 显示右边的外边框    vsides 显示左右的外边框
+        caption 表格标题
+        tr 行            th 表头             td 表格单元
+        rowspan 合并行         colspan 合并列
+        thead 表格页眉    tbody 表格主题       tfoot 表格页脚
+
+-->
+<table border="1px" width="600px" align="left" cellpadding="20px" cellspacing="15px" frame="vsides">
+    <caption>商品库存表</caption>
+    <tr>
+        <th>商品类别</th>
+        <th>商品名称</th>
+        <th>单位</th>
+        <th>数量</th>
+    </tr>
+    <tr>
+        <td rowspan="2">家电类</td>
+        <td>冰箱</td>
+        <td>台</td>
+        <td>520</td>
+    </tr>
+    <tr bgcolor="#faebd7" align="right">
+        <td>洗衣机</td>
+        <td>台</td>
+        <td>13</td>
+    </tr>
+    <tr>
+        <td>辅料</td>
+        <td>插线板</td>
+        <td>个</td>
+        <td>14</td>
+    </tr>
+    <tr>
+        <td colspan="4">备注：</td>
+    </tr>
+</table>
+
+<hr>
+<table border="1px" width="600px">
+    <caption>商品库存表</caption>
+    <thead>
+    <tr>
+        <th>商品类别</th>
+        <th>商品名称</th>
+        <th>单位</th>
+        <th>数量</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td rowspan="2">家电类</td>
+        <td>冰箱</td>
+        <td>台</td>
+        <td>520</td>
+    </tr>
+    <tr>
+        <td>洗衣机</td>
+        <td>台</td>
+        <td>13</td>
+    </tr>
+    <tr bgcolor="#d2691e" align="center">
+        <td>辅料</td>
+        <td>插线板</td>
+        <td>个</td>
+        <td>14</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="4">备注:</td>
+    </tr>
+    </tfoot>
+</table>
+</body>
+</html>
