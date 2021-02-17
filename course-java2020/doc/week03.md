@@ -37,13 +37,10 @@
 
 > 具体开发过程中，先定义类再实例化对象
 
-[course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCat.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCat.java)
-
-[course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCatTest.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCatTest.java)
-
-[course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoPerson.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoPerson.java)
-
-[course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoPersonTest.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoPersonTest.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCat.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCat.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCatTest.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCatTest.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoPerson.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoPerson.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoPersonTest.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoPersonTest.java)
 
 ### 单一职责原则
 
@@ -164,9 +161,8 @@ public class CatTest{
 5. 当有指定构造方法，无论是有参、无参的构造方法，都不会自动添加无参的构造方法。
 6. 一个类中可以有多个构造方法。
 
-[course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCat01.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCat01.java)
-
-[course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCatTest01.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCatTest01.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCat01.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCat01.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCatTest01.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCatTest01.java)
 
 ### this 关键字
 
@@ -224,9 +220,8 @@ public class CatTest{
     }
     ```
 
-[course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCat01.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCat01.java)
-
-[course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCatTest01.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCatTest01.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCat01.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCat01.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCatTest01.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCatTest01.java)
 
 ### 就近原则
 
@@ -303,9 +298,8 @@ public class Cat() {
 }
 ```
 
-[course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoMonkey.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoMonkey.java)
-
-[course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoMonkeyTest.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoMonkeyTest.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoMonkey.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoMonkey.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoMonkeyTest.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoMonkeyTest.java)
 
 ### this 关键字应用
 
@@ -392,9 +386,8 @@ public class Sections01ClassThisCat01Test {
 
 **总结:** 大部分时候，类的方法中访问成员属性时无须使用 this，但如果方法里存在局部变量和成员属性同名，但程序又需要在该方法里访问成员属性时，则必须使用 this 进行调用。
 
-[course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat01.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat01.java)
-
-[course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat01Test.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat01Test.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat01.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat01.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat01Test.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat01Test.java)
 
 #### this 调用成员方法
 
@@ -452,9 +445,8 @@ public class Sections01ClassThisCat02Test {
 
 **总结:** 大部分时候，类的成员方法访问同类中其他成员方法时，this 关键字可加可不加，效果相同。
 
-[course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat02.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat02.java)
-
-[course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat02Test.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat02Test.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat02.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat02.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat02Test.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat02Test.java)
 
 #### this 调用构造方法
 
@@ -547,9 +539,8 @@ public class Sections01ClassThisCat03Test {
 2. 可以通过 this 调用本类中带参或者无参构造方法，调用带参构造方法时，需要按顺序传入设定的参数。
 3. 在一个构造方法内只能调用一个构造方法。
 
-[course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03.java)
-
-[course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03Test.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03Test.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03Test.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03Test.java)
 
 **在普通成员方法内调用构造**
 
@@ -582,9 +573,8 @@ public class Sections01ClassThisCat03 {
 
 **总结:** 不能在类中普通成员方法内通过 this 调用构造方法。
 
-[course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03.java)
-
-[course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03Test.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03Test.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03Test.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03Test.java)
 
 #### this 方法调用时作为参数传递
 
@@ -651,9 +641,8 @@ public class Sections01ClassThisCat04Test {
 
 **总结：**this 可以作为方法参数进行传递，代表调用方法的当前对象。
 
-[course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat04.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat04.java)
-
-[course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat04Test.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat04Test.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat04.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat04.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat04Test.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat04Test.java)
 
 #### this 方法调用时作为返回值传递
 
@@ -713,9 +702,8 @@ huahua
 
 **总结：** this 可以作为方法返回值，代表返回当前调用对象。
 
-[course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat05.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat05.java)
-
-[course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat05Test.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat05Test.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat05.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat05.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat05Test.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat05Test.java)
 
 ### 构造方法常见问题
 
@@ -785,9 +773,8 @@ huahua
 2. 创建 getter/setter 方法（设为 public，用于属性的读写）
 3. 在 getter/setter 方法中加入属性控制语句（对属性值的合法性进行判断）
 
-[course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationDemoCat.java](course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationDemoCat.java)
-
-[course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationDemoCatTest.java](course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationDemoCatTest.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationDemoCat.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationDemoCat.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationDemoCatTest.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationDemoCatTest.java)
 
 #### 关于封装应用中的常见问题
 
@@ -822,9 +809,8 @@ huahua
 
    - 在不同类中，需要通过对应的非私有方法访问。
 
-[course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeBook.java](course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeBook.java)
-
-[course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeBookTest.java](course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeBookTest.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeBook.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeBook.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeBookTest.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeBookTest.java)
 
 #### 引用数据类型的应用 -- 方法参数
 
@@ -956,20 +942,15 @@ public class Sections02EncapsulationPracticeCatTest {
 执行流程
 
 1. 宠物猫测试类中包含主方法，启动后，实例化产生宠物猫类类型的 one，two 两个对象，并通过构造方法完成对象初始化。
-
 2. 完成宠物猫管理类类型实例化操作，并调用 catMonthPK 方法，实现两只宠物猫年龄的对比。
-
 3. 在 catMonthPK 方法中，由于方法参数是自定义类型宠物 o 猫类类型，因此传入 one，two 两个对象的引用，并借由引用获取到对象的年龄，进而进行判断，将年龄大的对象作为返回值返回主方法。
-
 4. 主方法中的局部变量 max 接收到 catMonthPK 返回的最大值的引用，并获取对应信息打印输出。
 
-**请注意：**当方法参数是引用数据类型对象时，方法调用时，也需传入与之匹配的类型的对象。
+**请注意：** 当方法参数是引用数据类型对象时，方法调用时，也需传入与之匹配的类型的对象。
 
-[course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeCat.java](course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeCat.java)
-
-[course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeCatManage.java](course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeCatManage.java)
-
-[course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeCatTest.java](course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeCatTest.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeCat.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeCat.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeCatManage.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeCatManage.java)
+- [course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeCatTest.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeCatTest.java)
 
 ### 包
 
