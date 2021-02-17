@@ -129,3 +129,7 @@ Temporary Items
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij+all,macos,vscode
 /git-init.ps1
+/course-java2020/doc/yuque.yml
+/course-java2020/doc/summary.py
+/course-java2020/doc/summary.ps1
+/course-java2020/doc/summary.md
