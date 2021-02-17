@@ -756,3 +756,265 @@ huahua
 #### debug 进入之后单步执行为啥会直接报错 source not found?
 
 **解决方案:** 首先 source 并不是报错，而是由于没有配置源码信息，再加上断点设置的位置关系，进行调试时就会展示这个界面。在配置中选择 JDK 目录下的 `src.zip` 文件即可。
+
+## 封装
+
+### 什么是封装
+
+- 将类的某些信息隐藏在类内部，不允许外部程序直接访问
+- 通过该类提供的方法来实现对隐藏信息的操作和访问
+- 隐藏对象的信息
+- 留出访问的接口
+
+#### 封装特点
+
+- 只能通过规定的方法访问数据
+- 隐藏类的实例细节，方便修改和实现
+
+#### 封装步骤
+
+1. 修改属性的可见性（设为 private）
+2. 创建 getter/setter 方法（设为 public，用于属性的读写）
+3. 在 getter/setter 方法中加入属性控制语句（对属性值的合法性进行判断）
+
+[course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationDemoCat.java](course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationDemoCat.java)
+
+[course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationDemoCatTest.java](course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationDemoCatTest.java)
+
+#### 关于封装应用中的常见问题
+
+1. **如果不用封装，在要调用的普通成员方法中编写相关限制代码，实现避免在主方法中所调用属性及方法的值被非法篡改，这样不也可以吗，为什么一定要用封装?**
+
+   在面向对象的的设计思想中，封装可以理解为是种利用抽象的函数接口实现细节信息的包装隐藏的方式。我们可以把封装认为是一个保护屏障，防止该类的私密代码和数据被外部类定义的代码随机访问和修改。简单来说，就是"按我的规则，才能玩我的游戏"。而在隐藏信息的同时，我们还要注意职责单一原则的应用，也就是各司其职。
+
+   如果只是从功能实现的角度来说，当然可以将限制代码写在任意的功能实现方法中，但是试想，如果一个类中，有 10 个功能性方法中需要针对某一属性进行相同的设定，我们是设置一次方便，还是设置十次更方便安全呢?
+
+   因此，适当的封装可以让代码更容易理解与维护，也加强了安全性。调用者不能随意通过变量名属性名的方式来修改类中的私密数据信息；同时，在使用的时候，也只需直接调用封装后的方法即可，无需再操心细节处理。
+
+2. **get/set 用两个方法实现取值、赋值，放在一个方法里不是更简单?是否可以改成别的名字呢?**
+
+   如果仅仅是为了实现功能，那么，无论是写在一个方法里，还是用其他名字命名方法都是 OK 的。但是，在基于面向对象的编程思想中，更推荐大家采用 get/set 方法分别实现取值和赋值的功能，让他们各司其职，也更加通俗易懂，毕竟当业务越来越复杂，团队协作的时候，约定俗成会比各有千秋更有价值。
+
+3. **有了 get/set 方法，为什么还需要带参构造方法?或者说，在构造方法中直接写 if...else...判断限制输入输出结果不行么，为什么要多写两个方法 get/set?**
+
+   构造方法与 get/set 方法的作用是不同的，构造方法只能在创建对象时进行调用，如果在对象构建完成后，再想对其某些属性进行赋值和取值，就无法再次应用构造方法啦。因此两者的存在并不冲突，我们可以应用带参构造在对象初始化时进行某些属性的设置，也可以通过 get/set 方法，在对象构建完成后进行后续修订。
+
+4. **main 方法中为什么可以添加 return?什么时候能加?有什么作用?是否可以用 break 进行替换?**
+
+   关于 return 和 break 的应用
+
+   - 当方法中出现 return 表示方法运行终止；当出现 break 则表示循环语句或者 swith 语句运行结束。
+   - 如果方法设置了返回值，那么必须出现 return，应用 return 带回返回值；如果方法的返回值为 void，也可以出现 return。但是后面什么也不能加，直接加分号结束。
+
+   因此，主方法中的 return 语句不能与 break 随意替换。
+
+5. **private 修饰的成员怎么用?**
+
+   - 在同一个类中，可以直接访问。
+
+   - 在不同类中，需要通过对应的非私有方法访问。
+
+[course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeBook.java](course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeBook.java)
+
+[course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeBookTest.java](course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeBookTest.java)
+
+#### 引用数据类型的应用 -- 方法参数
+
+Java 中的方法包含无参、有参、无返回值、带返回值多种形态。其中，方法中的参数和返回值，可以使用基本数据类型(譬如：int， float， double 等)定义，也可以使用引用数据类型(譬如：String，数组，自定义类等)定义。
+
+如应用的是基本数据类型的变量，则传递的是数据的值；当为引用数据类型的变量时，传递的则是对象的引用。
+
+现有宠物猫类，包含属性：昵称和年龄。
+
+```java
+package com.imooc.java2020.week03;
+
+/**
+ * 宠物猫类 Sections02EncapsulationPracticeCat
+ *
+ * @author Jaime
+ * @project_name learning-java
+ */
+public class Sections02EncapsulationPracticeCat {
+    /**
+     * 昵称name、年龄age
+     */
+    private String name;
+    private int age;
+
+    /**
+     * 有参构造初始化
+     * @param name 昵称
+     * @param age 年龄
+     */
+    public Sections02EncapsulationPracticeCat(String name, int age) {
+        // this.name = name;
+        // this.age = age;
+        this.setName(name);
+        this.setAge(age);
+    }
+
+    /**
+     * get 获取昵称
+     * @return 昵称
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * set 设置昵称
+     * @param name 昵称
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * get 获取年龄
+     * @return 年龄
+     */
+    public int getAge() {
+        return age;
+    }
+
+    /**
+     * set 设置年龄
+     * @param age 年龄
+     */
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
+
+```
+
+宠物猫管理类，包含年龄比较的方法 catMonthPK
+
+```java
+package com.imooc.java2020.week03;
+
+/**
+ * 宠物猫管理类 Sections02EncapsulationPracticeCatManage
+ *
+ * @author Jaime
+ * @project_name learning-java
+ */
+public class Sections02EncapsulationPracticeCatManage {
+
+    /**
+     * 宠物猫年龄比较
+     *
+     * @param one 宠物猫一
+     * @param two 宠物猫二
+     * @return 年龄大的宠物猫
+     */
+    public Sections02EncapsulationPracticeCat catMonthPK(Sections02EncapsulationPracticeCat one, Sections02EncapsulationPracticeCat two) {
+        return (one.getAge() > two.getAge()) ? one : two;
+    }
+}
+
+```
+
+宠物猫测试类，包含主方法
+
+```java
+package com.imooc.java2020.week03;
+
+/**
+ * 自定义 Sections02EncapsulationPracticeCat 类的测试类：宠物猫测试类
+ *
+ * @author Jaime
+ * @project_name learning-java
+ */
+public class Sections02EncapsulationPracticeCatTest {
+    public static void main(String[] args) {
+        Sections02EncapsulationPracticeCat one, two;
+        one = new Sections02EncapsulationPracticeCat("huahua", 3);
+        two = new Sections02EncapsulationPracticeCat("fanfan", 6);
+        Sections02EncapsulationPracticeCatManage manage = new Sections02EncapsulationPracticeCatManage();
+        System.out.println("优胜者 name = " + manage.catMonthPK(one, two).getName() + ", age = " + manage.catMonthPK(one, two).getAge());
+    }
+}
+
+```
+
+运行结果：
+
+```java
+优胜者 name = fanfan, age = 6
+```
+
+执行流程
+
+1. 宠物猫测试类中包含主方法，启动后，实例化产生宠物猫类类型的 one，two 两个对象，并通过构造方法完成对象初始化。
+
+2. 完成宠物猫管理类类型实例化操作，并调用 catMonthPK 方法，实现两只宠物猫年龄的对比。
+
+3. 在 catMonthPK 方法中，由于方法参数是自定义类型宠物 o 猫类类型，因此传入 one，two 两个对象的引用，并借由引用获取到对象的年龄，进而进行判断，将年龄大的对象作为返回值返回主方法。
+
+4. 主方法中的局部变量 max 接收到 catMonthPK 返回的最大值的引用，并获取对应信息打印输出。
+
+**请注意：**当方法参数是引用数据类型对象时，方法调用时，也需传入与之匹配的类型的对象。
+
+### 包
+
+- 管理 Java 文件
+
+- 解决同名文件冲突
+
+#### 定义包
+
+语法：`package 包名;`
+
+例：`package com.imooc.animal;`
+
+注意：
+
+1. 必须放在 Java 源文件中的第一行
+2. 一个 Java 源文件中只能有一个 package 语句
+3. 包名全部英文小写
+4. 命名方式：域名倒序+模块+功能
+
+#### 导入包
+
+语法：`import 包名.类名;`
+
+例：
+
+1. 导入包中全部类：`import com.imooc.*;`
+2. 导入包中指定类：`import com.imooc.animal.Cat;`
+
+#### 常用系统包
+
+java.lang 包含 java 语言基础的类
+java.util 包含 java 语言中各种工具类
+java.io 包含输入、输出相关功能的类
+
+### static
+
+- static+属性---静态属性
+- static+方法---静态方法
+- static+类---不存在
+- static+方法内局部变量---不存在
+
+静态成员随类加载产生，直至类销毁才回收
+
+### 静态方法
+
+1. 可以直接调用同类中的静态成员
+2. 不可以直接调用同类中的非静态成员
+3. 可以通过实例化对象后，对象调用的方式完成非静态成员调用
+
+### 代码块
+
+1. 通过{}可以形成代码块
+2. 方法内的代码块称为：普通代码块
+3. 类内的代码块称为：构造代码块
+4. 构造代码块前+static：静态代码块
+
+### 代码块执行顺序那边
+
+1. 无论实例产生多少对象，静态代码块只执行一次
+2. 构造代码块随实例化过程调用
+3. 普通代码块随方法调用执行
