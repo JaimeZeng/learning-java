@@ -547,6 +547,10 @@ public class Sections01ClassThisCat03Test {
 2. 可以通过 this 调用本类中带参或者无参构造方法，调用带参构造方法时，需要按顺序传入设定的参数。
 3. 在一个构造方法内只能调用一个构造方法。
 
+[course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03.java)
+
+[course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03Test.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03Test.java)
+
 **在普通成员方法内调用构造**
 
 ```java
@@ -708,6 +712,10 @@ huahua
 ```
 
 **总结：** this 可以作为方法返回值，代表返回当前调用对象。
+
+[course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat05.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat05.java)
+
+[course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat05Test.java](course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat05Test.java)
 
 ### 构造方法常见问题
 
@@ -909,7 +917,7 @@ public class Sections02EncapsulationPracticeCatManage {
      * @param two 宠物猫二
      * @return 年龄大的宠物猫
      */
-    public Sections02EncapsulationPracticeCat catMonthPK(Sections02EncapsulationPracticeCat one, Sections02EncapsulationPracticeCat two) {
+    public Sections02EncapsulationPracticeCat catMonthPk(Sections02EncapsulationPracticeCat one, Sections02EncapsulationPracticeCat two) {
         return (one.getAge() > two.getAge()) ? one : two;
     }
 }
@@ -933,7 +941,7 @@ public class Sections02EncapsulationPracticeCatTest {
         one = new Sections02EncapsulationPracticeCat("huahua", 3);
         two = new Sections02EncapsulationPracticeCat("fanfan", 6);
         Sections02EncapsulationPracticeCatManage manage = new Sections02EncapsulationPracticeCatManage();
-        System.out.println("优胜者 name = " + manage.catMonthPK(one, two).getName() + ", age = " + manage.catMonthPK(one, two).getAge());
+        System.out.println("优胜者 name = " + manage.catMonthPk(one, two).getName() + ", age = " + manage.catMonthPk(one, two).getAge());
     }
 }
 
@@ -956,6 +964,12 @@ public class Sections02EncapsulationPracticeCatTest {
 4. 主方法中的局部变量 max 接收到 catMonthPK 返回的最大值的引用，并获取对应信息打印输出。
 
 **请注意：**当方法参数是引用数据类型对象时，方法调用时，也需传入与之匹配的类型的对象。
+
+[course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeCat.java](course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeCat.java)
+
+[course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeCatManage.java](course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeCatManage.java)
+
+[course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeCatTest.java](course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeCatTest.java)
 
 ### 包
 
