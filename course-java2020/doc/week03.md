@@ -1412,23 +1412,21 @@ age = 13, run() 普通代码块2.
 - [course-java2020/src/com/imooc/java2020/week03/packagedemo/animal/Cat02.java](course-java2020/src/com/imooc/java2020/week03/packagedemo/animal/Cat02.java)
 - [course-java2020/src/com/imooc/java2020/week03/packagedemo/demotest/Cat02Test.java](course-java2020/src/com/imooc/java2020/week03/packagedemo/demotest/Cat02Test.java)
 
-
-
 ## 综合案例
 
-某校开设“计算机科学与应用”专业，专业编号J0001，学制4年。现有3名学生都报名学习了这个专业。
+某校开设"计算机科学与应用"专业，专业编号 J0001，学制 4 年。现有 3 名学生都报名学习了这个专业。
 
-| 张三 | S01  | 男   | 18岁 |
-| ---- | ---- | ---- | ---- |
-| 姓名 | 学号 | 性别 | 年龄 |
-| 李四 | S02  | 女   | 17岁 |
-| 王五 | S03  | 男   | 18岁 |
+| 张三 | S01  | 男   | 18 岁 |
+| ---- | ---- | ---- | ----- |
+| 姓名 | 学号 | 性别 | 年龄  |
+| 李四 | S02  | 女   | 17 岁 |
+| 王五 | S03  | 男   | 18 岁 |
 
 ### 运行效果
 
 ```java
 ===============================================
-专业信息如下: 
+专业信息如下:
 专业名称: 计算机科学与技术
 学科编号: J0001
 学制年限: 4
@@ -1441,7 +1439,7 @@ age = 13, run() 普通代码块2.
 年龄: 18
 学科名称: 计算机科学与技术
 学制年限: 4
-    
+
 ===============================================
 学生信息如下:
 姓名: 李四
@@ -1450,7 +1448,7 @@ age = 13, run() 普通代码块2.
 年龄: 17
 学科名称: 计算机科学与技术
 学制年限: 4
-    
+
 ===============================================
 学生信息如下:
 姓名: 王五
@@ -1459,10 +1457,8 @@ age = 13, run() 普通代码块2.
 年龄: 18
 学科名称: 计算机科学与技术
 学制年限: 4
-    
+
 ```
-
-
 
 ### 案例分析
 
@@ -1473,22 +1469,23 @@ age = 13, run() 普通代码块2.
   - 方法：介绍（功能：介绍专业相关信息）。
 
 - 学生类
+
   - 属性：专业编号、专业名称、学制年限。
   - 方法：自我介绍（功能：介绍学生相关信息）。
 
 - 实现专业与学生关联
 
-  - 方案1： 在学生类的自我介绍方法中，添加两个参数：专业名称、学制年限。
+  - 方案 1： 在学生类的自我介绍方法中，添加两个参数：专业名称、学制年限。
 
-     特点：容易理解、参数列表长。
+    特点：容易理解、参数列表长。
 
-  - 方案2： 在学生类的自我介绍方法中，添加一个专业对象作为参数，从中获取专业名称、学制年限。
+  - 方案 2： 在学生类的自我介绍方法中，添加一个专业对象作为参数，从中获取专业名称、学制年限。
 
-     特点：相比前一个参数列表简单、获取参数方便。
+    特点：相比前一个参数列表简单、获取参数方便。
 
-  - 方案3： 在学生类中，添加一个专业对象作为属性，从中获取专业名称、学制年限。
+  - 方案 3： 在学生类中，添加一个专业对象作为属性，从中获取专业名称、学制年限。
 
-     特点：关联性更强。
+    特点：关联性更强。
 
 ---
 
@@ -1497,7 +1494,7 @@ age = 13, run() 普通代码块2.
 - [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student.java)
 - [course-java2020/src/com/imooc/java2020/week03/schooldemo/test/StudentTest.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/test/StudentTest.java)
 
-方案1代码：
+方案 1 代码：
 
 - [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java)
 
@@ -1505,7 +1502,7 @@ age = 13, run() 普通代码块2.
 
 - [course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student01Test.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student01Test.java)
 
-方案2代码：
+方案 2 代码：
 
 - [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java)
 
@@ -1513,7 +1510,7 @@ age = 13, run() 普通代码块2.
 
 - [course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student02Test.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student02Test.java)
 
-方案3代码：
+方案 3 代码：
 
 - [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java)
 
@@ -1529,7 +1526,7 @@ age = 13, run() 普通代码块2.
 
 ```java
 ===============================================
-专业信息如下: 
+专业信息如下:
 专业名称: 计算机科学与技术
 学科编号: J0001
 学制年限: 4
@@ -1548,8 +1545,6 @@ age = 13, run() 普通代码块2.
 - [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student04.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student04.java)
 - [course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student04Test.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student04Test.java)
 
-
-
 ### 关于类型创建阶段常见问题
 
 #### 为什么要写多个构造方法，只写一个不行么？或者不写构造方法，直接在类里写个带对象返回值的方法，不也能实现结果么？
@@ -1559,12 +1554,12 @@ age = 13, run() 普通代码块2.
 如果只是从上面案例的实现结果来看，只定义一个带参构造方法，或者，做一个带对象作为返回值的成员方法的确可实现功能，但有几点需要注意：
 
 - 构造方法主要用于实现对象的实例初始化，即便没有手动定义，编译器也会默认提供一个该类的无参构造以供类型创建。基于职责单一的角度，如果只是对象的初始信息赋值，建议还是在构造方法中实现。
-   - 从程序的可扩展性和维护性的考虑，建议在程序中，写一下无参构造，一方面给使用者可以提供更多的实例化对象的方式选择;另一方面也方便后续程序扩展，这点在后面章节进行继承相关内容讲解时会有详细介绍。
+  - 从程序的可扩展性和维护性的考虑，建议在程序中，写一下无参构造，一方面给使用者可以提供更多的实例化对象的方式选择;另一方面也方便后续程序扩展，这点在后面章节进行继承相关内容讲解时会有详细介绍。
 
 #### 怎么实现性别只允许为男或女的设置？
 
-- 性别信息分别与字符串“男”，“女”进行比对，并进行逻辑判断
-- 如果满足判断结果，则将数据存入性别属性；如不满足，可设置为默认性别值，譬如“男”。
+- 性别信息分别与字符串"男"，"女"进行比对，并进行逻辑判断
+- 如果满足判断结果，则将数据存入性别属性；如不满足，可设置为默认性别值，譬如"男"。
 
 ```java
 /**
@@ -1580,16 +1575,16 @@ public void setStuSex(String stuSex) {
 
 几点注意：
 
-1. `setStuSex()` 中，如果将 `equals` 修改为 “`equals`”，虽然不影响本段程序的运行结果，但表示的是对象引用是否一致，此处建议用 `equals` 进行对象内容的比较，相关内容在后面的字符串课程中会有详细介绍。
+1. `setStuSex()` 中，如果将 `equals` 修改为 "`equals`"，虽然不影响本段程序的运行结果，但表示的是对象引用是否一致，此处建议用 `equals` 进行对象内容的比较，相关内容在后面的字符串课程中会有详细介绍。
 
 2. 在目前的代码中 `setStuSex()` 中，通过 `||` 实现性别条件的判断，也可以通过 `&&` 判断，此时代码修订可参考，请注意其中!运算符的结合运用，表示不等于男，同时不等于女:
 
-      ```java
-      public void setStuSex(String stuSex) {
-          // this.stuSex = ((stuSex == "男") || (stuSex == "女")) ? stuSex : "男";
-          this.stuSex = ( !("男".equals(stuSex)) && !("女".equals(stuSex))) ?  "男" : stuSex;
-      }
-      ```
+   ```java
+   public void setStuSex(String stuSex) {
+       // this.stuSex = ((stuSex == "男") || (stuSex == "女")) ? stuSex : "男";
+       this.stuSex = ( !("男".equals(stuSex)) && !("女".equals(stuSex))) ?  "男" : stuSex;
+   }
+   ```
 
 3. 如在构造方法执行时即进行信息验证，注章在构造方法中对于 `setStuSex()` 方法的调用。
 
@@ -1605,6 +1600,128 @@ public void setStuSex(String stuSex) {
 
 - 如果确定 get/set 方法中，对属性无特殊操作(譬如验证等)，只是简单的赋值取值，可以不调用，直接使用 `this.属性名 = 赋值;` 的形式
 - 如果不能确保 get/set 方法中，一定无特殊操作；或已知方法中已进行了相关复杂操作时，推荐在构造方法中，通过 `this.set/get` 的形式操作属性，以避免错失验证过程。
+
+### 关于类型关联阶段常见问题
+
+#### 什么时候使用 this，看到几个方案中都用到了 this，他们代表什么含义?是否可以去掉呢?
+
+this 在 Java 中主要代表当前对象的意思。结合下面中的代码，简单可以理解为，谁调用了这个 introduction 谁就是 this。
+
+```java
+/**
+ * 学生自我介绍的方法
+ *
+ * @return 自我介绍的信息，包括姓名、学号、性别、年龄
+ */
+public String introduction () {
+    String str = "学生信息如下：" +
+        "\n姓名：" + this.getStudentName() +
+        "\n学号：" + this.getStudentNo() +
+        "\n性别：" + this.getStudentSex() +
+        "\n年龄：" + this.getStudentAge() +
+        "\n所报专业名称：" + this.getStudentSubject().getSubjectName() +
+        "\n学制年限：" + this.getStudentSubject().getSubjectLife();
+    return str;
+}
+```
+
+如当主方法中以下面的代码中的方式完成方法调用时，执行过程中，stu1 就是对应的 this，可以在方法中进一步获取 stu1 的专业成员，并获取其专业名称和年限。
+
+```java
+//测试Student
+Student stu1 = new Student("S01", "张三", "男", 200);
+System.out.println(stu1.introduction());
+```
+
+此处的 this 可以省略，对于程序运行结果并无影响，在方法中加入 this，只是显示表示调用的是当前对象的某个特定成员信息。
+
+但是有一种情况，this 不能省，即方法传参时，如果传入参数名与属性名相同，如需特定表明传入数值是赋值给类中属性时，譬如下面的代码所示：
+
+```java
+public void setSubjectNo(String subjectNo) {
+    this.subjectNo = subjectNo;
+}
+```
+
+当将 Subject 类型的对象作为 Student 类型的成员属性的应用时，为什么要在 `getStudentSubject()` 中实例化？而不是在 set 方法中？
+
+关于 get/set 方法，我们先来回忆一下，两个方法的作用:
+
+- set: 结合参数给类中的属性进行赋值。
+- get: 结合返回值，将类中属性返回调用处
+
+因此，如下所示: `getStudentSubject()` 方法最终是将属性 `studentSubject` 返回，之前的判断及实例化操作，只是为了确保返回的 `studentSubject` 属性是不为 Null 的，是有意义的。
+
+```java
+/**
+ * 获取专业对象，如果没有实例化，先实例化后再返回
+ * @return 专业对象信息
+ */
+public Subject getStudentSubject() {
+    if(this.studentSubject == null)
+        this.studentSubject = new Subject();
+    return studentSubject;
+}
+```
+
+也就是说，如果我们需要在赋值时判断，如果传入参数为 null，则需要属性自行完成实例化，不为空时，则将输入参数赋值给属性，此时就建议在 set 方法中完成啦，参考代码如下:
+
+```java
+public Subject getStudentSubject() {
+    if(this.studentSubject == null) {
+        this.studentSubject = new Subject();
+    } else {
+        this.studentSubject = studentSubject;
+    }
+
+}
+```
+
+由此可见，究竟是在 set 还是 get 方法中进行判断和实例化，是需要结合功能实现目标来确定的。
+
+#### getStudentSubject()中为什么是 this.studentSubject = new Subject(); 之前不都是 类名 对象名 = new 类名(); 么?
+
+此处在 get 方法中是针对类中已经定义的属性 `studentSubject` 进行实例化，所以直接写 `this.studentSubject = new Subject();` 就可以。当需要新定义一个对象的时候，就需要采用 `类名 对象名 = new 类名();` 的形式。
+
+#### introduction 方法中为什么获取专业名称、年限要两次调用？其他数据一次就能调出来？
+
+结合下图代码示例，简单来说，前 4 个属性，我们只需要获取单数据信息就可以，因此通过对应的 get 方法，也就是 `getStudentName()`、 `getStudentNo()`、 `getStudentSex()`、 `getStudentAge()` 方法就可以直接获取；而第五个属性 `studentSubject` 是一个对象，我们希望在 introduction 方法中进步获取 `studentSubject` 里面的名称和年限属性值时，就需要两步操作了。以获取专业名称为例
+
+第一步: 获取类中 `studentSubject` 属性，即 `this.studentSubject =this.getStudentSubject();`
+
+第二步: 获取 `studentSubject` 的名称属性，即 `this.studentSubject.getSubjectName();`
+
+两步合并，即为 `this.getStudentSubject().getSubjectName();`
+
+```java
+public class Student {
+    // 成员属性：学号、姓名、性别、年龄、专业
+    private String studentNo;
+    private String studentName;
+    private String studentSex;
+    private int studentAge;
+    private Subject studentSubject;
+    ...
+}
+```
+
+```java
+/**
+ * 学生自我介绍的方法
+ *
+ * @return 自我介绍的信息，包括姓名、学号、性别、年龄
+ */
+public String introduction () {
+    String str = "学生信息如下：" +
+        "\n姓名：" + this.getStudentName() +
+        "\n学号：" + this.getStudentNo() +
+        "\n性别：" + this.getStudentSex() +
+        "\n年龄：" + this.getStudentAge() +
+        "\n所报专业名称：" + this.getStudentSubject().getSubjectName() +
+        "\n学制年限：" + this.getStudentSubject().getSubjectLife();
+    return str;
+}
+```
 
 ### 引用数据类型应用--成员属性
 
@@ -1709,8 +1826,8 @@ public class Test {
 
 ```java
 Exception in thread "main" java.lang.NullPointerException
-	at com.imooc.java2020.week03.schooldemo.practice.Staff.display(Staff.java:47)
-	at com.imooc.java2020.week03.schooldemo.practice.Test.main(Test.java:11) 
+    at com.imooc.java2020.week03.schooldemo.practice.Staff.display(Staff.java:47)
+    at com.imooc.java2020.week03.schooldemo.practice.Test.main(Test.java:11)
 ```
 
 如果修改员工类中代码：加入对员工公司属性的初始化设置。
@@ -1723,7 +1840,7 @@ public class Staff {
     int age;
     String name;
     Company comp = new Company("不知道啥公司~", "不知道啥位置~");
-    
+
     ...
 }
 ```
@@ -1763,12 +1880,12 @@ public class Staff {
             comp = new Company("不知道啥公司~", "不知道啥位置~");
         }
     }
-    
+
     ...
 }
 ```
 
-保持测试类代码和公司类代码不变。此时，虽然员工类中的公司属性定义时未完成初始化，但是在构造方法中有相关判断，江湾城属性初始化操作，从而在main方法中调用时不会产生异常。运行代码结果：
+保持测试类代码和公司类代码不变。此时，虽然员工类中的公司属性定义时未完成初始化，但是在构造方法中有相关判断，江湾城属性初始化操作，从而在 main 方法中调用时不会产生异常。运行代码结果：
 
 ```java
 Staff {
@@ -1800,7 +1917,7 @@ public class Staff {
         this.age = age;
         this.name = name;
     }
-    
+
     ...
 }
 ```
@@ -1816,7 +1933,7 @@ public class Test {
 }
 ```
 
-员工对象的公司属性，虽然在类定义时未初始化，但是在main方法中调用正确赋值，执行结果：
+员工对象的公司属性，虽然在类定义时未初始化，但是在 main 方法中调用正确赋值，执行结果：
 
 ```java
 Staff {
@@ -1825,67 +1942,4 @@ Staff {
  compaName = niuniu
  compAddress = 加里敦
 }
-```
-
-### 关于类型关联阶段常见问题
-
-#### 什么时候使用 this，看到几个方案中都用到了 this，他们代表什么含义?是否可以去掉呢?
-
-this 在 Java 中主要代表当前对象的意思。结合下面中的代码，简单可以理解为，谁调用了这个 introduction 谁就是 this。
-
-```java
-
-```
-
-如当主方法中以下面的代码中的方式完成方法调用时，执行过程中，stu1 就是对应的 this，可以在方法中进一步获取 stu1 的专业成员，并获取其专业名称和年限。
-
-```java
-
-```
-
-此处的 this 可以省略，对于程序运行结果并无影响，在方法中加入 this，只是显示表示调用的是当前对象的某个特定成员信息。
-
-但是有一种情况，this 不能省，即方法传参时，如果传入参数名与属性名相同，如需特定表明传入数值是赋值给类中属性时，譬如下面的代码所示：
-
-```java
-
-```
-
-当将 Subject 类型的对象作为 Student 类型的成员属性的应用时，为什么要在 `getStudentSubject()` 中实例化？而不是在 set 方法中？
-
-关于 get/set 方法，我们先来回忆一下，两个方法的作用:
-
-- set: 结合参数给类中的属性进行赋值。
-- ger: 结合返回值，将类中属性返回调用处
-
-因此，如下所示: `getStudentSubject()` 方法最终是将属性 `studentSubject` 返回，之前的判断及实例化操作，只是为了确保返回的 `studentSubject` 属性是不为 Null 的，是有意义的。
-
-```java
-
-```
-
-也就是说，如果我们需要在赋值时判断，如果传入参数为 null，则需要属性自行完成实例化，不为空时，则将输入参数赋值给属性，此时就建议在 set 方法中完成啦，参考代码如下:
-
-```java
-
-```
-
-由此可见，究竟是在 set 还是 get 方法中进行判断和实例化，是需要结合功能实现目标来确定的。
-
-#### getStudentSubject()中为什么是 this.studentSubject = new Subject(); 之前不都是 类名 对象名 = new 类名(); 么?
-
-此处在 get 方法中是针对类中已经定义的属性 `studentSubject` 进行实例化，所以直接写 `this.studentSubject = new Subject();` 就可以。当需要新定义一个对象的时候，就需要采用 `类名 对象名 = new 类名();` 的形式。
-
-#### introduction 方法中为什么获取专业名称、年限要两次调用？其他数据一次就能调出来？
-
-结合下图代码示例，简单来说，前 4 个属性，我们只需要获取单数据信息就可以，因此通过对应的 get 方法，也就是 `getStudentName()`、 `getStudentNo()`、 `getStudentSex()`、 `getStudentAge()` 方法就可以直接获取；而第五个属性 `studentSubject` 是一个对象，我们希望在 introduction 方法中进步获取 `studentSubject` 里面的名称和年限属性值时，就需要两步操作了。以获取专业名称为例
-
-第一步: 获取类中 `studentSubject` 属性，即 `this.studentSubject =this.getStudentSubject();`
-
-第二步: 获取 `studentSubject` 的名称属性，即 `this.studentSubject.getSubjectName();`
-
-两步合并，即为 `this.getStudentSubject().getSubjectName();`
-
-```java
-
 ```
