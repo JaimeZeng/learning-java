@@ -1728,7 +1728,7 @@ public class Staff {
 }
 ```
 
-保持测试类代码和公司类代码不变，运行代码结果：
+保持测试类代码和公司类代码不变。此时运行无异常，结果中将展示初始化的公司属性的默认值。运行代码结果：
 
 ```java
 Staff {
@@ -1739,18 +1739,92 @@ Staff {
 }
 ```
 
-
+如果员工类中，公司属性定义时未初始化，但在加入双参构造方法中时做信息判断：
 
 ```java
+public class Staff {
+    /**
+     * 员工年龄age、员工姓名name、员工所在公司comp
+     */
+    int age;
+    String name;
+    Company comp;
 
-
+    /**
+     * 初始化全部属性
+     *
+     * @param age  员工年龄
+     * @param name 员工姓名
+     */
+    public Staff(int age, String name) {
+        this.age = age;
+        this.name = name;
+        if (this.comp == null){
+            comp = new Company("不知道啥公司~", "不知道啥位置~");
+        }
+    }
+    
+    ...
+}
 ```
 
-
+保持测试类代码和公司类代码不变。此时，虽然员工类中的公司属性定义时未完成初始化，但是在构造方法中有相关判断，江湾城属性初始化操作，从而在main方法中调用时不会产生异常。运行代码结果：
 
 ```java
+Staff {
+ age = 30
+ name = huahua
+ compaName = 不知道啥公司~
+ compAddress = 不知道啥位置~
+}
+```
 
+如果保留员工类、公司类初始代码不变（即员工类中公司属性在定义时和构造方法中均未初始化），修改测试类中代码：加入对员工的公司属性赋值：
 
+```java
+public class Staff {
+    /**
+     * 员工年龄age、员工姓名name、员工所在公司comp
+     */
+    int age;
+    String name;
+    Company comp;
+
+    /**
+     * 初始化全部属性
+     *
+     * @param age  员工年龄
+     * @param name 员工姓名
+     */
+    public Staff(int age, String name) {
+        this.age = age;
+        this.name = name;
+    }
+    
+    ...
+}
+```
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        Company cp = new Company("niuniu", "加里敦");
+        Staff st = new Staff(30, "huahua");
+        st.comp = cp;
+        System.out.println(st.display());
+    }
+}
+```
+
+员工对象的公司属性，虽然在类定义时未初始化，但是在main方法中调用正确赋值，执行结果：
+
+```java
+Staff {
+ age = 30
+ name = huahua
+ compaName = niuniu
+ compAddress = 加里敦
+}
 ```
 
 ### 关于类型关联阶段常见问题
