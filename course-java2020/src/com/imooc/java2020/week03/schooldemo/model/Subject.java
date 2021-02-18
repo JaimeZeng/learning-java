@@ -1,7 +1,7 @@
 package com.imooc.java2020.week03.schooldemo.model;
 
 /**
- * 学科类
+ * 学科学科类
  *
  * @author Jaime
  * @project_name learning-java

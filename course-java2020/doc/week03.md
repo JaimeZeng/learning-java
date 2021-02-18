@@ -1478,17 +1478,77 @@ age = 13, run() 普通代码块2.
 
 - 实现专业与学生关联
 
-  1. 在学生类的自我介绍方法中，添加两个参数：专业名称、学制年限。
+  - 方案1： 在学生类的自我介绍方法中，添加两个参数：专业名称、学制年限。
 
      特点：容易理解、参数列表长。
 
-  2. 在学生类的自我介绍方法中，添加一个专业对象作为参数，从中获取专业名称、学制年限。
+  - 方案2： 在学生类的自我介绍方法中，添加一个专业对象作为参数，从中获取专业名称、学制年限。
 
      特点：相比前一个参数列表简单、获取参数方便。
 
-  3. 在学生类中，添加一个专业对象作为属性，从中获取专业名称、学制年限。
+  - 方案3： 在学生类中，添加一个专业对象作为属性，从中获取专业名称、学制年限。
 
      特点：关联性更强。
+
+---
+
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java)
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/test/SubjectTest.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/test/SubjectTest.java)
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student.java)
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/test/StudentTest.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/test/StudentTest.java)
+
+方案1代码：
+
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java)
+
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student01.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student01.java)
+
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student01Test.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student01Test.java)
+
+方案2代码：
+
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java)
+
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student02.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student02.java)
+
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student02Test.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student02Test.java)
+
+方案3代码：
+
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java)
+
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student03.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student03.java)
+
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student03Test.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student03Test.java)
+
+### 扩展功能
+
+实现统计指定专业下有多少报名参加的学生。
+
+运行效果：
+
+```java
+===============================================
+专业信息如下: 
+专业名称: 计算机科学与技术
+学科编号: J0001
+学制年限: 4
+专业学科报名学生人数: 3
+```
+
+实现方案：
+
+- 在专业类中添加属性：学生数组、学生总人数
+- 添加方法：新增学生。功能：将新增学生插入数组，并获取学生总人数。
+
+---
+
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject01.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject01.java)
+
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student04.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student04.java)
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student04Test.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student04Test.java)
+
+
 
 ### 关于类型创建阶段常见问题
 
@@ -1524,7 +1584,7 @@ public void setStuSex(String stuSex) {
 
 2. 在目前的代码中 `setStuSex()` 中，通过 `||` 实现性别条件的判断，也可以通过 `&&` 判断，此时代码修订可参考，请注意其中!运算符的结合运用，表示不等于男，同时不等于女:
 
-    - ```java
+      ```java
       public void setStuSex(String stuSex) {
           // this.stuSex = ((stuSex == "男") || (stuSex == "女")) ? stuSex : "男";
           this.stuSex = ( !("男".equals(stuSex)) && !("女".equals(stuSex))) ?  "男" : stuSex;
@@ -1569,8 +1629,129 @@ public void setStuSex(String stuSex) {
 - 引用数据类型: 如未进行实例化，方法中调用对象非私有成员时会报空指针异常（具体内容，后面小节中会详细个绍）；当进行初始化后，可借由对象访问其非私有成员信息。
 - 基本数据类型: 可直接调用获取具体数值。
 
-
 示例: 现有公司类和员工类，在测试类中对员工信息进行测试。
+
+```java
+/**
+ * 公司类 Company
+ */
+public class Company {
+    /**
+     * 公司名name、公司地址address
+     */
+    String name;
+    String address;
+
+    /**
+     * 初始化全部属性
+     *
+     * @param name    公司名
+     * @param address 公司地址
+     */
+    public Company(String name, String address) {
+        this.name = name;
+        this.address = address;
+    }
+}
+```
+
+```java
+/**
+ * 员工类
+ */
+public class Staff {
+    /**
+     * 员工年龄age、员工姓名name、员工所在公司comp
+     */
+    int age;
+    String name;
+    Company comp;
+
+    /**
+     * 初始化全部属性
+     *
+     * @param age  员工年龄
+     * @param name 员工姓名
+     */
+    public Staff(int age, String name) {
+        this.age = age;
+        this.name = name;
+    }
+
+    /**
+     * 显示员工信息
+     * @return 员工信息
+     */
+    public String display() {
+        return "Staff {" +
+                "\n \r age = " + this.age +
+                "\n \r name = " + this.name +
+                "\n \r compaName = " + this.comp.name +
+                "\n \r compAddress = " + this.comp.address +
+                "\n}";
+    }
+}
+```
+
+在测试类中生成公司、员工对象，但未对员工对象中的公司属性赋值：
+
+```java
+public class Test {
+    public static void main(String[] args) {
+        Company cp = new Company("niuniu", "加里敦");
+        Staff st = new Staff(30, "huahua");
+        System.out.println(st.display());
+    }
+}
+```
+
+运行结果：
+
+```java
+Exception in thread "main" java.lang.NullPointerException
+	at com.imooc.java2020.week03.schooldemo.practice.Staff.display(Staff.java:47)
+	at com.imooc.java2020.week03.schooldemo.practice.Test.main(Test.java:11) 
+```
+
+如果修改员工类中代码：加入对员工公司属性的初始化设置。
+
+```java
+public class Staff {
+    /**
+     * 员工年龄age、员工姓名name、员工所在公司comp
+     */
+    int age;
+    String name;
+    Company comp = new Company("不知道啥公司~", "不知道啥位置~");
+    
+    ...
+}
+```
+
+保持测试类代码和公司类代码不变，运行代码结果：
+
+```java
+Staff {
+ age = 30
+ name = huahua
+ compaName = 不知道啥公司~
+ compAddress = 不知道啥位置~
+}
+```
+
+
+
+```java
+
+
+```
+
+
+
+```java
+
+
+```
 
 ### 关于类型关联阶段常见问题
 

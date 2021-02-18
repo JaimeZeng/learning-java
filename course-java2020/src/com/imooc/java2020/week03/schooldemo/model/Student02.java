@@ -1,7 +1,7 @@
 package com.imooc.java2020.week03.schooldemo.model;
 
 /**
- * 学生类 Student02
+ * 学生类 Student02,在学生类 Student 的自我介绍方法中，添加一个专业对象作为参数，从中获取专业名称、学制年限
  *
  * @author Jaime
  * @project_name learning-java

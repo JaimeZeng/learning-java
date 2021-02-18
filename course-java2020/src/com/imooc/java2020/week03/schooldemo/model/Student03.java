@@ -1,7 +1,7 @@
 package com.imooc.java2020.week03.schooldemo.model;
 
 /**
- * 学生类 Student03
+ * 学生类 Student03，在学生类 Student 中，添加一个专业对象作为属性，从中获取专业名称、学制年限
  *
  * @author Jaime
  * @project_name learning-java
