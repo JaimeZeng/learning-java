@@ -1,3 +1,8 @@
+---
+title: 第3周 面向对象之封装与继承
+url: week03
+---
+
 # 面向对象之封装与继承
 
 ## 面向对象
@@ -37,10 +42,12 @@
 
 > 具体开发过程中，先定义类再实例化对象
 
-- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCat.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCat.java)
-- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCatTest.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCatTest.java)
-- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoPerson.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoPerson.java)
-- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoPersonTest.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoPersonTest.java)
+---
+
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/Cat.java](course-java2020/src/com/imooc/java2020/week03/classdemo/Cat.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/CatTest.java](course-java2020/src/com/imooc/java2020/week03/classdemo/CatTest.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/Person.java](course-java2020/src/com/imooc/java2020/week03/classdemo/Person.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/PersonTest.java](course-java2020/src/com/imooc/java2020/week03/classdemo/PersonTest.java)
 
 ### 单一职责原则
 
@@ -161,8 +168,10 @@ public class CatTest{
 5. 当有指定构造方法，无论是有参、无参的构造方法，都不会自动添加无参的构造方法。
 6. 一个类中可以有多个构造方法。
 
-- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCat01.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCat01.java)
-- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCatTest01.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCatTest01.java)
+---
+
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/Cat01.java](course-java2020/src/com/imooc/java2020/week03/classdemo/Cat01.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/Cat01Test.java](course-java2020/src/com/imooc/java2020/week03/classdemo/Cat01Test.java)
 
 ### this 关键字
 
@@ -220,8 +229,10 @@ public class CatTest{
     }
     ```
 
-- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCat01.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCat01.java)
-- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCatTest01.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoCatTest01.java)
+---
+
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/Cat01.java](course-java2020/src/com/imooc/java2020/week03/classdemo/Cat01.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/Cat01Test.java](course-java2020/src/com/imooc/java2020/week03/classdemo/Cat01Test.java)
 
 ### 就近原则
 
@@ -253,7 +264,7 @@ public class CatTest {
 }
 ```
 
-```bash
+```java
 // 运行结果
 小猫已经 1 月大了，跑的很欢快！
 小猫已经 0 月大了，跑的很欢快！
@@ -264,10 +275,15 @@ public class CatTest {
 接下来，我们就起来分析下这个结果产生的原因：
 
 1. main 方法启动，执行第一条语句，产生 Cat 类型对象 one，此时由于 Cat 类中没有定义构造方法，系统默认提供无参构造，并设置其属性 month 的默认值为 0。
+
 2. 创建一个 int 类型的变量 mh，赋值为 1。
+
 3. 调用 one 的 run 方法，将 mh 作为实参传入 run。此时，run 方法的参数 month 即为 1。
+
 4. run 方法执行第一句，由于此时在 run 方法中，由于就近原则的影响，其"可访问范围内"的 month，最近的是方法形参的 month 也就是说 month= month，执行操作实际为，方法形参的自身赋值。说白了，这句话的执行类似于 1=1，无实际意义。
-5. run 方法执行第二句，将赋值结果后的 month 传入输出语句，打印输出。即输出结果的第一行：小猫已经 1 月大了，跑的很欢快
+
+5. run 方法执行第二句，将赋值结果后的 month 传入输出语句，打印输出。即输出结果的第一行：小猫已经 1 月大了，跑的很欢快。
+
 6. 回到主方法，由于此时 one.month 仍是初始值 0，未被修改过，因此最后打印输出第二行：小猫已经 0 月大了，跑的很欢快。
 
 因此，当实际输出结果需要为 1 和 1 时，常用修订方案：
@@ -298,8 +314,10 @@ public class Cat() {
 }
 ```
 
-- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoMonkey.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoMonkey.java)
-- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoMonkeyTest.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassDemoMonkeyTest.java)
+---
+
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/Monkey.java](course-java2020/src/com/imooc/java2020/week03/classdemo/Monkey.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/MonkeyTest.java](course-java2020/src/com/imooc/java2020/week03/classdemo/MonkeyTest.java)
 
 ### this 关键字应用
 
@@ -312,15 +330,15 @@ this 在 Java 中可用于调用成员属性、成员方法、构造方法，也
 示例: 分别在 run 和 eat 方法中，通过 this 访问属性 month 和 name。
 
 ```java
-package com.imooc.java2020.week03;
+package com.imooc.java2020.week03.classdemo.thiscall;
 
 /**
- * 自定义类，通过 this 访问成员属性
+ * 自定义类 Cat01，通过 this 访问成员属性
  *
  * @author Jaime
  * @project_name learning-java
  */
-public class Sections01ClassThisCat01 {
+public class Cat01 {
     int month;
     String name;
 
@@ -344,20 +362,21 @@ public class Sections01ClassThisCat01 {
         System.out.printf("名叫 %s 的小猫在吃鱼！\n", this.name);
     }
 }
+
 ```
 
 ```java
-package com.imooc.java2020.week03;
+package com.imooc.java2020.week03.classdemo.thiscall;
 
 /**
- * 自定义类 Sections01ClassThisCat01 的测试类
+ * 自定义类 Cat01 的测试类
  *
  * @author Jaime
  * @project_name learning-java
  */
-public class Sections01ClassThisCat01Test {
+public class Cat01Test {
     public static void main(String[] args) {
-        Sections01ClassThisCat01 one = new Sections01ClassThisCat01();
+        Cat01 one = new Cat01();
         int mh = 1;
 
         System.out.println("---------- 没有 this ----------");
@@ -371,6 +390,7 @@ public class Sections01ClassThisCat01Test {
         one.eat();
     }
 }
+
 ```
 
 ```java
@@ -386,23 +406,23 @@ public class Sections01ClassThisCat01Test {
 
 **总结:** 大部分时候，类的方法中访问成员属性时无须使用 this，但如果方法里存在局部变量和成员属性同名，但程序又需要在该方法里访问成员属性时，则必须使用 this 进行调用。
 
-- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat01.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat01.java)
-- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat01Test.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat01Test.java)
+---
 
-#### this 调用成员方法
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat01.java](course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat01.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat01Test.java](course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat01Test.java)
 
 在类中的 run 方法中，分别通过 this 以及不加 this 为前缀调用的方式访问同类中的 eat 方法。
 
 ```java
-package com.imooc.java2020.week03;
+package com.imooc.java2020.week03.classdemo.thiscall;
 
 /**
- * 自定义类 Sections01ClassThisCat02，通过 this 调用成员方法
+ * 自定义类 Cat02，通过 this 调用成员方法
  *
  * @author Jaime
  * @project_name learning-java
  */
-public class Sections01ClassThisCat02 {
+public class Cat02 {
     String name;
 
     public void run() {
@@ -417,19 +437,21 @@ public class Sections01ClassThisCat02 {
         System.out.printf("名叫 %s 的小猫在吃鱼！\n", this.name);
     }
 }
+
 ```
 
 ```java
-package com.imooc.java2020.week03;
+package com.imooc.java2020.week03.classdemo.thiscall;
 
 /**
- * 自定义类 Sections01ClassThisCat02 的测试类
+ * 自定义类 Cat02 的测试类
+ *
  * @author Jaime
  * @project_name learning-java
  */
-public class Sections01ClassThisCat02Test {
+public class Cat02Test {
     public static void main(String[] args) {
-        Sections01ClassThisCat02 one = new Sections01ClassThisCat02();
+        Cat02 one = new Cat02();
         one.run();
     }
 }
@@ -445,8 +467,10 @@ public class Sections01ClassThisCat02Test {
 
 **总结:** 大部分时候，类的成员方法访问同类中其他成员方法时，this 关键字可加可不加，效果相同。
 
-- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat02.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat02.java)
-- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat02Test.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat02Test.java)
+---
+
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat02.java](course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat02.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat02Test.java](course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat02Test.java)
 
 #### this 调用构造方法
 
@@ -457,24 +481,25 @@ public class Sections01ClassThisCat02Test {
 **在带参构造中调用无参构造**
 
 ```java
-package com.imooc.java2020.week03;
+package com.imooc.java2020.week03.classdemo.thiscall;
 
 /**
- * 自定义类 Sections01ClassThisCat03，
+ * 自定义类 Cat03，
  * 在单参构造中使用 this 调用无参构造，双参构造中调用单参构造
+ * 在普通成员方法内调用构造
  *
  * @author Jaime
  * @project_name learning-java
  */
-public class Sections01ClassThisCat03 {
+public class Cat03 {
     String name;
     int month;
 
-    public Sections01ClassThisCat03() {
+    public Cat03() {
         System.out.println("无参构造！");
     }
 
-    public Sections01ClassThisCat03(String name) {
+    public Cat03(String name) {
         // 调用无参构造
         // 构造方法的调用必须是构造函数本体中的第一条语句!!!
         /*this.name = name;
@@ -486,36 +511,42 @@ public class Sections01ClassThisCat03 {
         System.out.println("单参构造！");
     }
 
-    public Sections01ClassThisCat03(String name, int month) {
+    public Cat03(String name, int month) {
         this(name);
         this.month = month;
         System.out.println("双参构造！");
+    }
+
+    public void run() {
+        // 不能在类中普通成员方法内通过 this() 调用构造方法
+        // this();
+        System.out.println("小猫快跑！");
     }
 }
 
 ```
 
 ```java
-package com.imooc.java2020.week03;
+package com.imooc.java2020.week03.classdemo.thiscall;
 
 /**
- * 自定义类 Sections01ClassThisCat03 的测试类
+ * 自定义类 Cat03 的测试类
  *
  * @author Jaime
  * @project_name learning-java
  */
-public class Sections01ClassThisCat03Test {
+public class Cat03Test {
     public static void main(String[] args) {
-        Sections01ClassThisCat03 one, two, three;
+        Cat03 one, two, three;
 
         System.out.println("--------- 调用无参构造 ---------");
-        one = new Sections01ClassThisCat03();
+        one = new Cat03();
 
         System.out.println("--------- 单参构造调用无参构造 ---------");
-        two = new Sections01ClassThisCat03("huahua");
+        two = new Cat03("huahua");
 
         System.out.println("--------- 双参构造调用单参构造 ---------");
-        three = new Sections01ClassThisCat03("huahua", 2);
+        three = new Cat03("huahua", 2);
     }
 }
 
@@ -539,27 +570,29 @@ public class Sections01ClassThisCat03Test {
 2. 可以通过 this 调用本类中带参或者无参构造方法，调用带参构造方法时，需要按顺序传入设定的参数。
 3. 在一个构造方法内只能调用一个构造方法。
 
-- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03.java)
-- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03Test.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03Test.java)
+---
+
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat03.java](course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat03.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat03Test.java](course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat03Test.java)
 
 **在普通成员方法内调用构造**
 
 ```java
-package com.imooc.java2020.week03;
+package com.imooc.java2020.week03.classdemo.thiscall;
 
 /**
- * 自定义类 Sections01ClassThisCat03，
+ * 自定义类 Cat03，
  * 在单参构造中使用 this 调用无参构造，双参构造中调用单参构造
  * 在普通成员方法内调用构造
  *
  * @author Jaime
  * @project_name learning-java
  */
-public class Sections01ClassThisCat03 {
+public class Cat03 {
     String name;
     int month;
 
-    public Sections01ClassThisCat03() {
+    public Cat03() {
         System.out.println("无参构造！");
     }
 
@@ -573,29 +606,32 @@ public class Sections01ClassThisCat03 {
 
 **总结:** 不能在类中普通成员方法内通过 this 调用构造方法。
 
-- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03.java)
-- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03Test.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat03Test.java)
+---
+
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat03.java](course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat03.java)
+
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat03Test.java](course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat03Test.java)
 
 #### this 方法调用时作为参数传递
 
 在类中，定义 run 方法，方法参数为类对象。类方法中，调用 run 方法，并通过 this 指代，传入当前对象。
 
 ```java
-package com.imooc.java2020.week03;
+package com.imooc.java2020.week03.classdemo.thiscall;
 
 /**
- * 自定义类 Sections01ClassThisCat04，使用 this 调用使用类作为参数的成员方法。
+ * 自定义类 Cat04，使用 this 调用使用类作为参数的成员方法。
  *
  * @author Jaime
  * @project_name learning-java
  */
-public class Sections01ClassThisCat04 {
+public class Cat04 {
     String name;
 
-    public Sections01ClassThisCat04() {
+    public Cat04() {
     }
 
-    public Sections01ClassThisCat04(String name) {
+    public Cat04(String name) {
         this.name = name;
     }
 
@@ -606,11 +642,11 @@ public class Sections01ClassThisCat04 {
     }
 
     // 等价方法
-    // public void call(Sections01ClassThisCat04 cat04){
+    // public void call(Cat04 cat04){
     //     run(cat04);
     // }
 
-    public void run(Sections01ClassThisCat04 cat04) {
+    public void run(Cat04 cat04) {
         System.out.printf("昵称为 %s 的小猫在奔跑！\n", cat04.name);
     }
 }
@@ -618,17 +654,18 @@ public class Sections01ClassThisCat04 {
 ```
 
 ```java
-package com.imooc.java2020.week03;
+package com.imooc.java2020.week03.classdemo.thiscall;
 
 /**
- * 自定义类 Sections01ClassThisCat04 的测试类。
+ * 自定义类 Cat04 的测试类。
+ *
  * @author Jaime
  * @project_name learning-java
  */
-public class Sections01ClassThisCat04Test {
+public class Cat04Test {
     public static void main(String[] args) {
-        Sections01ClassThisCat04 one;
-        one = new Sections01ClassThisCat04("huahua");
+        Cat04 one;
+        one = new Cat04("huahua");
         one.call();
     }
 }
@@ -641,33 +678,35 @@ public class Sections01ClassThisCat04Test {
 
 **总结：**this 可以作为方法参数进行传递，代表调用方法的当前对象。
 
-- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat04.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat04.java)
-- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat04Test.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat04Test.java)
+---
+
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat04.java](course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat04.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat04Test.java](course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat04Test.java)
 
 #### this 方法调用时作为返回值传递
 
 在类中，定义 call 方法，方法中通过 this 返回类对象。
 
 ```java
-package com.imooc.java2020.week03;
+package com.imooc.java2020.week03.classdemo.thiscall;
 
 /**
- * 自定义类 Sections01ClassThisCat05，在成员方法中通过 this 返回类对象。
+ * 自定义类 Cat05，在成员方法中通过 this 返回类对象。
  *
  * @author Jaime
  * @project_name learning-java
  */
-public class Sections01ClassThisCat05 {
+public class Cat05 {
     String name;
 
-    public Sections01ClassThisCat05() {
+    public Cat05() {
     }
 
-    public Sections01ClassThisCat05(String name) {
+    public Cat05(String name) {
         this.name = name;
     }
 
-    public Sections01ClassThisCat05 call(String name) {
+    public Cat05 call(String name) {
         this.name = name;
         //通过 this 返回类对象
         return this;
@@ -677,17 +716,17 @@ public class Sections01ClassThisCat05 {
 ```
 
 ```java
-package com.imooc.java2020.week03;
+package com.imooc.java2020.week03.classdemo.thiscall;
 
 /**
- * 自定义类 Sections01ClassThisCat05 的测试类
+ * 自定义类 Cat05 的测试类
  *
  * @author Jaime
  * @project_name learning-java
  */
-public class Sections01ClassThisCat05Test {
+public class Cat05Test {
     public static void main(String[] args) {
-        Sections01ClassThisCat05 one = new Sections01ClassThisCat05();
+        Cat05 one = new Cat05();
         System.out.println(one.call("huahua"));
         System.out.println(one.call("huahua").name);
     }
@@ -696,14 +735,16 @@ public class Sections01ClassThisCat05Test {
 ```
 
 ```java
-com.imooc.java2020.week03.Sections01ClassThisCat05@1b6d3586
+com.imooc.java2020.week03.classdemo.thiscall.Cat05@1b6d3586
 huahua
 ```
 
 **总结：** this 可以作为方法返回值，代表返回当前调用对象。
 
-- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat05.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat05.java)
-- [course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat05Test.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections01ClassThisCat05Test.java)
+---
+
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat05.java](course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat05.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat05Test.java](course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat05Test.java)
 
 ### 构造方法常见问题
 
@@ -773,8 +814,11 @@ huahua
 2. 创建 getter/setter 方法（设为 public，用于属性的读写）
 3. 在 getter/setter 方法中加入属性控制语句（对属性值的合法性进行判断）
 
-- [course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationDemoCat.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationDemoCat.java)
-- [course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationDemoCatTest.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationDemoCatTest.java)
+---
+
+- [course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/Cat.java](course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/Cat.java)
+
+- [course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/CatTest.java](course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/CatTest.java)
 
 #### 关于封装应用中的常见问题
 
@@ -806,11 +850,12 @@ huahua
 5. **private 修饰的成员怎么用?**
 
    - 在同一个类中，可以直接访问。
-
    - 在不同类中，需要通过对应的非私有方法访问。
 
-- [course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeBook.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeBook.java)
-- [course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeBookTest.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeBookTest.java)
+---
+
+- [course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/Book.java](course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/Book.java)
+- [course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/BookTest.java](course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/BookTest.java)
 
 #### 引用数据类型的应用 -- 方法参数
 
@@ -821,15 +866,15 @@ Java 中的方法包含无参、有参、无返回值、带返回值多种形态
 现有宠物猫类，包含属性：昵称和年龄。
 
 ```java
-package com.imooc.java2020.week03;
+package com.imooc.java2020.week03.encapsulationdemo.practice;
 
 /**
- * 宠物猫类 Sections02EncapsulationPracticeCat
+ * 宠物猫类 Cat
  *
  * @author Jaime
  * @project_name learning-java
  */
-public class Sections02EncapsulationPracticeCat {
+public class Cat {
     /**
      * 昵称name、年龄age
      */
@@ -838,10 +883,11 @@ public class Sections02EncapsulationPracticeCat {
 
     /**
      * 有参构造初始化
+     *
      * @param name 昵称
-     * @param age 年龄
+     * @param age  年龄
      */
-    public Sections02EncapsulationPracticeCat(String name, int age) {
+    public Cat(String name, int age) {
         // this.name = name;
         // this.age = age;
         this.setName(name);
@@ -850,6 +896,7 @@ public class Sections02EncapsulationPracticeCat {
 
     /**
      * get 获取昵称
+     *
      * @return 昵称
      */
     public String getName() {
@@ -858,6 +905,7 @@ public class Sections02EncapsulationPracticeCat {
 
     /**
      * set 设置昵称
+     *
      * @param name 昵称
      */
     public void setName(String name) {
@@ -866,6 +914,7 @@ public class Sections02EncapsulationPracticeCat {
 
     /**
      * get 获取年龄
+     *
      * @return 年龄
      */
     public int getAge() {
@@ -874,6 +923,7 @@ public class Sections02EncapsulationPracticeCat {
 
     /**
      * set 设置年龄
+     *
      * @param age 年龄
      */
     public void setAge(int age) {
@@ -883,18 +933,18 @@ public class Sections02EncapsulationPracticeCat {
 
 ```
 
-宠物猫管理类，包含年龄比较的方法 catMonthPK
+宠物猫管理类，包含年龄比较的方法 catMonthPk
 
 ```java
-package com.imooc.java2020.week03;
+package com.imooc.java2020.week03.encapsulationdemo.practice;
 
 /**
- * 宠物猫管理类 Sections02EncapsulationPracticeCatManage
+ * 宠物猫管理类 CatManage
  *
  * @author Jaime
  * @project_name learning-java
  */
-public class Sections02EncapsulationPracticeCatManage {
+public class CatManage {
 
     /**
      * 宠物猫年龄比较
@@ -903,7 +953,7 @@ public class Sections02EncapsulationPracticeCatManage {
      * @param two 宠物猫二
      * @return 年龄大的宠物猫
      */
-    public Sections02EncapsulationPracticeCat catMonthPk(Sections02EncapsulationPracticeCat one, Sections02EncapsulationPracticeCat two) {
+    public Cat catMonthPk(Cat one, Cat two) {
         return (one.getAge() > two.getAge()) ? one : two;
     }
 }
@@ -913,20 +963,20 @@ public class Sections02EncapsulationPracticeCatManage {
 宠物猫测试类，包含主方法
 
 ```java
-package com.imooc.java2020.week03;
+package com.imooc.java2020.week03.encapsulationdemo.practice;
 
 /**
- * 自定义 Sections02EncapsulationPracticeCat 类的测试类：宠物猫测试类
+ * 自定义 Cat 类的测试类：宠物猫测试类
  *
  * @author Jaime
  * @project_name learning-java
  */
-public class Sections02EncapsulationPracticeCatTest {
+public class CatTest {
     public static void main(String[] args) {
-        Sections02EncapsulationPracticeCat one, two;
-        one = new Sections02EncapsulationPracticeCat("huahua", 3);
-        two = new Sections02EncapsulationPracticeCat("fanfan", 6);
-        Sections02EncapsulationPracticeCatManage manage = new Sections02EncapsulationPracticeCatManage();
+        Cat one, two;
+        one = new Cat("huahua", 3);
+        two = new Cat("fanfan", 6);
+        CatManage manage = new CatManage();
         System.out.println("优胜者 name = " + manage.catMonthPk(one, two).getName() + ", age = " + manage.catMonthPk(one, two).getAge());
     }
 }
@@ -942,15 +992,17 @@ public class Sections02EncapsulationPracticeCatTest {
 执行流程
 
 1. 宠物猫测试类中包含主方法，启动后，实例化产生宠物猫类类型的 one，two 两个对象，并通过构造方法完成对象初始化。
-2. 完成宠物猫管理类类型实例化操作，并调用 catMonthPK 方法，实现两只宠物猫年龄的对比。
-3. 在 catMonthPK 方法中，由于方法参数是自定义类型宠物 o 猫类类型，因此传入 one，two 两个对象的引用，并借由引用获取到对象的年龄，进而进行判断，将年龄大的对象作为返回值返回主方法。
-4. 主方法中的局部变量 max 接收到 catMonthPK 返回的最大值的引用，并获取对应信息打印输出。
+2. 完成宠物猫管理类类型实例化操作，并调用 catMonthPk 方法，实现两只宠物猫年龄的对比。
+3. 在 catMonthPk 方法中，由于方法参数是自定义类型宠物猫类类型，因此传入 one，two 两个对象的引用，并借由引用获取到对象的年龄，进而进行判断，将年龄大的对象作为返回值返回主方法。
+4. 主方法中的局部变量 max 接收到 catMonthPk 返回的最大值的引用，并获取对应信息打印输出。
 
 **请注意：** 当方法参数是引用数据类型对象时，方法调用时，也需传入与之匹配的类型的对象。
 
-- [course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeCat.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeCat.java)
-- [course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeCatManage.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeCatManage.java)
-- [course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeCatTest.java](https://hub.fastgit.org/JaimeZeng/learning-java/blob/main/course-java2020/src/com/imooc/java2020/week03/Sections02EncapsulationPracticeCatTest.java)
+---
+
+- [course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/Cat.java](course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/Cat.java)
+- [course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/CatManage.java](course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/CatManage.java)
+- [course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/CatTest.java](course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/CatTest.java)
 
 ### 包
 
@@ -980,26 +1032,198 @@ public class Sections02EncapsulationPracticeCatTest {
 1. 导入包中全部类：`import com.imooc.*;`
 2. 导入包中指定类：`import com.imooc.animal.Cat;`
 
+---
+
+- [course-java2020/src/com/imooc/java2020/week03/packagedemo/animal/Cat.java](course-java2020/src/com/imooc/java2020/week03/packagedemo/animal/Cat.java)
+- [course-java2020/src/com/imooc/java2020/week03/packagedemo/mechanics/Cat.java](course-java2020/src/com/imooc/java2020/week03/packagedemo/mechanics/Cat.java)
+- [course-java2020/src/com/imooc/java2020/week03/packagedemo/demotest/CatTest.java](course-java2020/src/com/imooc/java2020/week03/packagedemo/demotest/CatTest.java)
+
+#### package 和 import 的常见问题
+
+1. **为什么需要打包，都放在一起使用不行么?**
+
+   为便于大型应用程序中信息管理，解决协同工作时类的命名冲突的问题，Java 引入了"包管理"机制。"包管理"机制类似于计算机管理系统中的文件夹。
+
+   基于合理分类，便于管理的思想，约定：
+
+   - 推荐将一组相互具有联系并组合起来完成某一功能的类聚集到同一个包中。
+   - 同一个包中，类名不允许重复。
+   - 不同包中，可以存在同名类。
+
+2. **包管理语句使用规则是什么?**
+
+   - 语法规则
+     - package
+       - 作用: 指明该文件中定义的类所在的包。
+       - 语法格式: `package 包名`。
+       - 包名推荐定义格式: `域名倒序.模块.功能`，其中: 用 `.` 来指明包的层次。
+       - 包名推荐全小写。
+     - import
+       - 作用:当需要引用本包之外定义的类时，可以通过 import 语句进行信息导入，以简化代码编写。
+       - 语法格式: `import 包名.*` 或者 `import 包名.类名`。
+   - 注意事项
+     - package 语句必须放在 Java 源文件第一行，一个 Java 文件中只能有一条 package 语句。如缺省，则指定为无名包。
+     - 一个 Java 文件中可以有多条 import 语句。如缺省，则默认导入 `java.lang` 包下的全部类。
+   - import 需写在 class 语句上面，即一个 Java 文件中的存在顺序应是: `package` - `import` - `class`。
+
+3. **import 语句几种导入方式的区别是什么?**
+
+   - `import 包名.*` :导入指定包名下所有直接允许访问的类，无法导入其子包中的类。
+   - `import 包名.类` :导入指定包名下指定的类。
+
+#### import 练习
+
+0. 存在两个类：宠物猫类 Cat 和机器猫类 Cat。
+
+   ```java
+   package com.imooc.java2020.week03.packagedemo.animal;
+
+   /**
+       * 宠物猫类 Cat
+       *
+       * @author Jaime
+       * @project_name learning-java
+       */
+   public class Cat {
+       /**
+           * 无参构造
+           */
+       public Cat() {
+           System.out.println("我是宠物猫！");
+       }
+   }
+   ```
+
+   ```java
+   package com.imooc.java2020.week03.packagedemo.mechanics;
+
+   /**
+       * 机器猫类 Cat
+       *
+       * @author Jaime
+       * @project_name learning-java
+       */
+   public class Cat {
+       public Cat() {
+           System.out.println("我是机器猫呦~");
+       }
+   }
+   ```
+
+1. 当需要访问宠物猫类时，以下 3 种方案任选其一即可。
+
+   ```java
+   package com.imooc.java2020.week03.packagedemo.demotest;
+
+   // 方案1：import 包名.* - 导入指定包名下所有直接允许访问的类
+   // import com.imooc.java2020.week03.packagedemo.animal.*;
+
+   // 方案2：import 包名.类 - 导入指定包名下指定的类
+   // import com.imooc.java2020.week03.packagedemo.animal.Cat;
+
+   /**
+       * Cat 测试类
+       * @author Jaime
+       * @project_name learning-java
+       */
+   public class CatTest {
+       public static void main(String[] args) {
+           // 方案1,2 调用语句
+           Cat one = new Cat();
+           // 方案3：包名.类名 - 调用时直接写完整名
+           com.imooc.java2020.week03.packagedemo.animal.Cat two = new com.imooc.java2020.week03.packagedemo.animal.Cat();
+
+       }
+   }
+
+   ```
+
+   执行结果：
+
+   ```java
+   我是宠物猫！
+   ```
+
+2. 如果同时访问宠物猫类和机器猫类时。
+
+   ```java
+   package com.imooc.java2020.week03.packagedemo.demotest;
+
+   import com.imooc.java2020.week03.packagedemo.animal.Cat;
+
+   /**
+       * Cat 测试类
+       * @author Jaime
+       * @project_name learning-java
+       */
+   public class CatTest {
+       public static void main(String[] args) {
+           Cat one = new Cat();
+           com.imooc.java2020.week03.packagedemo.mechanics.Cat two = new com.imooc.java2020.week03.packagedemo.mechanics.Cat();
+
+       }
+   }
+   ```
+
+   运行结果：
+
+   ```java
+   我是宠物猫！
+   我是机器猫呦~
+   ```
+
+3. 如果同时导入宠物猫类和机器猫类，**分别以和指定类名进行导入，以类名导入优先级最高。**
+
+   ```java
+   package com.imooc.java2020.week03.packagedemo.demotest;
+
+   import com.imooc.java2020.week03.packagedemo.mechanics.*;
+   import com.imooc.java2020.week03.packagedemo.animal.Cat;
+
+   /**
+       * Cat 测试类
+       * @author Jaime
+       * @project_name learning-java
+       */
+   public class CatTest {
+       public static void main(String[] args) {
+           Cat one = new Cat();
+       }
+   }
+   ```
+
+   运行结果：
+
+   ```java
+   我是宠物猫！
+   ```
+
 #### 常用系统包
 
-java.lang 包含 java 语言基础的类
-java.util 包含 java 语言中各种工具类
-java.io 包含输入、输出相关功能的类
+- java.lang 包含 java 语言基础的类
+- java.util 包含 java 语言中各种工具类
+- java.io 包含输入、输出相关功能的类
 
 ### static
 
 - static+属性---静态属性
 - static+方法---静态方法
-- static+类---不存在
+- static+类---不存在（只能 public, abstract, final）
 - static+方法内局部变量---不存在
 
-静态成员随类加载产生，直至类销毁才回收
+静态成员随类加载产生，直至类销毁才回收。
 
 ### 静态方法
 
-1. 可以直接调用同类中的静态成员
-2. 不可以直接调用同类中的非静态成员
-3. 可以通过实例化对象后，对象调用的方式完成非静态成员调用
+1. 可以使用类直接访问同类中的静态成员，不建议通过类实例访问静态成员。
+2. 不可以直接调用同类中的非静态成员(只能 static)。
+3. 可以通过实例化对象后，对象调用的方式完成非静态成员调用。
+4. 静态方法中不能使用 this。
+
+---
+
+- [course-java2020/src/com/imooc/java2020/week03/packagedemo/animal/Cat01.java](course-java2020/src/com/imooc/java2020/week03/packagedemo/animal/Cat01.java)
+- [course-java2020/src/com/imooc/java2020/week03/packagedemo/demotest/Cat01Test.java](course-java2020/src/com/imooc/java2020/week03/packagedemo/demotest/Cat01Test.java)
 
 ### 代码块
 
@@ -1008,8 +1232,182 @@ java.io 包含输入、输出相关功能的类
 3. 类内的代码块称为：构造代码块
 4. 构造代码块前+static：静态代码块
 
-### 代码块执行顺序那边
+#### 代码块执行顺序
 
 1. 无论实例产生多少对象，静态代码块只执行一次
 2. 构造代码块随实例化过程调用
-3. 普通代码块随方法调用执行
+3. 普通代码块随方法调用执行，执行结束后里面的临时变量就会被系统回收。
+
+#### 示例代码
+
+```java
+package com.imooc.java2020.week03.packagedemo.animal;
+
+/**
+ * 宠物猫类 Cat02 + {} 代码块
+ *
+ * @author Jaime
+ * @project_name learning-java
+ */
+public class Cat02 {
+    /**
+     * 昵称name、价格price
+     */
+    private String name;
+    public static int price;
+
+    /**
+     * 无参构造
+     */
+    public Cat02() {
+    }
+
+    /**
+     * 构造初始化
+     *
+     * @param name 昵称
+     */
+    public Cat02(String name) {
+        this.name = name;
+    }
+
+    /**
+     * get 获取昵称
+     *
+     * @return 昵称
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * set 设置昵称
+     *
+     * @param name 昵称
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * 静态代码块1
+     */
+    static {
+        System.out.println("====== Cat02 three ======");
+        Cat02 three = new Cat02();
+        three.setName("fanfan");
+        Cat02.price = 20000;
+        // tempCat.run(temp.getName(), Cat02.price);
+        Cat02.eat(three);
+        System.out.println("静态代码块1.");
+    }
+
+    /**
+     * 静态代码块2
+     */
+    static {
+        System.out.println("静态代码块2.");
+    }
+
+    /**
+     * 构造代码块1
+     */ {
+        System.out.println("构造代码块1.");
+    }
+
+    /**
+     * 构造代码块2
+     */ {
+        System.out.println("构造代码块2.");
+    }
+
+    /**
+     * 奔跑的方法
+     *
+     * @param name 宠物猫昵称
+     */
+    public void run(String name, int price) {
+        System.out.println("name = " + name + ", price = " + price + " 在愉快的奔跑中~");
+        /**
+         * 普通代码块1
+         */
+        {
+            int age = 12;
+            System.out.println("age = "+ age+", run() 普通代码块1.");
+        }
+        /**
+         * 普通代码块2
+         */
+        {
+            int age = 13;
+            System.out.println("age = "+ age+", run() 普通代码块2.");
+        }
+    }
+
+    /**
+     * 吃东西的方法
+     *
+     * @param cat02 宠物猫类对象
+     */
+    public static void eat(Cat02 cat02) {
+        cat02.run(cat02.getName(), Cat02.price);
+    }
+}
+
+```
+
+```java
+package com.imooc.java2020.week03.packagedemo.demotest;
+
+import com.imooc.java2020.week03.packagedemo.animal.Cat02;
+
+/**
+ * Cat02 测试类
+ *
+ * @author Jaime
+ * @project_name learning-java
+ */
+public class Cat02Test {
+    public static void main(String[] args) {
+        System.out.println("====== Cat02 one ======");
+        Cat02 one = new Cat02("huahua");
+        one.run(one.getName(), Cat02.price);
+        System.out.println("====== Cat02 two ======");
+        Cat02 two = new Cat02("niuniu");
+        Cat02.price = 1000;
+        // two.eat(two);
+        Cat02.eat(two);
+    }
+}
+
+```
+
+执行结果
+
+```java
+====== Cat02 one ======
+====== Cat02 three ======
+构造代码块1.
+构造代码块2.
+name = fanfan, price = 20000 在愉快的奔跑中~
+age = 12, run() 普通代码块1.
+age = 13, run() 普通代码块2.
+静态代码块1.
+静态代码块2.
+构造代码块1.
+构造代码块2.
+name = huahua, price = 20000 在愉快的奔跑中~
+age = 12, run() 普通代码块1.
+age = 13, run() 普通代码块2.
+====== Cat02 two ======
+构造代码块1.
+构造代码块2.
+name = niuniu, price = 1000 在愉快的奔跑中~
+age = 12, run() 普通代码块1.
+age = 13, run() 普通代码块2.
+```
+
+---
+
+- [course-java2020/src/com/imooc/java2020/week03/packagedemo/animal/Cat02.java](course-java2020/src/com/imooc/java2020/week03/packagedemo/animal/Cat02.java)
+- [course-java2020/src/com/imooc/java2020/week03/packagedemo/demotest/Cat02Test.java](course-java2020/src/com/imooc/java2020/week03/packagedemo/demotest/Cat02Test.java)
