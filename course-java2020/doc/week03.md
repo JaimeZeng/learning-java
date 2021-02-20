@@ -2006,15 +2006,11 @@ Staff {
 | P002     | 助理     |
 | P003     | 职员     |
 
-
-
 程序运行参考效果图如下：
 
 ```java
 
 ```
-
-
 
 ### 任务描述
 
@@ -2091,10 +2087,106 @@ Staff {
 - 测试类【18 分】
   - 测试程序，将题目中的员工信息传入到程序中，参照效果图输出结果。
 
-----
+---
 
-- 
-
-
+-
 
 ## 继承
+
+- 一种类与类之间的关系
+
+- 使用已存在的类的定义作为基础建立新类
+
+- 新类的定义可以增加新的数据或新的功能，也可以用父类的功能，但不能选择性地继承父类。
+
+```java
+父类（基类）
+↑
+子类（派生类）
+```
+
+### 特点
+
+- 子类拥有父类非 private 的属性、方法。
+- 子类可以拥有自己的属性和方法，即子类可以对父类进行扩展。
+- 子类可以用自己的方式实现父类的方法。
+- Java 的继承是单继承，但是可以多重继承，单继承就是一个子类只能继承一个父类，多重继承就是，例如 B 类继承 A 类，C 类继承 B 类，所以按照关系就是 B 类是 C 类的父类，A 类是 B 类的父类，这是 Java 继承区别于 C++ 继承的一个特性。
+- 提高了类之间的耦合性（继承的缺点，耦合度高就会造成代码之间的联系越紧密，代码独立性越差）。
+
+### 继承的关系
+
+满足"A is a B "的关系就可以形成继承关系如：
+
+- 猫、狗是动物 → 猫，狗继承自动物
+- 学生、老师是人 → 学生，老师继承自人
+
+- 小轿车、大卡车是汽车 → 小轿车，大卡车继承自汽车
+
+### 实现继承
+
+使用 extends 实现封装
+
+- 写父类
+
+  ```java
+  class Animal{
+      //公共的属性和方法
+  }
+  ```
+
+- 编写子类，继承父类
+
+  ```java
+  class Dog extends Animal{
+      //子类特有的属性和方法
+  }
+  class Cat extends Animal{    //只能继承一个父类
+      //子类特有的属性和方法
+  }
+  ```
+
+---
+
+- [course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animal/Animal.java](course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animal/Animal.java)
+- [course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animal/Cat.java](course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animal/Cat.java)
+
+- [course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animal/Dog.java](course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animal/Dog.java)
+- [course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animaltest/Test.java](course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animaltest/Test.java)
+
+### 方法重写
+
+方法重写 PK 方法重载：
+
+- 方法重写 Override
+
+  - 在满足继承关系的子类中
+  - 方法名、参数个数、顺序、类型与父类相同
+  - 返回值相同，访问修饰符的限定范围大于等于父类方法
+
+- 方法重载 Overload
+
+  - 在同一个类中
+
+  - 方法名相同
+
+  - 参数列表（个数、顺序、类型）不同。
+
+    ```java
+    public void sleep(int month, String name) {}
+
+    public void sleep(String name,int month) {}  // ✔ 参数顺序不同
+    public void sleep(int name, String month) {} // ✖ 与参数名无关，都是两个参数，前一个为 int 类型，后一个为 String 类型
+    ```
+
+  - 返回值类型、访问修饰符任意
+
+| 区别点   | 重载方法 | 重写方法                                       |
+| :------- | :------- | :--------------------------------------------- |
+| 参数列表 | 必须修改 | 一定不能修改                                   |
+| 返回类型 | 可以修改 | 一定不能修改                                   |
+| 异常     | 可以修改 | 可以减少或删除，一定不能抛出新的或者更广的异常 |
+| 访问     | 可以修改 | 一定不能做更严格的限制（可以降低限制）         |
+
+方法重写存在
+
+属性重写不存在
