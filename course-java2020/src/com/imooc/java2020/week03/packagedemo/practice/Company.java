@@ -1,4 +1,4 @@
-package com.imooc.java2020.week03.schooldemo.practice;
+package com.imooc.java2020.week03.packagedemo.practice;
 
 /**
  * 公司类 Company

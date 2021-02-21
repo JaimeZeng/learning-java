@@ -1,4 +1,4 @@
-package com.imooc.java2020.week03.schooldemo.practice;
+package com.imooc.java2020.week03.packagedemo.practice;
 
 /**
  * 员工类 Staff
@@ -24,20 +24,6 @@ public class Staff {
         this.age = age;
         this.name = name;
     }
-
-    /**
-     * 初始化部分属性
-     *
-     * @param age  员工年龄
-     * @param name 员工姓名
-     */
-    // public Staff(int age, String name) {
-    //     this.age = age;
-    //     this.name = name;
-    //     if (this.comp == null) {
-    //         comp = new Company("不知道啥公司~", "不知道啥位置~");
-    //     }
-    // }
 
     /**
      * 显示员工信息
