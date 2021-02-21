@@ -56,15 +56,15 @@ url: week03
 - 在程序设计中，尽量把不同的职责，放在不同的职责中，即把 不同的变化原因，封装到不同的类中。
 
 > **单一职责原则总结**
->
+> 
 > 单一职责原则(SRP: `Single responsibility principle`)又称单一功能原则，面向对象五个基本原则(SOLID: SRP 单一责任原则、OCP 开放封闭原则、LSP 里氏替换原则、DIP 依赖倒置原则、ISP 接口分离原则)之一。它规定一个 SRP 单一一个发生变化的原因。该原则由罗伯特·C·马丁( Robert C.Martin)于《敏捷软件开发：原则、模式和实践》一书中给出的。马丁表示此原则是基于汤姆·狄马克(Tom DeMarco)和 Meilir Page-Jones 的著作中的内聚性原则发展出的。
->
+> 
 > 所调职责是指类变化的原因，如果一个类有多于一个的动机被改变，那么这个类就具有多于一个的职责。而单一职责原则就是指一个类或者模块应该有且只有一个改变的原因。
->
+> 
 > 单一职责原则告诉我们：一个类不能太累！在软件系统中,一个类(大到模块,，小到方法)承担的职责越多，它被复用的可能性就越小。而且一个类承担的职责过多，就相当于将这些职责耦合在一起，当其中一个职责变化时，可能会影响其他职责的运作。因此要将这些职责进行分离，将不同的职责封装在不同的类中，即将不同的变化原因封装在不同的类中，如果多个职责总是同时发生改变则可将它们封装在同一类中。
->
+> 
 > 之所以会出现单一职责原则就是因为在软件设计时会出现以下类似场景：T 负责两个不同的职责：职责 P1，职责 P2。当由于职责 P1 需求发生改变而需要修改类 T 时，有可能会导致原本运行正常的职责 P2 功能发生故障。也就是说职责 P1 和 P2 被耦合在了一起。
->
+> 
 > 解决办法：遵守单一职责原则，将不同的职责封装到不同的类或模块中，分别建立两个类 T1、T2，使 T1 完成职责 P1 功能，T2 完成职责 P2 功能。这样，当修改类 T1 时，不会使职责 P2 发生故障风险；同理，当修改 T2 时，也不会使职责 P1 发生故障风险。
 
 ### Java 内存管理之堆和栈
@@ -109,42 +109,42 @@ public class CatTest{
 1. JM 自动寻找 main 方法，执行第一句代码，创建一个 Cat 类的实例 one，在栈中分配块内存，存放一个指向堆区对象的地址譬如 0x111111。
 
 2. 创建一个 doube 型的变量 wh，由于是基础数据类型，直接在栈中存放 double 对应的值 200。
-
+   
    ![Java-memory-management-heap-and-stack-01](https://img.zxj.guru/java/img/Java-memory-management-heap-and-stack-01.png)
 
 3. 当调用 one 对象的 run 方法，并以 wh 为参数传入方法时，JVM 检测到方法参数 weight，作为方法局部变量，也会放入栈中并将 Wh 的值 200 复制给 weight。
-
+   
    ![Java-memory-management-heap-and-stack-02](https://img.zxj.guru/java/img/Java-memory-management-heap-and-stack-02.png)
 
 4. 当完成 run 方法调用后，立即释放局部变量 weight 所占用的栈空间。
-
+   
    ![Java-memory-management-heap-and-stack-03](https://img.zxj.guru/java/img/Java-memory-management-heap-and-stack-03.png)
 
 5. main 方法运行结束，立即释放栈中 one，wh 的空间，而堆中对象空间，则会当确定无引用指向后，由垃圾回收机制进行回收，不会立即释放资源。
-
+   
    ![Java-memory-management-heap-and-stack-04](https://img.zxj.guru/java/img/Java-memory-management-heap-and-stack-04.png)
 
 ### 对象实例化
 
 - 实例化对象的过程可以分为两部分: `Cat one = new Cat();`
-
+  
   1. 声明对象 `Cat one`
   2. 实例化对象 `new Cat();`
 
 - 每次 new 对象会产生新的实例化对象。
-
+  
   ```java
   Cat one = new Cat();
   Cat two = new Cat();
   ```
 
 - 多个对象可以指向同一块实例化空间
-
+  
   ```java
   Cat one = new Cat();
   Cat two = one;
   ```
-
+  
   ![Java-class-object-instantiation](https://img.zxj.guru/java/img/Java-class-object-instantiation.png)
 
 > 1. 对象必须被实例化之后才能使用
@@ -178,20 +178,20 @@ public class CatTest{
 - this：当前对象的默认引用；
 
 - this 的使用
-
+  
   - 调用成员变量，解决成员属性和局部变量同名冲突
-
+    
     ```java
     String name;
     int age;
     double weight;
     String species;
-
+    
     // 单参构造
     public Cat(String name) {
         this.name = name;
     }
-
+    
     // 全参构造
     public Cat(String name, int age, double weight, String species) {
         this.name = name;
@@ -200,32 +200,32 @@ public class CatTest{
         this.species = species;
     }
     ```
-
+  
   - 调用成员方法
-
+    
     ```java
     public void eat(String name) {
         this.run();
         System.out.println(name + " 快吃鱼！");
     }
-
+    
     public void run() {
         System.out.println("小猫快跑！");
     }
     ```
-
+  
   - 调用重载的构造方法
-
+    
     ```java
     public Cat() {
         System.out.println("无参构造方法");
     }
-
+    
     public Cat(String name) {
         this();    // 必须是构造方法第一条语句
         this.name = name;
         System.out.println("单参构造");
-
+    
     }
     ```
 
@@ -362,7 +362,6 @@ public class Cat01 {
         System.out.printf("名叫 %s 的小猫在吃鱼！\n", this.name);
     }
 }
-
 ```
 
 ```java
@@ -390,7 +389,6 @@ public class Cat01Test {
         one.eat();
     }
 }
-
 ```
 
 ```java
@@ -437,7 +435,6 @@ public class Cat02 {
         System.out.printf("名叫 %s 的小猫在吃鱼！\n", this.name);
     }
 }
-
 ```
 
 ```java
@@ -455,7 +452,6 @@ public class Cat02Test {
         one.run();
     }
 }
-
 ```
 
 ```java
@@ -523,7 +519,6 @@ public class Cat03 {
         System.out.println("小猫快跑！");
     }
 }
-
 ```
 
 ```java
@@ -549,7 +544,6 @@ public class Cat03Test {
         three = new Cat03("huahua", 2);
     }
 }
-
 ```
 
 ```java
@@ -650,7 +644,6 @@ public class Cat04 {
         System.out.printf("昵称为 %s 的小猫在奔跑！\n", cat04.name);
     }
 }
-
 ```
 
 ```java
@@ -669,7 +662,6 @@ public class Cat04Test {
         one.call();
     }
 }
-
 ```
 
 ```java
@@ -712,7 +704,6 @@ public class Cat05 {
         return this;
     }
 }
-
 ```
 
 ```java
@@ -731,7 +722,6 @@ public class Cat05Test {
         System.out.println(one.call("huahua").name);
     }
 }
-
 ```
 
 ```java
@@ -751,29 +741,28 @@ huahua
 #### 构造方法与类中成员方法的区别
 
 1. 作用
-
+   
    - 构造方法: 用于生成并初始化对象，针对不同的初始化状态，设置不同参数的构造方法。
-
+   
    - 成员方法: 根据类型所需任意功能，进行方法设置。
 
 2. 格式
-
 - 构造方法: 访问修饰符类名(参数列表){}
+
 - 成员方法: 访问修饰符返回值类型方法名(参数列表){}
-
 3. 特点
-
+   
    - 构造方法
-
+     
      - 方法名必须与类名相同，包括大小写
      - 没有返回值，也不能用 void 修饰。
      - 如果在定义类时没有定义构造方法，则编译系统会自动插入一个无参数且无方法体的构造方法以完成对象实例化。如果类中显式地定义了一个或多个构造方法，则编译器不再提供默认构造方法。
      - 类中可以包含多个构造方法，多个构造方法之间可以通过 this 进行调用，但仅可在第一行执行调用，this 调用一次只能调用一个构造方法。
      - 只能与 new 一起进行调用，不能通过对象名、类名等其他形式调用。
      - 在非构造方法中，只能结合对象实例化操作被调用，不能通过方法名被访问。
-
+   
    - 成员方法
-
+     
      - 方法名符合 Java 命名规范即可。
      - 需设置返回值，如果方法体中无返回值，需用 void 设置。
      - 类中可以包含多个同名成员方法，类内方法间可以在任意位置进行调用。类外，当访问权限允许时，可以通过 `对象名.方法名()` 形式调用。
@@ -782,6 +771,7 @@ huahua
 #### 一个类中构造方法可以有几种表现形式?相互之间是否可以调用?
 
 - 一个类中可以包含多个构造方法，只要满足参数类型、顺序、个数不同即可，也称为构造方法重载。
+
 - 不同构造方法之间可以通过 this(参数列表)的方式进行调用，但是只能在构造方法的第一行出现。
 
 - 调用详情及示例可查看 『this 关键字应用』- 『this 调用构造方法』。
@@ -823,32 +813,32 @@ huahua
 #### 关于封装应用中的常见问题
 
 1. **如果不用封装，在要调用的普通成员方法中编写相关限制代码，实现避免在主方法中所调用属性及方法的值被非法篡改，这样不也可以吗，为什么一定要用封装?**
-
+   
    在面向对象的的设计思想中，封装可以理解为是种利用抽象的函数接口实现细节信息的包装隐藏的方式。我们可以把封装认为是一个保护屏障，防止该类的私密代码和数据被外部类定义的代码随机访问和修改。简单来说，就是"按我的规则，才能玩我的游戏"。而在隐藏信息的同时，我们还要注意职责单一原则的应用，也就是各司其职。
-
+   
    如果只是从功能实现的角度来说，当然可以将限制代码写在任意的功能实现方法中，但是试想，如果一个类中，有 10 个功能性方法中需要针对某一属性进行相同的设定，我们是设置一次方便，还是设置十次更方便安全呢?
-
+   
    因此，适当的封装可以让代码更容易理解与维护，也加强了安全性。调用者不能随意通过变量名属性名的方式来修改类中的私密数据信息；同时，在使用的时候，也只需直接调用封装后的方法即可，无需再操心细节处理。
 
 2. **get/set 用两个方法实现取值、赋值，放在一个方法里不是更简单?是否可以改成别的名字呢?**
-
+   
    如果仅仅是为了实现功能，那么，无论是写在一个方法里，还是用其他名字命名方法都是 OK 的。但是，在基于面向对象的编程思想中，更推荐大家采用 get/set 方法分别实现取值和赋值的功能，让他们各司其职，也更加通俗易懂，毕竟当业务越来越复杂，团队协作的时候，约定俗成会比各有千秋更有价值。
 
 3. **有了 get/set 方法，为什么还需要带参构造方法?或者说，在构造方法中直接写 if...else...判断限制输入输出结果不行么，为什么要多写两个方法 get/set?**
-
+   
    构造方法与 get/set 方法的作用是不同的，构造方法只能在创建对象时进行调用，如果在对象构建完成后，再想对其某些属性进行赋值和取值，就无法再次应用构造方法啦。因此两者的存在并不冲突，我们可以应用带参构造在对象初始化时进行某些属性的设置，也可以通过 get/set 方法，在对象构建完成后进行后续修订。
 
 4. **main 方法中为什么可以添加 return?什么时候能加?有什么作用?是否可以用 break 进行替换?**
-
+   
    关于 return 和 break 的应用
-
+   
    - 当方法中出现 return 表示方法运行终止；当出现 break 则表示循环语句或者 swith 语句运行结束。
    - 如果方法设置了返回值，那么必须出现 return，应用 return 带回返回值；如果方法的返回值为 void，也可以出现 return。但是后面什么也不能加，直接加分号结束。
-
+   
    因此，主方法中的 return 语句不能与 break 随意替换。
 
 5. **private 修饰的成员怎么用?**
-
+   
    - 在同一个类中，可以直接访问。
    - 在不同类中，需要通过对应的非私有方法访问。
 
@@ -930,7 +920,6 @@ public class Cat {
         this.age = age;
     }
 }
-
 ```
 
 宠物猫管理类，包含年龄比较的方法 catMonthPk
@@ -957,7 +946,6 @@ public class CatManage {
         return (one.getAge() > two.getAge()) ? one : two;
     }
 }
-
 ```
 
 宠物猫测试类，包含主方法
@@ -980,7 +968,6 @@ public class CatTest {
         System.out.println("优胜者 name = " + manage.catMonthPk(one, two).getName() + ", age = " + manage.catMonthPk(one, two).getAge());
     }
 }
-
 ```
 
 运行结果：
@@ -1041,17 +1028,17 @@ public class CatTest {
 #### package 和 import 的常见问题
 
 1. **为什么需要打包，都放在一起使用不行么?**
-
+   
    为便于大型应用程序中信息管理，解决协同工作时类的命名冲突的问题，Java 引入了"包管理"机制。"包管理"机制类似于计算机管理系统中的文件夹。
-
+   
    基于合理分类，便于管理的思想，约定：
-
+   
    - 推荐将一组相互具有联系并组合起来完成某一功能的类聚集到同一个包中。
    - 同一个包中，类名不允许重复。
    - 不同包中，可以存在同名类。
 
 2. **包管理语句使用规则是什么?**
-
+   
    - 语法规则
      - package
        - 作用: 指明该文件中定义的类所在的包。
@@ -1067,17 +1054,17 @@ public class CatTest {
    - import 需写在 class 语句上面，即一个 Java 文件中的存在顺序应是: `package` - `import` - `class`。
 
 3. **import 语句几种导入方式的区别是什么?**
-
+   
    - `import 包名.*` :导入指定包名下所有直接允许访问的类，无法导入其子包中的类。
    - `import 包名.类` :导入指定包名下指定的类。
 
 #### import 练习
 
 0. 存在两个类：宠物猫类 Cat 和机器猫类 Cat。
-
+   
    ```java
    package com.imooc.java2020.week03.packagedemo.animal;
-
+   
    /**
        * 宠物猫类 Cat
        *
@@ -1093,10 +1080,10 @@ public class CatTest {
        }
    }
    ```
-
+   
    ```java
    package com.imooc.java2020.week03.packagedemo.mechanics;
-
+   
    /**
        * 机器猫类 Cat
        *
@@ -1111,16 +1098,16 @@ public class CatTest {
    ```
 
 1. 当需要访问宠物猫类时，以下 3 种方案任选其一即可。
-
+   
    ```java
    package com.imooc.java2020.week03.packagedemo.demotest;
-
+   
    // 方案1：import 包名.* - 导入指定包名下所有直接允许访问的类
    // import com.imooc.java2020.week03.packagedemo.animal.*;
-
+   
    // 方案2：import 包名.类 - 导入指定包名下指定的类
    // import com.imooc.java2020.week03.packagedemo.animal.Cat;
-
+   
    /**
        * Cat 测试类
        * @author Jaime
@@ -1132,25 +1119,24 @@ public class CatTest {
            Cat one = new Cat();
            // 方案3：包名.类名 - 调用时直接写完整名
            com.imooc.java2020.week03.packagedemo.animal.Cat two = new com.imooc.java2020.week03.packagedemo.animal.Cat();
-
+   
        }
    }
-
    ```
-
+   
    执行结果：
-
+   
    ```java
    我是宠物猫！
    ```
 
 2. 如果同时访问宠物猫类和机器猫类时。
-
+   
    ```java
    package com.imooc.java2020.week03.packagedemo.demotest;
-
+   
    import com.imooc.java2020.week03.packagedemo.animal.Cat;
-
+   
    /**
        * Cat 测试类
        * @author Jaime
@@ -1160,26 +1146,26 @@ public class CatTest {
        public static void main(String[] args) {
            Cat one = new Cat();
            com.imooc.java2020.week03.packagedemo.mechanics.Cat two = new com.imooc.java2020.week03.packagedemo.mechanics.Cat();
-
+   
        }
    }
    ```
-
+   
    运行结果：
-
+   
    ```java
    我是宠物猫！
    我是机器猫呦~
    ```
 
 3. 如果同时导入宠物猫类和机器猫类，**分别以和指定类名进行导入，以类名导入优先级最高。**
-
+   
    ```java
    package com.imooc.java2020.week03.packagedemo.demotest;
-
+   
    import com.imooc.java2020.week03.packagedemo.mechanics.*;
    import com.imooc.java2020.week03.packagedemo.animal.Cat;
-
+   
    /**
        * Cat 测试类
        * @author Jaime
@@ -1191,9 +1177,9 @@ public class CatTest {
        }
    }
    ```
-
+   
    运行结果：
-
+   
    ```java
    我是宠物猫！
    ```
@@ -1353,7 +1339,6 @@ public class Cat02 {
         cat02.run(cat02.getName(), Cat02.price);
     }
 }
-
 ```
 
 ```java
@@ -1379,7 +1364,6 @@ public class Cat02Test {
         Cat02.eat(two);
     }
 }
-
 ```
 
 执行结果
@@ -1416,11 +1400,11 @@ age = 13, run() 普通代码块2.
 
 某校开设"计算机科学与应用"专业，专业编号 J0001，学制 4 年。现有 3 名学生都报名学习了这个专业。
 
-| 张三 | S01  | 男   | 18 岁 |
-| ---- | ---- | ---- | ----- |
-| 姓名 | 学号 | 性别 | 年龄  |
-| 李四 | S02  | 女   | 17 岁 |
-| 王五 | S03  | 男   | 18 岁 |
+| 张三  | S01 | 男   | 18 岁 |
+| --- | --- | --- | ---- |
+| 姓名  | 学号  | 性别  | 年龄   |
+| 李四  | S02 | 女   | 17 岁 |
+| 王五  | S03 | 男   | 18 岁 |
 
 ### 运行效果
 
@@ -1457,34 +1441,33 @@ age = 13, run() 普通代码块2.
 年龄: 18
 学科名称: 计算机科学与技术
 学制年限: 4
-
 ```
 
 ### 案例分析
 
 - 专业类
-
+  
   - 属性：专业编号、专业名称、学制年限 。
-
+  
   - 方法：介绍（功能：介绍专业相关信息）。
 
 - 学生类
-
+  
   - 属性：专业编号、专业名称、学制年限。
   - 方法：自我介绍（功能：介绍学生相关信息）。
 
 - 实现专业与学生关联
-
+  
   - 方案 1： 在学生类的自我介绍方法中，添加两个参数：专业名称、学制年限。
-
+    
     特点：容易理解、参数列表长。
-
+  
   - 方案 2： 在学生类的自我介绍方法中，添加一个专业对象作为参数，从中获取专业名称、学制年限。
-
+    
     特点：相比前一个参数列表简单、获取参数方便。
-
+  
   - 方案 3： 在学生类中，添加一个专业对象作为属性，从中获取专业名称、学制年限。
-
+    
     特点：关联性更强。
 
 ---
@@ -1543,6 +1526,7 @@ age = 13, run() 普通代码块2.
 - [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject01.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject01.java)
 
 - [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student04.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student04.java)
+
 - [course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student04Test.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student04Test.java)
 
 ### 关于类型创建阶段常见问题
@@ -1578,7 +1562,7 @@ public void setStuSex(String stuSex) {
 1. `setStuSex()` 中，如果将 `equals` 修改为 "`equals`"，虽然不影响本段程序的运行结果，但表示的是对象引用是否一致，此处建议用 `equals` 进行对象内容的比较，相关内容在后面的字符串课程中会有详细介绍。
 
 2. 在目前的代码中 `setStuSex()` 中，通过 `||` 实现性别条件的判断，也可以通过 `&&` 判断，此时代码修订可参考，请注意其中!运算符的结合运用，表示不等于男，同时不等于女:
-
+   
    ```java
    public void setStuSex(String stuSex) {
        // this.stuSex = ((stuSex == "男") || (stuSex == "女")) ? stuSex : "男";
@@ -1826,8 +1810,8 @@ public class Test {
 
 ```java
 Exception in thread "main" java.lang.NullPointerException
-    at com.imooc.java2020.week03.schooldemo.practice.Staff.display(Staff.java:47)
-    at com.imooc.java2020.week03.schooldemo.practice.Test.main(Test.java:11)
+    at com.imooc.java2020.week03.packagedemo.practice.Staff.display(Staff.java:47)
+    at com.imooc.java2020.week03.packagedemo.practice.Test.main(Test.java:11)
 ```
 
 如果修改员工类中代码：加入对员工公司属性的初始化设置。
@@ -1949,15 +1933,19 @@ Staff {
 #### 包名
 
 - 包名命名，所有字母都小写。
-- 包命名的路径建议符合所开发的系统模块的定义，以便看了包名就明白是哪个模块，从而直接到对应包里找相应的实现。
-- 由于 Java 面向对象的特性，每名 Java 开发人员都可以编写属于自己的包，为了保障每个包命名的唯一性，在最新的 Java 编程规范中，要求开发人员在自己定义的包名前加上唯一的前缀。由于互联网上的域名称是不会重复的，所以多数开发人员采用 `自己公司的名称.项目名.模块名*.*.*`，在互联网上的域名称作为自己程序包的唯一前缀。例如: `com.imooc.base.类`。
-- 个人项目包的推荐命名：
 
+- 包命名的路径建议符合所开发的系统模块的定义，以便看了包名就明白是哪个模块，从而直接到对应包里找相应的实现。
+
+- 由于 Java 面向对象的特性，每名 Java 开发人员都可以编写属于自己的包，为了保障每个包命名的唯一性，在最新的 Java 编程规范中，要求开发人员在自己定义的包名前加上唯一的前缀。由于互联网上的域名称是不会重复的，所以多数开发人员采用 `自己公司的名称.项目名.模块名*.*.*`，在互联网上的域名称作为自己程序包的唯一前缀。例如: `com.imooc.base.类`。
+
+- 个人项目包的推荐命名：
+  
   - indi：个体项目。指个人发起，但非自己独自完成的项目，可公开或私有项目，版权主要属于发起者。例如：包名为 `indi.发起者名.项目名.模块名.*.*.*`。
   - pers：个人项目。指个人发起，独自完成，可分享的项目，版权主要属于个人。例如：包名为 `pers.个人名.项目名.模块名.*.*.*`。
   - priv：私有项目。指个人发起，独自完成，非公开的私人使用的项目，版权属于个人。例如包名为 `priv.个人名.项目名.模块名.*.*.*`。
 
 - 团队项目包的推荐命名：
+  
   - team：团队项目指由团队发起，并由该团队开发的项目，版权属于该团队所有。例如包名为 `team.团队名.项目名.模块名.*.*.*`。
   - com：公司项目。由项目发起的公司所有。例如：包名为 `com.公司名.项目名.模块名.*.*.*`。
 
@@ -1980,36 +1968,73 @@ Staff {
 
 通常在团队开发中，会预先设定统一的命名方式，以便于团队中项目的维护。
 
-## 实践 - 办公信息化管理系统
+## 作业实践 - 办公信息化管理系统
 
 ### 题目要求
 
 某公司要开发内部的"办公信息化管理系统"，请使用面向对象的思想描述以下员工信息。
 
-| 姓名   | 工号 | 性别 | 年龄 | 所在部门 | 职务 |
-| ------ | ---- | ---- | ---- | -------- | ---- |
-| 张铭   | S001 | 男   | 29   | 人事部   | 经理 |
-| 李艾爱 | S002 | 女   | 21   | 人事部   | 助理 |
-| 孙超   | S003 | 男   | 29   | 人事部   | 职员 |
-| 张美美 | S004 | 女   | 26   | 市场部   | 职员 |
-| 蓝迪   | S005 | 男   | 37   | 市场部   | 经理 |
-| 米莉   | S006 | 女   | 24   | 市场部   | 职员 |
+| 姓名  | 工号   | 性别  | 年龄  | 所在部门 | 职务  |
+| --- | ---- | --- | --- | ---- | --- |
+| 张铭  | S001 | 男   | 29  | 人事部  | 经理  |
+| 李艾爱 | S002 | 女   | 21  | 人事部  | 助理  |
+| 孙超  | S003 | 男   | 29  | 人事部  | 职员  |
+| 张美美 | S004 | 女   | 26  | 市场部  | 职员  |
+| 蓝迪  | S005 | 男   | 37  | 市场部  | 经理  |
+| 米莉  | S006 | 女   | 24  | 市场部  | 职员  |
 
-| 部门编号 | 部门名称 | 员工数组         | 员工人数 |
-| -------- | -------- | ---------------- | -------- |
-| D001     | 人事部   | 张铭,李艾爱,孙超 | 3        |
-| D002     | 市场部   | 张美美,蓝迪,米莉 | 3        |
+| 部门编号 | 部门名称 | 员工数组      | 员工人数 |
+| ---- | ---- | --------- | ---- |
+| D001 | 人事部  | 张铭,李艾爱,孙超 | 3    |
+| D002 | 市场部  | 张美美,蓝迪,米莉 | 3    |
 
 | 职务编号 | 职务名称 |
-| -------- | -------- |
-| P001     | 经理     |
-| P002     | 助理     |
-| P003     | 职员     |
+| ---- | ---- |
+| P001 | 经理   |
+| P002 | 助理   |
+| P003 | 职员   |
 
 程序运行参考效果图如下：
 
 ```java
-
+姓名: 张铭
+工号: S001
+性别: 男
+年龄: 29
+职务: 人事部经理
+============================
+姓名: 李艾爱
+工号: S002
+性别: 女
+年龄: 21
+职务: 人事部助理
+============================
+姓名: 孙超
+工号: S003
+性别: 男
+年龄: 29
+职务: 人事部职员
+============================
+姓名: 张美美
+工号: S004
+性别: 女
+年龄: 26
+职务: 市场部职员
+============================
+姓名: 蓝迪
+工号: S005
+性别: 男
+年龄: 37
+职务: 市场部经理
+============================
+姓名: 米莉
+工号: S006
+性别: 女
+年龄: 24
+职务: 市场部助理
+============================
+人事部总共有 3 名员工
+市场部总共有 3 名员工
 ```
 
 ### 任务描述
@@ -2032,25 +2057,110 @@ Staff {
 由场景和运行效果，可以分析出项目中可以抽取如下类(要求编码时注意面向对象思想及封装特性的应用)。
 
 - 部门类
-
+  
   - 类型描述：能够描述部门编号、部门名称、员工数组、统计部门中的员工个数。
-  - 要求：设定方法统计该部门员工个数。
-  - 提示：部门类的属性有四个，分别是部门编号，部门名称，员工数组和统计变量。具体是市场部还是人事部，是通过部门类的对象来表示的，如果是市场部的对象，那么添加并统计的就是市场部的人数。同样如果是人事部的对象，添加并统计的就是人事部的人数。
+    
+    ```java
+    /**
+     * 部门编号departmentId，部门名称departmentName，员工数组departmentStaff和部门中的员工个数departmentStaffCount
+     */
+    private String departmentId;
+    private String departmentName;
+    private Staff[] departmentStaff;
+    private int departmentStaffCount;
+    ```
+  
+  - 要求：设定方法统计该部门员工个数。(将部门员工添加进部门并同时统计部门员工人数)
+    
+    ```java
+    /**
+     * 将部门员工添加进部门并同时统计部门员工人数。
+    * @param departmentStaff 部门员工
+     */
+    public void addDepartmentStaff(Staff departmentStaff) {
+        departmentStaff.setStaffDepartment(this);
+        this.setDepartmentStaffCount(this.getDepartmentStaffCount() + 1);
+    }
+    ```
+
+- 提示：部门类的属性有四个，分别是部门编号，部门名称，员工数组和统计变量。具体是市场部还是人事部，是通过部门类的对象来表示的，如果是市场部的对象，那么添加并统计的就是市场部的人数。同样如果是人事部的对象，添加并统计的就是人事部的人数。
 
 - 职务类
-
+  
   - 类型描述：能够描述职务编号、职务名称。
+    
+    ```java
+    /**
+     * 职务编号postId、职务名称postName
+     */
+    private String postId;
+    private String postName;
+    ```
 
 - 员工类
-
+  
   - 类型描述：能够描述员工姓名、工号、年龄、性别、所属部门、职务信息 。
+    
+    ```java
+    /**
+     * 员工姓名staffName、工号staffId、年龄staffAge、性别staffSex、所属部门staffDepartment、职务信息staffPost
+     */
+    private String staffName;
+    private String staffId;
+    private int staffAge;
+    private String staffSex;
+    private Department staffDepartment;
+    private Post staffPost;
+    ```
+  
   - 要求：
-
+    
     - 设定方法限定年龄只能是 18-65 之间，反之则设置默认为 18 岁。
+      
+      ```java
+      /**
+       * set 设置员工年龄
+       *
+       * @param staffAge 员工年龄
+       */
+      public void setStaffAge(int staffAge) {
+          this.staffAge = ((staffAge < 18) || (staffAge > 65)) ? 18 : staffAge;
+      }
+      ```
+    
     - 设定方法限定性别只能是"男"或者"女"，反之则设置默认为"男"。
+      
+      ```java
+      /**
+       * set 设置员工性别
+       *
+       * @param staffSex 员工性别
+       */
+      public void setStaffSex(String staffSex) {
+          this.staffSex = (("男".equals(staffSex)) || ("女".equals(staffSex))) ? staffSex : "男";
+      }
+      ```
+    
     - 设定方法，实现员工自我介绍信息，将员工信息作为字符串返回。
+      
+      ```java
+      /**
+       * 实现员工自我介绍信息，将员工信息作为字符串返回。
+       *
+       * @return 员工信息(姓名 、 工号 、 性别 、 年龄 、 职务)
+       */
+      public String showStaffInfo() {
+          return "姓名: " + this.getStaffName()
+                  + "\n工号: " + this.getStaffId()
+                  + "\n性别: " + this.getStaffSex()
+                  + "\n年龄: " + this.getStaffAge()
+                  + "\n职务: " + this.getStaffPost()
+                  + "\n============================\n";
+      }
+      ```
 
 - 测试类
+  
   - 类型描述：测试程序，并参照效果图输出结果。
 
 注意：可以在属性上添加适当的信息验证，提高信息的安全性。
@@ -2058,38 +2168,39 @@ Staff {
 ### 评分标准
 
 - 规范【10 分】
-
+  
   - 每个类都封装在自己独立的"java"文件中；
   - 文件、class、成员变量命名规范；
   - 代码结构要层次分明；
   - Java 代码规范及添加适量注释。
 
 - 程序整体运行效果【10 分】
-
+  
   - 程序正常运行效果，且满足效果图要求。信息间分隔符"="号数量不做统一要求。
 
 - 部门类【22 分】
-
+  
   - 能够描述部门编号、部门名称、获取所有该部门员工信息；
   - 设定方法，完成统计该部门员工个数的功能。
 
 - 职务类【6 分】
-
+  
   - 能够描述职务编号、职务名称。
 
 - 员工类【34 分】
-
+  
   - 能够描述员工姓名、工号、年龄、性别、所属部门、职务信息；
   - 设定方法来约束年龄的范围；
   - 设定方法来限定性别的选择；
   - 设定方法，实现员工自我介绍信息，将员工信息作为字符串返回。
 
 - 测试类【18 分】
+  
   - 测试程序，将题目中的员工信息传入到程序中，参照效果图输出结果。
 
 ---
 
--
+- [course-java2020/src/com/imooc/java2020/week03/officemanagementsystem](course-java2020/src/com/imooc/java2020/week03/officemanagementsystem)
 
 ## 继承
 
@@ -2118,6 +2229,7 @@ Staff {
 满足"A is a B "的关系就可以形成继承关系如：
 
 - 猫、狗是动物 → 猫，狗继承自动物
+
 - 学生、老师是人 → 学生，老师继承自人
 
 - 小轿车、大卡车是汽车 → 小轿车，大卡车继承自汽车
@@ -2127,7 +2239,7 @@ Staff {
 使用 extends 实现封装
 
 - 写父类
-
+  
   ```java
   class Animal{
       //公共的属性和方法
@@ -2135,7 +2247,7 @@ Staff {
   ```
 
 - 编写子类，继承父类
-
+  
   ```java
   class Dog extends Animal{
       //子类特有的属性和方法
@@ -2148,9 +2260,11 @@ Staff {
 ---
 
 - [course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animal/Animal.java](course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animal/Animal.java)
+
 - [course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animal/Cat.java](course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animal/Cat.java)
 
 - [course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animal/Dog.java](course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animal/Dog.java)
+
 - [course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animaltest/Test.java](course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animaltest/Test.java)
 
 ### 方法重写
@@ -2158,34 +2272,34 @@ Staff {
 方法重写 PK 方法重载：
 
 - 方法重写 Override
-
+  
   - 在满足继承关系的子类中
   - 方法名、参数个数、顺序、类型与父类相同
   - 返回值相同，访问修饰符的限定范围大于等于父类方法
 
 - 方法重载 Overload
-
+  
   - 在同一个类中
-
+  
   - 方法名相同
-
+  
   - 参数列表（个数、顺序、类型）不同。
-
+    
     ```java
     public void sleep(int month, String name) {}
-
+    
     public void sleep(String name,int month) {}  // ✔ 参数顺序不同
     public void sleep(int name, String month) {} // ✖ 与参数名无关，都是两个参数，前一个为 int 类型，后一个为 String 类型
     ```
-
+  
   - 返回值类型、访问修饰符任意
 
-| 区别点   | 重载方法 | 重写方法                                       |
-| :------- | :------- | :--------------------------------------------- |
-| 参数列表 | 必须修改 | 一定不能修改                                   |
-| 返回类型 | 可以修改 | 一定不能修改                                   |
-| 异常     | 可以修改 | 可以减少或删除，一定不能抛出新的或者更广的异常 |
-| 访问     | 可以修改 | 一定不能做更严格的限制（可以降低限制）         |
+| 区别点  | 重载方法 | 重写方法                    |
+|:---- |:---- |:----------------------- |
+| 参数列表 | 必须修改 | 一定不能修改                  |
+| 返回类型 | 可以修改 | 一定不能修改                  |
+| 异常   | 可以修改 | 可以减少或删除，一定不能抛出新的或者更广的异常 |
+| 访问   | 可以修改 | 一定不能做更严格的限制（可以降低限制）     |
 
 方法重写存在
 
