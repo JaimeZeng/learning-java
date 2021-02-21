@@ -1,0 +1,15 @@
+{
+  "name": "learning-java",
+  "version": "0.1.1",
+  "main": "index.js",
+  "repository": "https://github.com/JaimeZeng/learning-java.git",
+  "author": "JaimeZeng <78083448+JaimeZeng@users.noreply.github.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^2.0.0-alpha.25"
+  },
+  "scripts": {
+    "docs:dev": "yarn add -D vuepress@next && vuepress dev docs --clean-cache",
+    "docs:build": "vuepress build docs --clean-cache"
+  }
+}
