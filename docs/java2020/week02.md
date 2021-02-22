@@ -87,7 +87,7 @@ System.out.print(j + " ");
 }
 ```
 
-[course-java2020/src/com/imooc/java2020/week02/Sections02ArrayDemo.java](course-java2020/src/com/imooc/java2020/week02/Sections02ArrayDemo.java)
+[course-java2020/src/com/imooc/java2020/week02/Sections02ArrayDemo.java](course-java2020/src/pub/imooc/java2020/week02/Sections02ArrayDemo.java)
 
 ### 冒泡排序
 
@@ -118,11 +118,11 @@ for (int i = 0; i < intArray.length; i++) {
 }
 ```
 
-[course-java2020/src/com/imooc/java2020/week02/Sections02BubbleSort.java](course-java2020/src/com/imooc/java2020/week02/Sections02BubbleSort.java)
+[course-java2020/src/com/imooc/java2020/week02/Sections02BubbleSort.java](course-java2020/src/pub/imooc/java2020/week02/Sections02BubbleSort.java)
 
 ### 数组练习
 
-[course-java2020/src/com/imooc/java2020/week02/Sections02ArrayPractice.java](course-java2020/src/com/imooc/java2020/week02/Sections02ArrayPractice.java)
+[course-java2020/src/com/imooc/java2020/week02/Sections02ArrayPractice.java](course-java2020/src/pub/imooc/java2020/week02/Sections02ArrayPractice.java)
 
 ## 二维数组
 
@@ -214,11 +214,11 @@ for (int[] scores : scoreArray) {
 }
 ```
 
-[course-java2020/src/com/imooc/java2020/week02/Sections03ArrayDemo.java](course-java2020/src/com/imooc/java2020/week02/Sections03ArrayDemo.java)
+[course-java2020/src/com/imooc/java2020/week02/Sections03ArrayDemo.java](course-java2020/src/pub/imooc/java2020/week02/Sections03ArrayDemo.java)
 
 ### 练习
 
-[course-java2020/src/com/imooc/java2020/week02/Sections03ArrayPractice.java](course-java2020/src/com/imooc/java2020/week02/Sections03ArrayPractice.java)
+[course-java2020/src/com/imooc/java2020/week02/Sections03ArrayPractice.java](course-java2020/src/pub/imooc/java2020/week02/Sections03ArrayPractice.java)
 
 > 注意：
 >
@@ -249,7 +249,7 @@ for (int[] scores : scoreArray) {
 - 带参无返回值方法 `public void getMaxNumber(double a, double b)`
 - 带参带返回值方法 `public int getFactorial(int n)`
 
-[course-java2020/src/com/imooc/java2020/week02/Sections04MethodDemo01.java](course-java2020/src/com/imooc/java2020/week02/Sections04MethodDemo01.java)
+[course-java2020/src/com/imooc/java2020/week02/Sections04MethodDemo01.java](course-java2020/src/pub/imooc/java2020/week02/Sections04MethodDemo01.java)
 
 ### 数组作为方法参数
 
@@ -257,7 +257,7 @@ for (int[] scores : scoreArray) {
 - `public boolean search(int n,int[] arr){}`
 - `public void bubbleSort(int[] intArray){}`
 
-[course-java2020/src/com/imooc/java2020/week02/Sections04MethodDemo02.java](course-java2020/src/com/imooc/java2020/week02/Sections04MethodDemo02.java)
+[course-java2020/src/com/imooc/java2020/week02/Sections04MethodDemo02.java](course-java2020/src/pub/imooc/java2020/week02/Sections04MethodDemo02.java)
 
 ### 方法重载
 
@@ -277,7 +277,7 @@ for (int[] scores : scoreArray) {
 - public void hello1(){}
 ```
 
-[course-java2020/src/com/imooc/java2020/week02/Sections04MethodDemo03.java](course-java2020/src/com/imooc/java2020/week02/Sections04MethodDemo03.java)
+[course-java2020/src/com/imooc/java2020/week02/Sections04MethodDemo03.java](course-java2020/src/pub/imooc/java2020/week02/Sections04MethodDemo03.java)
 
 ### 参数的传递问题
 
@@ -285,7 +285,7 @@ for (int[] scores : scoreArray) {
 - 数组参数在传递过程中，主方法的的参数值会改变。
 - 区别在于：参数在内存中是否指向同一片内存空间。
 
-[course-java2020/src/com/imooc/java2020/week02/Sections04MethodDemo04.java](course-java2020/src/com/imooc/java2020/week02/Sections04MethodDemo04.java)
+[course-java2020/src/com/imooc/java2020/week02/Sections04MethodDemo04.java](course-java2020/src/pub/imooc/java2020/week02/Sections04MethodDemo04.java)
 
 ### 可变参数列表
 
@@ -302,7 +302,7 @@ for (int[] scores : scoreArray) {
   public void searchNumber(int number, int[] intArray) {}
   ```
 
-[course-java2020/src/com/imooc/java2020/week02/Sections04MethodDemo05.java](course-java2020/src/com/imooc/java2020/week02/Sections04MethodDemo05.java)
+[course-java2020/src/com/imooc/java2020/week02/Sections04MethodDemo05.java](course-java2020/src/pub/imooc/java2020/week02/Sections04MethodDemo05.java)
 
 ## 综合案例: 数组移位与统计
 
@@ -316,4 +316,4 @@ for (int[] scores : scoreArray) {
 - 查询能被 3 整除的数据: `public void diyThree(int[] a){}`
 - 提示信息: `public void promptMessage(){}`
 
-[course-java2020/src/com/imooc/java2020/week02/Sections05DataManage.java](course-java2020/src/com/imooc/java2020/week02/Sections05DataManage.java)
+[course-java2020/src/com/imooc/java2020/week02/Sections05DataManage.java](course-java2020/src/pub/imooc/java2020/week02/Sections05DataManage.java)

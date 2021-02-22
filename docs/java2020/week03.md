@@ -44,10 +44,10 @@ url: week03
 
 ---
 
-- [course-java2020/src/com/imooc/java2020/week03/classdemo/Cat.java](course-java2020/src/com/imooc/java2020/week03/classdemo/Cat.java)
-- [course-java2020/src/com/imooc/java2020/week03/classdemo/CatTest.java](course-java2020/src/com/imooc/java2020/week03/classdemo/CatTest.java)
-- [course-java2020/src/com/imooc/java2020/week03/classdemo/Person.java](course-java2020/src/com/imooc/java2020/week03/classdemo/Person.java)
-- [course-java2020/src/com/imooc/java2020/week03/classdemo/PersonTest.java](course-java2020/src/com/imooc/java2020/week03/classdemo/PersonTest.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/Cat.java](course-java2020/src/pub/imooc/java2020/week03/classdemo/Cat.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/CatTest.java](course-java2020/src/pub/imooc/java2020/week03/classdemo/CatTest.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/Person.java](course-java2020/src/pub/imooc/java2020/week03/classdemo/Person.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/PersonTest.java](course-java2020/src/pub/imooc/java2020/week03/classdemo/PersonTest.java)
 
 ### 单一职责原则
 
@@ -170,8 +170,8 @@ public class CatTest{
 
 ---
 
-- [course-java2020/src/com/imooc/java2020/week03/classdemo/Cat01.java](course-java2020/src/com/imooc/java2020/week03/classdemo/Cat01.java)
-- [course-java2020/src/com/imooc/java2020/week03/classdemo/Cat01Test.java](course-java2020/src/com/imooc/java2020/week03/classdemo/Cat01Test.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/Cat01.java](course-java2020/src/pub/imooc/java2020/week03/classdemo/Cat01.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/Cat01Test.java](course-java2020/src/pub/imooc/java2020/week03/classdemo/Cat01Test.java)
 
 ### this 关键字
 
@@ -231,8 +231,8 @@ public class CatTest{
 
 ---
 
-- [course-java2020/src/com/imooc/java2020/week03/classdemo/Cat01.java](course-java2020/src/com/imooc/java2020/week03/classdemo/Cat01.java)
-- [course-java2020/src/com/imooc/java2020/week03/classdemo/Cat01Test.java](course-java2020/src/com/imooc/java2020/week03/classdemo/Cat01Test.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/Cat01.java](course-java2020/src/pub/imooc/java2020/week03/classdemo/Cat01.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/Cat01Test.java](course-java2020/src/pub/imooc/java2020/week03/classdemo/Cat01Test.java)
 
 ### 就近原则
 
@@ -316,8 +316,8 @@ public class Cat() {
 
 ---
 
-- [course-java2020/src/com/imooc/java2020/week03/classdemo/Monkey.java](course-java2020/src/com/imooc/java2020/week03/classdemo/Monkey.java)
-- [course-java2020/src/com/imooc/java2020/week03/classdemo/MonkeyTest.java](course-java2020/src/com/imooc/java2020/week03/classdemo/MonkeyTest.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/Monkey.java](course-java2020/src/pub/imooc/java2020/week03/classdemo/Monkey.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/MonkeyTest.java](course-java2020/src/pub/imooc/java2020/week03/classdemo/MonkeyTest.java)
 
 ### this 关键字应用
 
@@ -330,7 +330,7 @@ this 在 Java 中可用于调用成员属性、成员方法、构造方法，也
 示例: 分别在 run 和 eat 方法中，通过 this 访问属性 month 和 name。
 
 ```java
-package com.imooc.java2020.week03.classdemo.thiscall;
+package pub.zxj.java2020.week03.classdemo.thiscall;
 
 /**
  * 自定义类 Cat01，通过 this 访问成员属性
@@ -365,7 +365,7 @@ public class Cat01 {
 ```
 
 ```java
-package com.imooc.java2020.week03.classdemo.thiscall;
+package pub.zxj.java2020.week03.classdemo.thiscall;
 
 /**
  * 自定义类 Cat01 的测试类
@@ -406,13 +406,13 @@ public class Cat01Test {
 
 ---
 
-- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat01.java](course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat01.java)
-- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat01Test.java](course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat01Test.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat01.java](course-java2020/src/pub/imooc/java2020/week03/classdemo/thiscall/Cat01.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat01Test.java](course-java2020/src/pub/imooc/java2020/week03/classdemo/thiscall/Cat01Test.java)
 
 在类中的 run 方法中，分别通过 this 以及不加 this 为前缀调用的方式访问同类中的 eat 方法。
 
 ```java
-package com.imooc.java2020.week03.classdemo.thiscall;
+package pub.zxj.java2020.week03.classdemo.thiscall;
 
 /**
  * 自定义类 Cat02，通过 this 调用成员方法
@@ -438,7 +438,7 @@ public class Cat02 {
 ```
 
 ```java
-package com.imooc.java2020.week03.classdemo.thiscall;
+package pub.zxj.java2020.week03.classdemo.thiscall;
 
 /**
  * 自定义类 Cat02 的测试类
@@ -465,8 +465,8 @@ public class Cat02Test {
 
 ---
 
-- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat02.java](course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat02.java)
-- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat02Test.java](course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat02Test.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat02.java](course-java2020/src/pub/imooc/java2020/week03/classdemo/thiscall/Cat02.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat02Test.java](course-java2020/src/pub/imooc/java2020/week03/classdemo/thiscall/Cat02Test.java)
 
 #### this 调用构造方法
 
@@ -477,7 +477,7 @@ public class Cat02Test {
 **在带参构造中调用无参构造**
 
 ```java
-package com.imooc.java2020.week03.classdemo.thiscall;
+package pub.zxj.java2020.week03.classdemo.thiscall;
 
 /**
  * 自定义类 Cat03，
@@ -522,7 +522,7 @@ public class Cat03 {
 ```
 
 ```java
-package com.imooc.java2020.week03.classdemo.thiscall;
+package pub.zxj.java2020.week03.classdemo.thiscall;
 
 /**
  * 自定义类 Cat03 的测试类
@@ -566,13 +566,13 @@ public class Cat03Test {
 
 ---
 
-- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat03.java](course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat03.java)
-- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat03Test.java](course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat03Test.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat03.java](course-java2020/src/pub/imooc/java2020/week03/classdemo/thiscall/Cat03.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat03Test.java](course-java2020/src/pub/imooc/java2020/week03/classdemo/thiscall/Cat03Test.java)
 
 **在普通成员方法内调用构造**
 
 ```java
-package com.imooc.java2020.week03.classdemo.thiscall;
+package pub.zxj.java2020.week03.classdemo.thiscall;
 
 /**
  * 自定义类 Cat03，
@@ -602,16 +602,16 @@ public class Cat03 {
 
 ---
 
-- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat03.java](course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat03.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat03.java](course-java2020/src/pub/imooc/java2020/week03/classdemo/thiscall/Cat03.java)
 
-- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat03Test.java](course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat03Test.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat03Test.java](course-java2020/src/pub/imooc/java2020/week03/classdemo/thiscall/Cat03Test.java)
 
 #### this 方法调用时作为参数传递
 
 在类中，定义 run 方法，方法参数为类对象。类方法中，调用 run 方法，并通过 this 指代，传入当前对象。
 
 ```java
-package com.imooc.java2020.week03.classdemo.thiscall;
+package pub.zxj.java2020.week03.classdemo.thiscall;
 
 /**
  * 自定义类 Cat04，使用 this 调用使用类作为参数的成员方法。
@@ -647,7 +647,7 @@ public class Cat04 {
 ```
 
 ```java
-package com.imooc.java2020.week03.classdemo.thiscall;
+package pub.zxj.java2020.week03.classdemo.thiscall;
 
 /**
  * 自定义类 Cat04 的测试类。
@@ -672,15 +672,15 @@ public class Cat04Test {
 
 ---
 
-- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat04.java](course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat04.java)
-- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat04Test.java](course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat04Test.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat04.java](course-java2020/src/pub/imooc/java2020/week03/classdemo/thiscall/Cat04.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat04Test.java](course-java2020/src/pub/imooc/java2020/week03/classdemo/thiscall/Cat04Test.java)
 
 #### this 方法调用时作为返回值传递
 
 在类中，定义 call 方法，方法中通过 this 返回类对象。
 
 ```java
-package com.imooc.java2020.week03.classdemo.thiscall;
+package pub.zxj.java2020.week03.classdemo.thiscall;
 
 /**
  * 自定义类 Cat05，在成员方法中通过 this 返回类对象。
@@ -707,7 +707,7 @@ public class Cat05 {
 ```
 
 ```java
-package com.imooc.java2020.week03.classdemo.thiscall;
+package pub.zxj.java2020.week03.classdemo.thiscall;
 
 /**
  * 自定义类 Cat05 的测试类
@@ -725,7 +725,7 @@ public class Cat05Test {
 ```
 
 ```java
-com.imooc.java2020.week03.classdemo.thiscall.Cat05@1b6d3586
+pub.zxj.java2020.week03.classdemo.thiscall.Cat05@1b6d3586
 huahua
 ```
 
@@ -733,8 +733,8 @@ huahua
 
 ---
 
-- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat05.java](course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat05.java)
-- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat05Test.java](course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat05Test.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat05.java](course-java2020/src/pub/imooc/java2020/week03/classdemo/thiscall/Cat05.java)
+- [course-java2020/src/com/imooc/java2020/week03/classdemo/thiscall/Cat05Test.java](course-java2020/src/pub/imooc/java2020/week03/classdemo/thiscall/Cat05Test.java)
 
 ### 构造方法常见问题
 
@@ -808,9 +808,9 @@ huahua
 
 ---
 
-- [course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/Cat.java](course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/Cat.java)
+- [course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/Cat.java](course-java2020/src/pub/imooc/java2020/week03/encapsulationdemo/Cat.java)
 
-- [course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/CatTest.java](course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/CatTest.java)
+- [course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/CatTest.java](course-java2020/src/pub/imooc/java2020/week03/encapsulationdemo/CatTest.java)
 
 #### 关于封装应用中的常见问题
 
@@ -846,8 +846,8 @@ huahua
 
 ---
 
-- [course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/Book.java](course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/Book.java)
-- [course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/BookTest.java](course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/BookTest.java)
+- [course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/Book.java](course-java2020/src/pub/imooc/java2020/week03/encapsulationdemo/practice/Book.java)
+- [course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/BookTest.java](course-java2020/src/pub/imooc/java2020/week03/encapsulationdemo/practice/BookTest.java)
 
 #### 引用数据类型的应用 -- 方法参数
 
@@ -858,7 +858,7 @@ Java 中的方法包含无参、有参、无返回值、带返回值多种形态
 现有宠物猫类，包含属性：昵称和年龄。
 
 ```java
-package com.imooc.java2020.week03.encapsulationdemo.practice;
+package pub.zxj.java2020.week03.encapsulationdemo.practice;
 
 /**
  * 宠物猫类 Cat
@@ -927,7 +927,7 @@ public class Cat {
 宠物猫管理类，包含年龄比较的方法 catMonthPk
 
 ```java
-package com.imooc.java2020.week03.encapsulationdemo.practice;
+package pub.zxj.java2020.week03.encapsulationdemo.practice;
 
 /**
  * 宠物猫管理类 CatManage
@@ -953,7 +953,7 @@ public class CatManage {
 宠物猫测试类，包含主方法
 
 ```java
-package com.imooc.java2020.week03.encapsulationdemo.practice;
+package pub.zxj.java2020.week03.encapsulationdemo.practice;
 
 /**
  * 自定义 Cat 类的测试类：宠物猫测试类
@@ -989,9 +989,9 @@ public class CatTest {
 
 ---
 
-- [course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/Cat.java](course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/Cat.java)
-- [course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/CatManage.java](course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/CatManage.java)
-- [course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/CatTest.java](course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/CatTest.java)
+- [course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/Cat.java](course-java2020/src/pub/imooc/java2020/week03/encapsulationdemo/practice/Cat.java)
+- [course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/CatManage.java](course-java2020/src/pub/imooc/java2020/week03/encapsulationdemo/practice/CatManage.java)
+- [course-java2020/src/com/imooc/java2020/week03/encapsulationdemo/practice/CatTest.java](course-java2020/src/pub/imooc/java2020/week03/encapsulationdemo/practice/CatTest.java)
 
 ### 包
 
@@ -1023,9 +1023,9 @@ public class CatTest {
 
 ---
 
-- [course-java2020/src/com/imooc/java2020/week03/packagedemo/animal/Cat.java](course-java2020/src/com/imooc/java2020/week03/packagedemo/animal/Cat.java)
-- [course-java2020/src/com/imooc/java2020/week03/packagedemo/mechanics/Cat.java](course-java2020/src/com/imooc/java2020/week03/packagedemo/mechanics/Cat.java)
-- [course-java2020/src/com/imooc/java2020/week03/packagedemo/demotest/CatTest.java](course-java2020/src/com/imooc/java2020/week03/packagedemo/demotest/CatTest.java)
+- [course-java2020/src/com/imooc/java2020/week03/packagedemo/animal/Cat.java](course-java2020/src/pub/imooc/java2020/week03/packagedemo/animal/Cat.java)
+- [course-java2020/src/com/imooc/java2020/week03/packagedemo/mechanics/Cat.java](course-java2020/src/pub/imooc/java2020/week03/packagedemo/mechanics/Cat.java)
+- [course-java2020/src/com/imooc/java2020/week03/packagedemo/demotest/CatTest.java](course-java2020/src/pub/imooc/java2020/week03/packagedemo/demotest/CatTest.java)
 
 #### package 和 import 的常见问题
 
@@ -1065,7 +1065,7 @@ public class CatTest {
 0. 存在两个类：宠物猫类 Cat 和机器猫类 Cat。
 
    ```java
-   package com.imooc.java2020.week03.packagedemo.animal;
+   package pub.zxj.java2020.week03.packagedemo.animal;
 
    /**
        * 宠物猫类 Cat
@@ -1084,7 +1084,7 @@ public class CatTest {
    ```
 
    ```java
-   package com.imooc.java2020.week03.packagedemo.mechanics;
+   package pub.zxj.java2020.week03.packagedemo.mechanics;
 
    /**
        * 机器猫类 Cat
@@ -1102,13 +1102,13 @@ public class CatTest {
 1. 当需要访问宠物猫类时，以下 3 种方案任选其一即可。
 
    ```java
-   package com.imooc.java2020.week03.packagedemo.demotest;
+   package pub.zxj.java2020.week03.packagedemo.demotest;
 
    // 方案1：import 包名.* - 导入指定包名下所有直接允许访问的类
-   // import com.imooc.java2020.week03.packagedemo.animal.*;
+   // import pub.zxj.java2020.week03.packagedemo.animal.*;
 
    // 方案2：import 包名.类 - 导入指定包名下指定的类
-   // import com.imooc.java2020.week03.packagedemo.animal.Cat;
+   // import pub.zxj.java2020.week03.packagedemo.animal.Cat;
 
    /**
        * Cat 测试类
@@ -1120,7 +1120,7 @@ public class CatTest {
            // 方案1,2 调用语句
            Cat one = new Cat();
            // 方案3：包名.类名 - 调用时直接写完整名
-           com.imooc.java2020.week03.packagedemo.animal.Cat two = new com.imooc.java2020.week03.packagedemo.animal.Cat();
+           pub.zxj.java2020.week03.packagedemo.animal.Cat two = new pub.zxj.java2020.week03.packagedemo.animal.Cat();
 
        }
    }
@@ -1135,9 +1135,9 @@ public class CatTest {
 2. 如果同时访问宠物猫类和机器猫类时。
 
    ```java
-   package com.imooc.java2020.week03.packagedemo.demotest;
+   package pub.zxj.java2020.week03.packagedemo.demotest;
 
-   import com.imooc.java2020.week03.packagedemo.animal.Cat;
+   import pub.zxj.java2020.week03.packagedemo.animal.Cat;
 
    /**
        * Cat 测试类
@@ -1147,7 +1147,7 @@ public class CatTest {
    public class CatTest {
        public static void main(String[] args) {
            Cat one = new Cat();
-           com.imooc.java2020.week03.packagedemo.mechanics.Cat two = new com.imooc.java2020.week03.packagedemo.mechanics.Cat();
+           pub.zxj.java2020.week03.packagedemo.mechanics.Cat two = new pub.zxj.java2020.week03.packagedemo.mechanics.Cat();
 
        }
    }
@@ -1163,10 +1163,10 @@ public class CatTest {
 3. 如果同时导入宠物猫类和机器猫类，**分别以和指定类名进行导入，以类名导入优先级最高。**
 
    ```java
-   package com.imooc.java2020.week03.packagedemo.demotest;
+   package pub.zxj.java2020.week03.packagedemo.demotest;
 
-   import com.imooc.java2020.week03.packagedemo.mechanics.*;
-   import com.imooc.java2020.week03.packagedemo.animal.Cat;
+   import pub.zxj.java2020.week03.packagedemo.mechanics.*;
+   import pub.zxj.java2020.week03.packagedemo.animal.Cat;
 
    /**
        * Cat 测试类
@@ -1210,8 +1210,8 @@ public class CatTest {
 
 ---
 
-- [course-java2020/src/com/imooc/java2020/week03/packagedemo/animal/Cat01.java](course-java2020/src/com/imooc/java2020/week03/packagedemo/animal/Cat01.java)
-- [course-java2020/src/com/imooc/java2020/week03/packagedemo/demotest/Cat01Test.java](course-java2020/src/com/imooc/java2020/week03/packagedemo/demotest/Cat01Test.java)
+- [course-java2020/src/com/imooc/java2020/week03/packagedemo/animal/Cat01.java](course-java2020/src/pub/imooc/java2020/week03/packagedemo/animal/Cat01.java)
+- [course-java2020/src/com/imooc/java2020/week03/packagedemo/demotest/Cat01Test.java](course-java2020/src/pub/imooc/java2020/week03/packagedemo/demotest/Cat01Test.java)
 
 ### 代码块
 
@@ -1229,7 +1229,7 @@ public class CatTest {
 #### 示例代码
 
 ```java
-package com.imooc.java2020.week03.packagedemo.animal;
+package pub.zxj.java2020.week03.packagedemo.animal;
 
 /**
  * 宠物猫类 Cat02 + {} 代码块
@@ -1344,9 +1344,9 @@ public class Cat02 {
 ```
 
 ```java
-package com.imooc.java2020.week03.packagedemo.demotest;
+package pub.zxj.java2020.week03.packagedemo.demotest;
 
-import com.imooc.java2020.week03.packagedemo.animal.Cat02;
+import pub.zxj.java2020.week03.packagedemo.animal.Cat02;
 
 /**
  * Cat02 测试类
@@ -1395,8 +1395,8 @@ age = 13, run() 普通代码块2.
 
 ---
 
-- [course-java2020/src/com/imooc/java2020/week03/packagedemo/animal/Cat02.java](course-java2020/src/com/imooc/java2020/week03/packagedemo/animal/Cat02.java)
-- [course-java2020/src/com/imooc/java2020/week03/packagedemo/demotest/Cat02Test.java](course-java2020/src/com/imooc/java2020/week03/packagedemo/demotest/Cat02Test.java)
+- [course-java2020/src/com/imooc/java2020/week03/packagedemo/animal/Cat02.java](course-java2020/src/pub/imooc/java2020/week03/packagedemo/animal/Cat02.java)
+- [course-java2020/src/com/imooc/java2020/week03/packagedemo/demotest/Cat02Test.java](course-java2020/src/pub/imooc/java2020/week03/packagedemo/demotest/Cat02Test.java)
 
 ## 综合案例
 
@@ -1474,34 +1474,34 @@ age = 13, run() 普通代码块2.
 
 ---
 
-- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java)
-- [course-java2020/src/com/imooc/java2020/week03/schooldemo/test/SubjectTest.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/test/SubjectTest.java)
-- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student.java)
-- [course-java2020/src/com/imooc/java2020/week03/schooldemo/test/StudentTest.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/test/StudentTest.java)
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java](course-java2020/src/pub/imooc/java2020/week03/schooldemo/model/Subject.java)
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/test/SubjectTest.java](course-java2020/src/pub/imooc/java2020/week03/schooldemo/test/SubjectTest.java)
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student.java](course-java2020/src/pub/imooc/java2020/week03/schooldemo/model/Student.java)
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/test/StudentTest.java](course-java2020/src/pub/imooc/java2020/week03/schooldemo/test/StudentTest.java)
 
 方案 1 代码：
 
-- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java)
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java](course-java2020/src/pub/imooc/java2020/week03/schooldemo/model/Subject.java)
 
-- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student01.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student01.java)
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student01.java](course-java2020/src/pub/imooc/java2020/week03/schooldemo/model/Student01.java)
 
-- [course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student01Test.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student01Test.java)
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student01Test.java](course-java2020/src/pub/imooc/java2020/week03/schooldemo/test/Student01Test.java)
 
 方案 2 代码：
 
-- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java)
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java](course-java2020/src/pub/imooc/java2020/week03/schooldemo/model/Subject.java)
 
-- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student02.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student02.java)
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student02.java](course-java2020/src/pub/imooc/java2020/week03/schooldemo/model/Student02.java)
 
-- [course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student02Test.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student02Test.java)
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student02Test.java](course-java2020/src/pub/imooc/java2020/week03/schooldemo/test/Student02Test.java)
 
 方案 3 代码：
 
-- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java)
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject.java](course-java2020/src/pub/imooc/java2020/week03/schooldemo/model/Subject.java)
 
-- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student03.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student03.java)
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student03.java](course-java2020/src/pub/imooc/java2020/week03/schooldemo/model/Student03.java)
 
-- [course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student03Test.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student03Test.java)
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student03Test.java](course-java2020/src/pub/imooc/java2020/week03/schooldemo/test/Student03Test.java)
 
 ### 扩展功能
 
@@ -1525,11 +1525,11 @@ age = 13, run() 普通代码块2.
 
 ---
 
-- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject01.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject01.java)
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Subject01.java](course-java2020/src/pub/imooc/java2020/week03/schooldemo/model/Subject01.java)
 
-- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student04.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student04.java)
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/model/Student04.java](course-java2020/src/pub/imooc/java2020/week03/schooldemo/model/Student04.java)
 
-- [course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student04Test.java](course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student04Test.java)
+- [course-java2020/src/com/imooc/java2020/week03/schooldemo/test/Student04Test.java](course-java2020/src/pub/imooc/java2020/week03/schooldemo/test/Student04Test.java)
 
 ### 关于类型创建阶段常见问题
 
@@ -1812,8 +1812,8 @@ public class Test {
 
 ```java
 Exception in thread "main" java.lang.NullPointerException
-    at com.imooc.java2020.week03.packagedemo.practice.Staff.display(Staff.java:47)
-    at com.imooc.java2020.week03.packagedemo.practice.Test.main(Test.java:11)
+    at pub.zxj.java2020.week03.packagedemo.practice.Staff.display(Staff.java:47)
+    at pub.zxj.java2020.week03.packagedemo.practice.Test.main(Test.java:11)
 ```
 
 如果修改员工类中代码：加入对员工公司属性的初始化设置。
@@ -2202,7 +2202,7 @@ Staff {
 
 ---
 
-- [course-java2020/src/com/imooc/java2020/week03/officemanagementsystem](course-java2020/src/com/imooc/java2020/week03/officemanagementsystem)
+- [course-java2020/src/com/imooc/java2020/week03/officemanagementsystem](course-java2020/src/pub/imooc/java2020/week03/officemanagementsystem)
 
 ## 继承
 
@@ -2261,17 +2261,17 @@ Staff {
 
 ---
 
-- [course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animal/Animal.java](course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animal/Animal.java)
+- [course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animal/Animal.java](course-java2020/src/pub/imooc/java2020/week03/inheritancedemo/animal/Animal.java)
 
-- [course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animal/Cat.java](course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animal/Cat.java)
+- [course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animal/Cat.java](course-java2020/src/pub/imooc/java2020/week03/inheritancedemo/animal/Cat.java)
 
-- [course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animal/Dog.java](course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animal/Dog.java)
+- [course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animal/Dog.java](course-java2020/src/pub/imooc/java2020/week03/inheritancedemo/animal/Dog.java)
 
-- [course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animaltest/Test.java](course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animaltest/Test.java)
+- [course-java2020/src/com/imooc/java2020/week03/inheritancedemo/animaltest/Test.java](course-java2020/src/pub/imooc/java2020/week03/inheritancedemo/animaltest/Test.java)
 
 ### 方法重写
 
-方法重写 PK 方法重载：
+#### 方法重写 PK 方法重载
 
 - 方法重写 Override
 
@@ -2303,6 +2303,254 @@ Staff {
 | 异常     | 可以修改 | 可以减少或删除，一定不能抛出新的或者更广的异常 |
 | 访问     | 可以修改 | 一定不能做更严格的限制（可以降低限制）         |
 
-方法重写存在
+### 编程练习
 
-属性重写不存在
+编程练习：请使用面向对象的思想，设计自定义类完成如下功能要求：
+接收用户输入的信息，选择需要完成的工作任务。其中，可供选择的有：测试工作和硏发工作。关于类型设定描述如下：
+
+- 测试工作
+  - 属性：工作名称、编写的测试用例个数、发现的 Bug 数量
+  - 方法：工作描述
+- 研发工作
+  - 属性：工作名称、有效编码行数、目前没有解决的 Bug 个数
+  - 方法：工作描述
+
+程序运行参考效果图如下：
+
+```java
+父类信息测试: 开心工作！
+测试工作类信息测试: 测试工作类 的日报是：今天编写了 10 个测试用例，发现了 5 个 bug。
+研发工作类信息测试: 研发工作类 的日报是：今天编写了 1000 行代码，目前仍然有 10 个 bug 没有解决。
+```
+
+<CodeGroup>
+<CodeGroupItem title="Job.java" active>
+
+```java
+package pub.zxj.java2020.week03.inheritancedemo.practice.model;
+
+/**
+ * 工作类
+ *
+ * @author Jaime
+ */
+public class Job {
+    /**
+     * 工作名称 jobName
+     */
+    private String jobName;
+
+    /**
+     * 无参构造初始化
+     */
+    public Job() {
+    }
+
+    /**
+     * 有参构造初始化全部属性
+     *
+     * @param jobName 工作名称
+     */
+    public Job(String jobName) {
+        this.setJobName(jobName);
+    }
+
+    /**
+     * get 获取工作名称属性。
+     *
+     * @return 工作名称
+     */
+    public String getJobName() {
+        return jobName;
+    }
+
+    /**
+     * set 设置工作名称
+     *
+     * @param jobName 工作名称
+     */
+    public void setJobName(String jobName) {
+        this.jobName = jobName;
+    }
+
+    /**
+     * 描述工作的方法。
+     */
+    public void showJob() {
+        System.out.println("开心工作！");
+    }
+}
+
+```
+
+</CodeGroupItem>
+<CodeGroupItem title="TestJob.java">
+
+```java
+package pub.zxj.java2020.week03.inheritancedemo.practice.model;
+
+/**
+ * 测试工作类
+ *
+ * @author Jaime
+ */
+public class TestJob extends Job {
+
+    /**
+     * 测试用例个数testCaseNum、发现 Bug 数量testBugNum
+     */
+    private int testCaseNum;
+    private int testBugNum;
+
+    /**
+     * 有参构造初始化测试用例个数、发现 Bug 数量属性
+     *
+     * @param testBugNum  发现 Bug 数量
+     * @param testCaseNum 测试用例个数
+     */
+    public TestJob(int testCaseNum, int testBugNum) {
+        this.setTestCaseNum(testCaseNum);
+        this.setTestBugNum(testBugNum);
+    }
+
+    /**
+     * 有参构造初始化全部属性,调用父类相关赋值方法
+     *
+     * @param jobName     测试工作类的工作名称
+     * @param testBugNum  发现 Bug 数量
+     * @param testCaseNum 测试用例个数
+     */
+    public TestJob(String jobName, int testCaseNum, int testBugNum) {
+        super(jobName);
+        this.setTestCaseNum(testCaseNum);
+        this.setTestBugNum(testBugNum);
+    }
+
+    public int getTestCaseNum() {
+        return testCaseNum;
+    }
+
+    public void setTestCaseNum(int testCaseNum) {
+        this.testCaseNum = testCaseNum;
+    }
+
+    public int getTestBugNum() {
+        return testBugNum;
+    }
+
+    public void setTestBugNum(int testBugNum) {
+        this.testBugNum = testBugNum;
+    }
+
+    /**
+     * 重写描述工作的方法。
+     */
+    @Override
+    public void showJob() {
+        System.out.printf(" %s 的日报是：今天编写了 %d 个测试用例，发现了 %s 个 bug。\n", this.getJobName(), this.getTestCaseNum(), this.getTestBugNum());
+    }
+}
+
+```
+
+</CodeGroupItem>
+<CodeGroupItem title="DevelopmentJob.java">
+
+```java
+package pub.zxj.java2020.week03.inheritancedemo.practice.model;
+
+/**
+ * 研发工作类
+ *
+ * @author Jaime
+ */
+public class DevelopmentJob extends Job {
+    /**
+     * 有效编码行数codingLineNum、目前没有解决的Bug数unsolvedBugNum
+     */
+    private int codingLineNum;
+    private int unsolvedBugNum;
+
+    /**
+     * 有参构造初始化有效编码行数、目前没有解决的Bug数属性
+     */
+    public DevelopmentJob(int codingLineNum, int unsolvedBugNum) {
+        this.setCodingLineNum(codingLineNum);
+        this.setUnsolvedBugNum(unsolvedBugNum);
+    }
+
+    /**
+     * 有参构造初始化全部属性,调用父类相关赋值方法
+     *
+     * @param jobName        开发工作类工作名称
+     * @param codingLineNum  有效编码行数
+     * @param unsolvedBugNum 目前没有解决的Bug数
+     */
+    public DevelopmentJob(String jobName, int codingLineNum, int unsolvedBugNum) {
+        super(jobName);
+        this.setCodingLineNum(codingLineNum);
+        this.setUnsolvedBugNum(unsolvedBugNum);
+    }
+
+    public int getCodingLineNum() {
+        return codingLineNum;
+    }
+
+    public void setCodingLineNum(int codingLineNum) {
+        this.codingLineNum = codingLineNum;
+    }
+
+    public int getUnsolvedBugNum() {
+        return unsolvedBugNum;
+    }
+
+    public void setUnsolvedBugNum(int unsolvedBugNum) {
+        this.unsolvedBugNum = unsolvedBugNum;
+    }
+
+    /**
+     * 重写描述工作的方法。
+     */
+    @Override
+    public void showJob() {
+        System.out.printf(" %s 的日报是：今天编写了 %d 行代码，目前仍然有 %s 个 bug 没有解决。\n", this.getJobName(), this.getCodingLineNum(), this.getUnsolvedBugNum());
+    }
+}
+
+```
+
+</CodeGroupItem>
+<CodeGroupItem title="JobTest.java">
+
+```java
+package pub.zxj.java2020.week03.inheritancedemo.practice.test;
+
+import pub.zxj.java2020.week03.inheritancedemo.practice.model.DevelopmentJob;
+import pub.zxj.java2020.week03.inheritancedemo.practice.model.Job;
+import pub.zxj.java2020.week03.inheritancedemo.practice.model.TestJob;
+
+/**
+ * 工作类 Job 的测试方法
+ *
+ * @author Jaime
+ */
+public class JobTest {
+    public static void main(String[] args) {
+        Job job = new Job("父类");
+        System.out.print(job.getJobName() + "信息测试: ");
+        job.showJob();
+
+        TestJob tj = new TestJob("测试工作类", 10, 5);
+        System.out.print(tj.getJobName() + "信息测试:");
+        tj.showJob();
+
+        DevelopmentJob dj = new DevelopmentJob("研发工作类", 1000, 10);
+        System.out.print(dj.getJobName() + "信息测试:");
+        dj.showJob();
+    }
+}
+
+```
+
+</CodeGroupItem>
+</CodeGroup>
