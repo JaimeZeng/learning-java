@@ -2303,7 +2303,7 @@ Staff {
 | 异常     | 可以修改 | 可以减少或删除，一定不能抛出新的或者更广的异常 |
 | 访问     | 可以修改 | 一定不能做更严格的限制（可以降低限制）         |
 
-### 编程练习
+#### 编程练习
 
 编程练习：请使用面向对象的思想，设计自定义类完成如下功能要求：
 接收用户输入的信息，选择需要完成的工作任务。其中，可供选择的有：测试工作和硏发工作。关于类型设定描述如下：
@@ -2380,7 +2380,6 @@ public class Job {
         System.out.println("开心工作！");
     }
 }
-
 ```
 
 </CodeGroupItem>
@@ -2450,7 +2449,6 @@ public class TestJob extends Job {
         System.out.printf(" %s 的日报是：今天编写了 %d 个测试用例，发现了 %s 个 bug。\n", this.getJobName(), this.getTestCaseNum(), this.getTestBugNum());
     }
 }
-
 ```
 
 </CodeGroupItem>
@@ -2516,7 +2514,6 @@ public class DevelopmentJob extends Job {
         System.out.printf(" %s 的日报是：今天编写了 %d 行代码，目前仍然有 %s 个 bug 没有解决。\n", this.getJobName(), this.getCodingLineNum(), this.getUnsolvedBugNum());
     }
 }
-
 ```
 
 </CodeGroupItem>
@@ -2547,6 +2544,680 @@ public class JobTest {
         DevelopmentJob dj = new DevelopmentJob("研发工作类", 1000, 10);
         System.out.print(dj.getJobName() + "信息测试:");
         dj.showJob();
+    }
+}
+```
+
+</CodeGroupItem>
+</CodeGroup>
+
+### 访问控制修饰符
+
+#### 访问控制权限
+
+Java 中，可以使用访问控制符来保护对类、变量、方法和构造方法的访问。Java 支持 4 种不同的访问权限。
+
+- **default** (即默认，什么也不写）: 在同一包内可见，不使用任何修饰符。使用对象：类、接口、变量、方法。
+
+- **private** : 在同一类内可见。使用对象：变量、方法。 **注意：不能修饰类（外部类）**
+
+- **public** : 对所有类可见。使用对象：类、接口、变量、方法
+
+- **protected** : 对同一包内的类和所有子类可见。使用对象：变量、方法。 **注意：不能修饰类（外部类）**。
+
+我们可以通过以下表来说明访问权限：
+
+| 修饰符      | 当前类 | 同一包内 | 子孙类(同一包) | 子孙类(不同包) | 其他包 |
+| ----------- | ------ | -------- | -------------- | -------------- | ------ |
+| `public`    | ✔      | ✔        | ✔              | ✔              | ✔      |
+| `protected` | ✔      | ✔        | ✔              | ✔/✖            | ✖      |
+| `default`   | ✔      | ✔        | ✔              | ✖              | ✖      |
+| `private`   | ✔      | ✖        | ✖              | ✖              | ✖      |
+
+::: tip 访问修饰符
+
+- **default**：默认访问修饰符声明的变量和方法，对同一个包内的类是可见的。接口里的变量都隐式声明为 public static final,而接口里的方法默认情况下访问权限为 public。
+
+- **private**：私有访问修饰符是最严格的访问级别，所以被声明为  **private**  的方法、变量和构造方法只能被所属类访问，并且类和接口不能声明为  **private**。
+
+  声明为私有访问类型的变量只能通过类中公共的 getter 方法被外部类访问。
+
+  Private 访问修饰符的使用主要用来隐藏类的实现细节和保护类的数据。
+
+- **public**：公有访问修饰符。被声明为 public 的类、方法、构造方法和接口能够被任何其他类访问。
+
+  如果几个相互访问的 public 类分布在不同的包中，则需要导入相应 public 类所在的包。由于类的继承性，类所有的公有方法和变量都能被其子类继承。
+
+- **protected**：受保护的访问修饰符。protected 需要从以下两个点来分析说明：
+
+  - **子类与基类在同一包中**：被声明为 protected 的变量、方法和构造器能被同一个包中的任何其他类访问；
+
+  - **子类与基类不在同一包中**：那么在子类中，子类实例可以访问其从基类继承而来的 protected 方法，而不能访问基类实例的 protected 方法。
+
+  protected 可以修饰数据成员，构造方法，方法成员，**不能修饰类（内部类除外）**。
+
+  接口及接口的成员变量和成员方法不能声明为 protected。
+
+::: right
+
+[Java 修饰符 - 菜鸟教程](https://www.runoob.com/java/java-modifier-types.html)
+
+:::
+
+#### 访问控制和继承
+
+::: tip 方法继承的规则
+
+- 父类中声明为 public 的方法在子类中也必须为 public。
+
+- 父类中声明为 protected 的方法在子类中要么声明为 protected，要么声明为 public，不能声明为 private。
+
+- 父类中声明为 private 的方法，不能够被继承。
+
+:::
+
+### super 关键字
+
+通过 super 关键字来实现对父类成员的访问，用来引用当前对象的父类。
+
+#### 子类访问父类成员
+
+- 访问父类成员方法 `super.print();`
+- 访问父类属性 `super.name;`
+- 访问父类构造方法 `super();`
+
+::: tip super
+
+- 子类的构造的过程中必须调用其父类的构造方法;
+- 如果子类的构造方法中没有显示调用父类的构造方法，则系统系默认调用父类无参的构造方法;
+- 如果子类构造方法中既没有显式调用父类的构造方法，而父类又没有无参的构造方法，则编译出错;
+- 使用 super 调用父类指定构造方法，必须在子类的构造方法的第一行;
+  :::
+
+#### 继承后的实例初始化顺序
+
+1. 父类静态成员
+2. 子类静态成员
+3. 父类对象构造（属性赋值、构造代码块、构造方法）
+4. 子类对象构造（属性赋值、构造代码块、构造方法）
+
+#### super PK this
+
+- this 关键字：指向自己(当前类对象)的引用。
+
+  - 访问当前类的成员方法；
+  - 访问当前类的成员属性；
+  - 访问当前类的构造方法；
+  - 不能在静态方法中使用；
+
+- super 关键字：我们可以通过 super 关键字来实现对父类对象成员的访问，用来引用当前对象的父类。
+
+  - 访问父类的成员方法；
+  - 访问父类的成员属性；
+  - 访问父类的构造方法；
+  - 不能再静态方法中使用；
+
+- 构造方法调用时，super 和 this 不能同时出现。（super 和 this 都是必须在构造方法的第一行）
+
+#### 关于 super 的常见问题
+
+1. 子类构造默认调用父类无参构造方法，那么如果父类中没有无参的枃造方法只有有参的枃造方法，一定会编译报错吗？编译报错是否就代表无法正常运行？
+
+   答案是: 此时一定会编译报错，但不一定会无法正常运行，需要看具体编码情况。
+
+   下面我们结合示例来看一下。譬如设定自定义类: Paternal、Modern 为继承关系，且满足父类中只有带参构造方法。定义 Test 类为测试类，完成 Modern 对象构建。
+
+   Ps: 此处由于展示篇幅有限，暂不考虑属性的访问权限。
+
+   - 子类中没有任何构造方法，通过 super 调用父类指定带参构造。
+
+     <CodeGroup>
+     <CodeGroupItem title="Paternal.java" active>
+
+     ```java
+     package pub.zxj.java2020.week03.inheritancedemo.supertest.model;
+
+     /**
+      * 父辈类 Paternal
+      *
+      * @author Jaime
+      */
+     public class Paternal {
+         /**
+          * 血型blood、肤色complexion
+          */
+         String blood;
+         String complexion;
+
+         /**
+          * 全参构造初始化。
+          *
+          * @param blood      血型
+          * @param complexion 肤色
+          */
+         public Paternal(String blood, String complexion) {
+             this.blood = blood;
+             this.complexion = complexion;
+         }
+     }
+     ```
+
+     </CodeGroupItem>
+     <CodeGroupItem title="Modern.java">
+
+     ```java
+     /**
+     * 当代人类 Modern 继承于父辈类 Paternal
+     *
+     * @author Jaime
+     */
+     public class Modern extends Paternal {
+        /**
+         * 国籍nationality、
+         */
+        String nationality;
+
+        // Error: 'Paternal' 中没有可用的默认构造函数。
+        public Modern() {
+        }
+
+        // Error: 'Paternal' 中没有可用的默认构造函数。
+        public Modern(String blood, String complexion, String nationality) {
+            //super(blood, complexion);
+            this.nationality = nationality;
+            System.out.println("hahahaha~");
+        }
+     }
+     ```
+
+     </CodeGroupItem>
+     <CodeGroupItem title="Test.java" active>
+
+     ```java
+     package pub.zxj.java2020.week03.inheritancedemo.supertest.test;
+
+     import pub.zxj.java2020.week03.inheritancedemo.supertest.model.Modern;
+
+     /**
+      * @author Jaime
+      */
+     public class Test {
+         public static void main(String[] args) {
+             Modern two = new Modern("O型血", "黄皮肤", "中国");
+         }
+     }
+     ```
+
+     </CodeGroupItem>
+     </CodeGroup>
+
+     运行结果，产生异常，原因为：父类没有无参构造，因此必须调用其他构造方法，否则无法完成指定对象。
+
+     由此可见，当父类中只有带参构造，子类中没有任何构造方法中通过 super 调用父类指定带参构造的时候，一定会编译报错，同时也会产生运行异常。
+
+   - 子类中部分构造方法通过 super 调用了父类指定的带参构造：修改子类带参构造，使用 super 调用父类对应构造，无参构造不动。
+
+     <CodeGroup>
+     <CodeGroupItem title="Paternal.java" active>
+
+     ```java
+     package pub.zxj.java2020.week03.inheritancedemo.supertest.model;
+
+     /**
+      * 父辈类 Paternal
+      *
+      * @author Jaime
+      */
+     public class Paternal {
+         /**
+          * 血型blood、肤色complexion
+          */
+         String blood;
+         String complexion;
+
+         /**
+          * 全参构造初始化。
+          *
+          * @param blood      血型
+          * @param complexion 肤色
+          */
+         public Paternal(String blood, String complexion) {
+             this.blood = blood;
+             this.complexion = complexion;
+         }
+     }
+     ```
+
+     </CodeGroupItem>
+     <CodeGroupItem title="Modern.java">
+
+     ```java
+     /**
+     * 当代人类 Modern 继承于父辈类 Paternal
+     *
+     * @author Jaime
+     */
+     public class Modern extends Paternal {
+        /**
+         * 国籍nationality、
+         */
+        String nationality;
+
+        // Error: 'Paternal' 中没有可用的默认构造函数。
+        public Modern() {
+        }
+
+        public Modern(String blood, String complexion, String nationality) {
+            super(blood, complexion);
+            this.nationality = nationality;
+            System.out.println("hahahaha~");
+        }
+     }
+     ```
+
+     </CodeGroupItem>
+     <CodeGroupItem title="Test.java" active>
+
+     ```java
+     package pub.zxj.java2020.week03.inheritancedemo.supertest.test;
+
+     import pub.zxj.java2020.week03.inheritancedemo.supertest.model.Modern;
+
+     /**
+      * @author Jaime
+      */
+     public class Test {
+         public static void main(String[] args) {
+             Modern two = new Modern("O型血", "黄皮肤", "中国");
+         }
+     }
+     ```
+
+     </CodeGroupItem>
+     </CodeGroup>
+
+     错误原因仍为：父类没有无参构造，因此必须调用其他构造方法，否则无法完成指定对象。
+
+     由此可见，当父类中只有带参构造，子类中只有部分构造方法中通过 super 调用父类指定带参构造的时候，仍然会编译报错。但此时，如在测试类中，调用的是已经处理过的子类构造则不会产生运行时异常(Ps: 处理指应用 super 调用过指定父类构造)
+
+     简单来说，可以理解为，编译出错只是提醒代码有漏洞，但是运行时如果不执行漏洞代码，则不彯响正常的运行结果。、
+
+2. 如果子类通过 super 来调用父类的带参构造，那么是不是父类当中就可以不需要定义无参构造了？
+
+   如果只是考虑当前功能实现，的确可以不在父类中定义无参构造方法了；但是如果考虑到后续功能扩展，还是建议大家在父类中保留无参构造的编码。
+
+3. 请问如果子类构造方法调用了 this()，那么还会默认调用父类的 super() 吗？
+
+   答案是：肯定会。
+
+   因为，当子类的带参构造方法调用 this()，意思是，调用了同类中的无参构造方法。
+
+   而在子类的无参构造方法中如果没有通过 super 设定，则默认会调用其父类的无参构造方法，也就是编译器会自动在子类无参构造方法中添加 super()。
+
+   下面我们结合示例来看一下: 假如设定自定义类: Paternal、 Modern 为继承关系，且满足父类中只有带参构造方法。定义 Test 类为测试类，完成 Modern 对象构建。 （Ps:此处由于展示篇幅有跟，暂不考虑属性的访问权跟）
+
+   <CodeGroup>
+   <CodeGroupItem title="Paternal.java" active>
+
+   ```java
+   package pub.zxj.java2020.week03.inheritancedemo.supertest.model;
+
+   /**
+    * 父辈类 Paternal
+    *
+    * @author Jaime
+    */
+   public class Paternal {
+
+       public Paternal() {
+           System.out.println("我是父类的无参构造~");
+       }
+   }
+   ```
+
+   </CodeGroupItem>
+   <CodeGroupItem title="Modern.java">
+
+   ```java
+   package pub.zxj.java2020.week03.inheritancedemo.supertest.model;
+
+   /**
+    * 当代人类 Modern 继承于父辈类 Paternal
+    *
+    * @author Jaime
+    */
+   public class Modern extends Paternal {
+       /**
+        * 国籍nationality、
+        */
+       String nationality;
+
+       public Modern（）{
+       }
+
+       public Modern(String nationality) {
+           this();
+           this.nationality =
+   nationality;
+       }
+   }
+   ```
+
+   </CodeGroupItem>
+   <CodeGroupItem title="Test.java">
+
+   ```java
+   package pub.zxj.java2020.week03.inheritancedemo.supertest.test;
+
+   import pub.zxj.java2020.week03.inheritancedemo.supertest.model.Modern;
+
+   /**
+    * @author Jaime
+    */
+   public class Test {
+       public static void main(String[] args) {
+           Modern two = new Modern("中国");
+       }
+   }
+   ```
+
+   </CodeGroupItem>
+   </CodeGroup>
+
+   运行结果
+
+   ```java
+   我是父类的无参构造~
+   ```
+
+#### 编程练习
+
+编程练习:某公司要开发"XX 车行管理系统"，请使用面向对象的思想，设计自定义类描述自行车、电动车和三轮车。
+
+程序参考运行效果图如下：
+
+```java
+父类信息测试：这是一辆 红 颜色的，天宇 牌的非机动车，有 4 个轮子，有 2 个座椅的非机动车。
+自行车类信息测试：这是一辆 黄 颜色的，捷安特 牌的自行车。
+电动车类信息测试：这是一辆使用 飞鸽 牌电池的电动车。
+三轮车类信息测试：三轮车是一款有 3 个轮子的非机动车。
+```
+
+<CodeGroup>
+<CodeGroupItem title="NonVehicle.java" active>
+
+```java
+package pub.zxj.java2020.week03.inheritancedemo.vehiclemanagementsystem.model;
+
+/**
+ * 非机动车类 NonVehicle
+ *
+ * @author Jaime
+ */
+public class NonVehicle {
+    /**
+     * 品牌brand、颜色color、轮子wheel、座椅seat
+     */
+    private String brand;
+    private String color;
+    private int wheel = 2;
+    private int seat = 1;
+
+    /**
+     * 无参构造方法
+     */
+    public NonVehicle() {
+    }
+
+    /**
+     * 双参构造方法，实现对对品牌、颜色属性的初始化 赋值操作。
+     *
+     * @param brand 品牌
+     * @param color 颜色
+     */
+    public NonVehicle(String brand, String color) {
+        this.brand = brand;
+        this.color = color;
+    }
+
+    /**
+     * 四参构造方法，实现对品牌、颜色、车轮、座椅属性进行初始化赋值操作。
+     *
+     * @param brand 品牌
+     * @param color 颜色
+     * @param wheel 车轮
+     * @param seat  座椅
+     */
+    public NonVehicle(String brand, String color, int wheel, int seat) {
+        this.setBrand(brand);
+        this.setColor(color);
+        this.setWheel(wheel);
+        this.setSeat(seat);
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public int getWheel() {
+        return wheel;
+    }
+
+    public void setWheel(int wheel) {
+        this.wheel = wheel;
+    }
+
+    public int getSeat() {
+        return seat;
+    }
+
+    public void setSeat(int seat) {
+        this.seat = seat;
+    }
+
+    /**
+     * 运行的方法。
+     */
+    public void showInfo() {
+        System.out.printf("这是一辆 %s 颜色的，%s 牌的非机动车，有 %d 个轮子，有 %d 个座椅的非机动车。\n", this.getColor(), this.getBrand(), this.getWheel(), this.getSeat());
+    }
+}
+
+```
+
+</CodeGroupItem>
+<CodeGroupItem title="Bicycle.java">
+
+```java
+package pub.zxj.java2020.week03.inheritancedemo.vehiclemanagementsystem.model;
+
+/**
+ * 自行车类 Bicycle 继承于非机动车类 NonVehicle
+ *
+ * @author Jaime
+ */
+public class Bicycle extends NonVehicle {
+    /**
+     * 无参构造方法
+     */
+    public Bicycle() {
+    }
+
+    /**
+     * 双参构造方法，实现对自行车品牌、颜色属性的初始化赋值操作。
+     *
+     * @param brand 品牌
+     * @param color 颜色
+     */
+    public Bicycle(String brand, String color) {
+        super(brand, color);
+    }
+
+    /**
+     * 四参构造方法，实现对自行车品牌、颜色、车轮、座椅属性进行初始化赋值操作。
+     *
+     * @param brand 品牌
+     * @param color 颜色
+     * @param wheel 车轮
+     * @param seat  座椅
+     */
+    public Bicycle(String brand, String color, int wheel, int seat) {
+        super(brand, color, wheel, seat);
+    }
+
+    /**
+     * 重写运行的方法。
+     */
+    @Override
+    public void showInfo() {
+        System.out.printf("这是一辆 %s 颜色的，%s 牌的自行车。\n", this.getColor(), this.getBrand());
+    }
+}
+
+```
+
+</CodeGroupItem>
+<CodeGroupItem title="ElectricVehicle.java">
+
+```java
+package pub.zxj.java2020.week03.inheritancedemo.vehiclemanagementsystem.model;
+
+/**
+ * 电动车类 ElectricVehicle 继承于非机动车类 NonVehicle
+ *
+ * @author Jaime
+ */
+public class ElectricVehicle extends NonVehicle {
+    /**
+     * 电池品牌batteryBrand
+     */
+    private String batteryBrand;
+
+    /**
+     * 单参构造方法，实现对对电动车电池品牌属性的初始化赋值操作
+     */
+    public ElectricVehicle(String batteryBrand) {
+        this.setBatteryBrand(batteryBrand);
+    }
+
+    /**
+     * 双参构造方法，实现对对电动车品牌、颜色、电池品牌属性的初始化赋值操作。
+     *
+     * @param brand        品牌
+     * @param color        颜色
+     * @param batteryBrand 电池品牌
+     */
+    public ElectricVehicle(String brand, String color, String batteryBrand) {
+        super(brand, color);
+        this.setBatteryBrand(batteryBrand);
+    }
+
+    /**
+     * 四参构造方法，实现对电动车品牌、颜色、车轮、座椅、电池品牌属性进行初始化赋值操作。
+     *
+     * @param brand 品牌
+     * @param color 颜色
+     * @param wheel 车轮
+     * @param seat  座椅
+     */
+    public ElectricVehicle(String brand, String color, int wheel, int seat, String batteryBrand) {
+        super(brand, color, wheel, seat);
+        this.setBatteryBrand(batteryBrand);
+    }
+
+    public String getBatteryBrand() {
+        return batteryBrand;
+    }
+
+    public void setBatteryBrand(String batteryBrand) {
+        this.batteryBrand = batteryBrand;
+    }
+
+    /**
+     * 重写运行的方法。
+     */
+    @Override
+    public void showInfo() {
+        System.out.printf("这是一辆使用 %s 牌电池的电动车。\n", this.getBatteryBrand());
+    }
+}
+
+```
+
+</CodeGroupItem>
+<CodeGroupItem title="Tricycle.java">
+
+```java
+package pub.zxj.java2020.week03.inheritancedemo.vehiclemanagementsystem.model;
+
+/**
+ * 三轮车类 Tricycle 继承于非机动车类 NonVehicle
+ *
+ * @author Jaime
+ */
+public class Tricycle extends NonVehicle {
+
+    /**
+     * 无参构造方法
+     */
+    public Tricycle() {
+        this.setWheel(3);
+    }
+
+    /**
+     * 重写运行的方法。
+     */
+    @Override
+    public void showInfo() {
+        System.out.printf("三轮车是一款有 %d 个轮子的非机动车。\n", this.getWheel());
+    }
+}
+
+```
+
+</CodeGroupItem>
+<CodeGroupItem title="Test.java">
+
+```java
+package pub.zxj.java2020.week03.inheritancedemo.vehiclemanagementsystem.test;
+
+import pub.zxj.java2020.week03.inheritancedemo.vehiclemanagementsystem.model.Bicycle;
+import pub.zxj.java2020.week03.inheritancedemo.vehiclemanagementsystem.model.ElectricVehicle;
+import pub.zxj.java2020.week03.inheritancedemo.vehiclemanagementsystem.model.NonVehicle;
+import pub.zxj.java2020.week03.inheritancedemo.vehiclemanagementsystem.model.Tricycle;
+
+/**
+ * @author Jaime
+ */
+public class Test {
+    public static void main(String[] args) {
+        NonVehicle nonVehicle = new NonVehicle("天宇", "红", 4, 2);
+        System.out.print("父类信息测试：");
+        nonVehicle.showInfo();
+
+        Bicycle bicycle = new Bicycle("捷安特", "黄");
+        System.out.print("自行车类信息测试：");
+        bicycle.showInfo();
+
+        ElectricVehicle electricVehicle = new ElectricVehicle("飞鸽");
+        System.out.print("电动车类信息测试：");
+        electricVehicle.showInfo();
+
+        Tricycle tricycle = new Tricycle();
+        System.out.print("三轮车类信息测试：");
+        tricycle.showInfo();
     }
 }
 
