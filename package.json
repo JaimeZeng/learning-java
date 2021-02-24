@@ -6,7 +6,7 @@
   "author": "JaimeZeng <78083448+JaimeZeng@users.noreply.github.com>",
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^2.0.0-alpha.25"
+    "vuepress": "^2.0.0-alpha.26"
   },
   "scripts": {
     "docs:dev": "yarn add -D vuepress@next && vuepress dev docs --clean-cache",
