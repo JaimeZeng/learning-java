@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS background-position 属性</title>
+    <style type="text/css">
+        /* 被所有 div 共享 */
+        div {
+            background-color: #FFEE99;
+            background-repeat: no-repeat;
+            width: 300px;
+            height: 80px;
+            margin-bottom: 12px;
+        }
+
+        /* 这些例子使用 `background` 缩写 */
+        .exampleone {
+            background: url("startransparent.gif") #FFEE99 2.5cm bottom no-repeat;
+        }
+
+        .exampletwo {
+            background: url("startransparent.gif") #FFEE99 3em 50% no-repeat;
+        }
+
+        /* 多背景图片：每个图片依次和相应的 `background-position` 匹配 */
+        .examplethree {
+            background-image: url("startransparent.gif"), url("catfront.png");
+            background-position: 0px 0px, center;
+        }
+    </style>
+</head>
+<body>
+<h1>CSS background-position 属性</h1>
+<div class="exampleone">Example One</div>
+<div class="exampletwo">Example Two</div>
+<div class="examplethree">Example Three</div>
+</body>
+</html>

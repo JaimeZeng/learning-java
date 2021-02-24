@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS background-image 属性</title>
+    <style type="text/css">
+        p {
+            font-size: 1.5em;
+            color: #FE7F88;
+            background-image: none;
+            background-color: transparent;
+        }
+
+        div {
+            background-image: url("mdn_logo_only_color.png");
+        }
+
+        .catsandstars {
+            background-image: url("startransparent.gif"),
+            url("catfront.png");
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+<h1>CSS background-image 属性</h1>
+<!--注意星星图片部分透明且位于猫图片上方.-->
+<div>
+    <p class="catsandstars">
+        This paragraph is full of cats<br/>and stars.
+    </p>
+    <p>This paragraph is not.</p>
+    <p class="catsandstars">
+        Here are more cats for you.<br/>Look at them!
+    </p>
+    <p>And no more.</p>
+</div>
+</body>
+</html>

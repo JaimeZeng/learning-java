@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <style type="text/css">
+        p::before{
+            content: "《";
+        }
+
+        p::after{
+            content: "》";
+        }
+
+        *::selection{
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+<h3>图书名称</h3>
+<p>Java程序设计</p>
+<p>Java编程思想</p>
+<p>Java核心技术</p>
+</body>
+</html>

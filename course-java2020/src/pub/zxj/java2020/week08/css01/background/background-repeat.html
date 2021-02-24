@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS background-repeat 属性</title>
+    <style type="text/css">
+        /* Shared for all DIVS in example */
+        li {
+            margin-bottom: 12px;
+        }
+
+        div {
+            background-image: url("starsolid.gif");
+            width: 144px;
+            height: 84px;
+        }
+
+        /* 因为 space 和 round 当前没有被广泛支持的, 所以没有添加*/
+        .one {
+            background-repeat: no-repeat;
+        }
+
+        .two {
+            background-repeat: repeat;
+        }
+
+        .three {
+            background-repeat: repeat-x;
+        }
+
+        .four {
+            background-repeat: repeat-y;
+        }
+
+        /* Multiple images */
+        .five {
+            background-image: url("starsolid.gif"), url("favicon32.png");
+            background-repeat: repeat-x, repeat-y;
+            height: 144px;
+        }
+    </style>
+</head>
+<body>
+<h1>CSS background-repeat 属性</h1>
+<ol>
+    <li>no-repeat
+        <div class="one">&nbsp;</div>
+    </li>
+    <li>repeat
+        <div class="two">&nbsp;</div>
+    </li>
+    <li>repeat-x
+        <div class="three">&nbsp;</div>
+    </li>
+    <li>repeat-y
+        <div class="four">&nbsp;</div>
+    </li>
+    <li>repeat-x, repeat-y (multiple images)
+        <div class="five">&nbsp;</div>
+    </li>
+</ol>
+</body>
+</html>
