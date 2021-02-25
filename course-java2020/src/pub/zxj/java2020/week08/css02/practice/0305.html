@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        .content {
+            width: 800px;
+            height: 400px;
+            background-color: skyblue;
+            padding-top: 100px;
+            box-sizing: border-box;
+        }
+
+        .top {
+            width: 400px;
+            height: 200px;
+            background-color: yellow;
+            margin-left: 200px;
+        }
+    </style>
+</head>
+<body>
+<!--在不更改蓝色区域大小的情况下，将黄色区域设置为水平垂直居中。-->
+<!--1. 水平居中可以设置top左外边距为200px。-->
+<!--2. 垂直居中可以设置content内上边距为100px，并使用box-sizing属性设置边距产生的位置。-->
+
+<div class="content">
+    <div class="top"></div>
+</div>
+</body>
+</html>
