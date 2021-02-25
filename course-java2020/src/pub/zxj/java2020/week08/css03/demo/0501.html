@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>z-index</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			div {
+				width: 6.25rem;
+				height: 6.25rem;
+			}
+
+			.div0 {
+				height: auto;
+			}
+
+			.div1 {
+				background-color: red;
+				position: absolute;
+				top: 1.25rem;
+				left: 6.25rem;
+				z-index: 100;
+			}
+			.div2{
+				background-color: #0000FF;
+				position: absolute;
+				top: 2.5rem;
+				left: 7.5rem;
+				z-index: 50;
+			}
+			.div3{
+				background-color: #006400;
+				position: absolute;
+				top: 3.75rem;
+				left: 8.75rem;
+				z-index: 10;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div0">
+			<div class="div1">
+
+			</div>
+			<div class="div2">
+
+			</div>
+			<div class="div3">
+
+			</div>
+		</div>
+	</body>
+</html>

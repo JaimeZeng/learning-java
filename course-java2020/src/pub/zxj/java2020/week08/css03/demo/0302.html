@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>相对定位和绝对定位-2</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			div{
+				width: 100px;
+				height: 100px;
+			}
+			.div1{
+				float: left;
+			}
+			.div2{
+				float: right;
+			}
+			.div11, .div21{
+				background-color: red;
+			}
+			.div12, .div22{
+				background-color: yellow;
+			}
+			.div13, .div23{
+				background-color: blue;
+			}
+			.div11{
+				position: relative;
+				left: 20px;
+				top: 40px;
+			}
+			.div12{
+				position: relative;
+				left: 40px;
+				top: 60px;
+			}
+			.div13{
+				position: relative;
+				left: 60px;
+				top: 80px;
+			}
+			.div21{
+				position: absolute;
+				right: 20px;
+				top: 40px;
+			}
+			.div22{
+				position: absolute;
+				right: 40px;
+				top: 60px;
+			}
+			.div23{
+				position: absolute;
+				right: 60px;
+				top: 80px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div0">
+			
+			<div class="div1">
+					<div class="div11">
+						
+					</div>
+					<div class="div12">
+						
+					</div>
+					<div class="div13">
+						
+					</div>
+			</div>
+			<div class="div2">
+					<div class="div21">
+								   
+					</div>         
+					<div class="div22">
+								   
+					</div>         
+					<div class="div23">
+						
+					</div>
+			</div>
+		</div>
+	</body>
+</html>
