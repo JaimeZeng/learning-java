@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>自定义函数</title>
+		<script type="text/javascript">
+			function add(var1, var2) {
+				console.log(var1 + " + " + var2 + " = " + (var1 + var2));
+			}
+
+			function subtract(var1, var2) {
+				return var1 - var2;
+			}
+
+			var multiply = function(var1, var2) {
+				return var1 * var2;
+			}
+
+			var divide = function(var1, var2) {
+				return var1 / var2;
+			}
+			add(20, 3);
+			console.log("20 - 3 = " + subtract(20, 3));
+			console.log("20 * 3 = " + multiply(20, 3));
+			console.log("20 / 3 = " + divide(20, 3));
+			alert("20 / 3 = " + divide(20, 3));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

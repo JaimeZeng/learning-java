@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量作用域</title>
+    <script type="text/javascript">
+        var num1 = 9; // 全局变量
+
+        function fun1() {
+            console.log("num1 = " + num1);
+            var num1 = 12; // 局部变量
+            console.log("num1 = " + num1);
+            console.log("num1 - 1 = " + (num1 - 1));
+            var num2 = 16; // 局部变量
+        }
+
+        function fun2() {
+            console.log("num1 = " + num1);
+            console.log("num2 = " + num2);
+        }
+
+        fun1();
+        fun2();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

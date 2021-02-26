@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>循环类控制语句</title>
+    <script type="text/javascript">
+        function sum(num) {
+            var i, sum;
+
+            // for
+            sum = 0;
+            for (i = 1; i <= num; i++) {
+                sum += i;
+            }
+            console.log("1 + 2 + 3 + ... + " + (i - 1) + " = " + sum);
+
+            // while
+            i = 1;
+            sum = 0;
+            while (i <= num) {
+                sum += i;
+                ++i;
+            }
+            console.log("1 + 2 + 3 + ... + " + (i - 1) + " = " + sum);
+
+            // do...while
+            i = 1;
+            sum = 0;
+            do {
+                sum += i;
+                ++i;
+            }
+            while (i <= num)
+            console.log("1 + 2 + 3 + ... + " + (i - 1) + " = " + sum);
+        }
+
+        function evensum(num) {
+            var i, sum;
+
+            // for
+            sum = 0;
+            for (i = 1; i <= num; i++) {
+                if (i % 2 === 0) {
+                    sum += i;
+                }
+            }
+            console.log("1 + 2 + 3 + ... + " + (i - 1) + " = " + sum);
+
+            // while
+            i = 1;
+            sum = 0;
+            while (i <= num) {
+                sum += (i % 2 === 0 ? i : 0);
+                ++i;
+            }
+            console.log("1 + 2 + 3 + ... + " + (i - 1) + " = " + sum);
+        }
+
+        sum(5);
+        sum(50);
+        sum(100);
+
+        console.log("");
+        evensum(5);
+        evensum(50);
+        evensum(100);
+
+    </script>
+</head>
+<body>
+1 + 2 + 3 + ... + num = ? <br/>
+1 + 2 + 4 + ... + num = ?
+</body>
+</html>

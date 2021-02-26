@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>数据类型及类型转换</title>
+		<script type="text/javascript">
+			function dataTypeConverter() {
+				console.log("数据类型转换......");
+				var str1 = 123.456;
+				// 如果是数字，isNaN 返回 false
+				if (!isNaN(str1)) {
+					console.log("str1 = " + str1);
+					console.log("str1 isNaN? " + isNaN(str1));
+					console.log("str1 + 1 = " + (str1 + 1));
+					console.log("parseInt(str1) + 1 = " + (parseInt(str1) + 1));
+					console.log("parseFloat(str1) + 1 = " + (parseFloat(str1) + 1));
+				}
+			}
+			dataTypeConverter();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

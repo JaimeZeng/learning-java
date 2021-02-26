@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多条件控制语句</title>
+    <script type="text/javascript">
+        function evaluate(score) {
+            switch (parseInt(score / 10)) {
+                case 10:
+                    console.log("成绩：" + score + ", 满分~");
+                    break;
+                case 9:
+                    console.log("成绩：" + score + ", 优秀~");
+                    break;
+                case 8:
+                case 7:
+                    console.log("成绩：" + score + ", 良好~");
+                    break;
+                case 6:
+                    console.log("成绩：" + score + ", 及格~");
+                    break;
+                default:
+                    console.log("成绩：" + score + ", 不及格！");
+            }
+        }
+
+        var score1 = 100, score2 = 99, score3 = 88, score4 = 66, score5 = 55;
+        evaluate(score1);
+        evaluate(score2);
+        evaluate(score3);
+        evaluate(score4);
+        evaluate(score5);
+    </script>
+</head>
+<body>
+<p>
+    成绩是100分，显示满分
+    成绩大于等于90，显示优秀
+    成绩大于等于70，显示良好
+    成绩大于等于60，显示及格
+    否则，不及格
+</p>
+</body>
+</html>

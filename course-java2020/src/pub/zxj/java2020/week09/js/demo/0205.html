@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>其它数据类型转换</title>
+		<script type="text/javascript">
+			var str0 = 0;
+			console.log("str0 = " + (str0));
+			console.log("parseInt(str0) + 1 = " + (parseInt(str0) + 1));
+			console.log("parseFloat(str0) + 1 = " + (parseFloat(str0) + 1));
+			console.log("Number(str0) + 1 = " + (Number(str0) + 1));
+			console.log("Boolean(str0) = " + Boolean(str0));
+
+			console.log("");
+			var str1 = 123.456;
+			console.log("str1 = " + (str1));
+			console.log("parseInt(str1) + 1 = " + (parseInt(str1) + 1));
+			console.log("parseFloat(str1) + 1 = " + (parseFloat(str1) + 1));
+			console.log("Number(str1) + 1 = " + (Number(str1) + 1));
+			console.log("Boolean(str1) = " + Boolean(str1));
+
+
+			console.log("");
+			var str2 = "123a.456";
+			console.log("str2 = " + (str2));
+			console.log("parseInt(str2) + 1 = " + (parseInt(str2) + 1));
+			console.log("parseFloat(str2) + 1 = " + (parseFloat(str2) + 1));
+			console.log("Number(str2) + 1 = " + (Number(str2) + 1));  // 优先使用
+			console.log("Boolean(str2) = " + Boolean(str2));
+
+			// parseInt parseFloat 如果字符串的第一个字符不能被转换为数字，那么会返回 NaN。
+			console.log("");
+			var str3 = "a123.456";
+			console.log("str3 = " + (str3));
+			console.log("parseInt(str3) + 1 = " + (parseInt(str3) + 1));
+			console.log("parseFloat(str3) + 1 = " + (parseFloat(str3) + 1));
+			console.log("Number(str3) + 1 = " + (Number(str3) + 1));
+			console.log("Boolean(str3) = " + Boolean(str3));
+
+			console.log("");
+			var str4 = null;
+			console.log("str4 = " + (str4));
+			console.log("parseInt(str4) + 1 = " + (parseInt(str4) + 1));
+			console.log("parseFloat(str4) + 1 = " + (parseFloat(str4) + 1));
+			console.log("Number(str4) + 1 = " + (Number(str4) + 1));
+			console.log("Boolean(str4) = " + Boolean(str4));
+
+			console.log("");
+			var str5 = "";
+			console.log("str5 = " + (str5));
+			console.log("parseInt(str5) + 1 = " + (parseInt(str5) + 1));
+			console.log("parseFloat(str5) + 1 = " + (parseFloat(str5) + 1));
+			console.log("Number(str5) + 1 = " + (Number(str5) + 1));
+			console.log("Boolean(str5) = " + Boolean(str5));
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
