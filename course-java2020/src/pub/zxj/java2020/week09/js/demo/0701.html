@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 对表单元素进行设置</title>
+    <script type="text/javascript">
+        function show() {
+            document.getElementById("userName").value = "JaimeZeng";
+        }
+    </script>
+</head>
+<body onload="show()">
+<form method="post">
+    <label for="userName">
+        <input type="text" id="userName" name="userName" placeholder="jaime"/>
+    </label>
+    <input type="button" id="submitBtn" name="submitBtn" value="submit" onclick="show()"/>
+</form>
+</body>
+</html>

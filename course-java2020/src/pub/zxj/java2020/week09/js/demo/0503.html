@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符函数</title>
+    <script type="text/javascript">
+        var str = "escwzk, ejzhyo, zoskke, vqlclp , dyimdw , kpatcj , escwzk , bfapxc";
+
+        console.log("把字符串分割成字符串数组");
+        console.log(str);
+        console.log(str.split(","));
+        console.log("Array 1st element: " + str.split(",")[0]);
+
+        console.log("");
+        console.log("字符串拼接 concat");
+        console.log(str);
+        // console.log(str + " + , qwerty, yuiopa = " + str.concat(", qwerty", ", yuiopa"));
+        console.log(str.concat(", qwerty", ", yuiopa"));
+
+        console.log("");
+        console.log("字符串替换 replace");
+        console.log(str);
+        console.log(str.replace("escwzk", "zxcvbn"));
+        console.log(str.replaceAll("escwzk", "zxcvbn"));
+    </script>
+</head>
+<body>
+<h1>字符函数</h1>
+<ul>
+    <li>
+        String.split( separator: string | RegExp, limit?: number): string[] <br>
+        Split a string into substrings using the specified separator and return them as an array.
+    </li>
+    <li>
+        String.concat( ...strings: string[]): string <br>
+        Returns a string that contains the concatenation of two or more strings.
+    </li>
+    <li>
+        String.replace( searchValue: string | RegExp, replaceValue: string): string <br>
+        Replaces text in a string, using a regular expression or search string.
+    </li>
+</ul>
+</body>
+</html>

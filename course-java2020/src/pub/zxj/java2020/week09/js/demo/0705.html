@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 对表单元素进行设置3</title>
+    <script type="text/javascript">
+        function initSelect(obj, start, end) {
+            for (var i = start; i <= end; i++) {
+                obj.options.add(new Option(i, i));
+            }
+        }
+
+        function addOption() {
+            var date = new Date();
+            initSelect(document.getElementById("fullYear"), 2000, date.getFullYear());
+            initSelect(document.getElementById("month"), 1, 12);
+            initSelect(document.getElementById("day"), 1, 28);
+        }
+
+    </script>
+</head>
+<body onload="addOption()">
+<form method="post">
+    <label for="fullYear">
+        <select name="fullYear" id="fullYear">
+            <option value="1995">1995</option>
+            <option value="1996">1996</option>
+            <option value="1997" selected>1997</option>
+            <option value="1998">1998</option>
+            <option value="1999">1999</option>
+        </select>年
+    </label>
+    <label for="month">
+        <select name="month" id="month"></select>月
+    </label>
+    <label for="day">
+        <select name="day" id="day"></select>日
+    </label>
+</form>
+</body>
+</html>

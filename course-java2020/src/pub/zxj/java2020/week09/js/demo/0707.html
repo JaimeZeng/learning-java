@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 对表单元素进行设置4</title>
+    <script type="text/javascript">
+        function initSelect(obj, start, end) {
+            for (let i = start; i <= end; i++) {
+                obj.options.add(new Option(i, i));
+            }
+        }
+
+        /**
+         * 将所选月份对应的天全部删除，重新添加
+         */
+        function selectMonthDays() {
+            // 获取所选年份、月份、天数
+            let fullYear = document.getElementById("fullYear");
+            let month = document.getElementById("month");
+            let day = document.getElementById("day");
+            let months = parseInt(month.value);
+            // 所选月的天数
+            let days;
+            if (months === 2) {
+                //获取所选年份
+                let years = parseInt(fullYear.value);
+                //判断是否为闰年
+                days = (years % 400 === 0 || (years % 4 === 0 && years % 100 !== 0)) ? 29 : 28;
+                console.log(days);
+            } else if (months === 4 || months === 6 || months === 9 || months === 11) {
+                days = 30;
+            } else {
+                days = 31;
+            }
+            // 将所选月份对应的天全部删除
+            day.options.length = 0;
+            //重新添加所选月份天
+            initSelect(day, 1, days);
+        }
+
+        function addOption() {
+            let date = new Date();
+            initSelect(document.getElementById("fullYear"), 1995, date.getFullYear());
+            initSelect(document.getElementById("month"), 1, 12);
+            initSelect(document.getElementById("day"), 1, 28);
+            // 下拉列表默认选中项居中
+            document.getElementById("fullYear").selectedIndex = Math.round(document.getElementById("fullYear").length / 2);
+        }
+
+    </script>
+</head>
+<body onload="addOption()">
+<form method="post">
+    <label for="fullYear">
+        <select name="fullYear" id="fullYear" onchange="selectMonthDays()"></select>年
+    </label>
+    <label for="month">
+        <select name="month" id="month" onchange="selectMonthDays()"></select>月
+    </label>
+    <label for="day">
+        <select name="day" id="day"></select>日
+    </label>
+</form>
+</body>
+</html>

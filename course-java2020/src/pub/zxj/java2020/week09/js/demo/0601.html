@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组</title>
+    <script type="text/javascript">
+        // 实例化创建数组
+        var arrayObj01 = new Array();
+        var arrayObj02 = [];
+
+        // 创建数组并指定数组长度
+        var arrayObj03 = new Array(5);
+
+        // 创建带有默认值的数组
+        var arrayObj04 = new Array(0, 1, 2, "a", "B", 3);
+
+        // 创建数组并赋值，又称隐式创建数组
+        var arrayObj = [0, 1, 2, "a", "B", 3];
+
+        // 数组元素
+        console.log(arrayObj + " 数组中第一个元素为: " + arrayObj[0]);
+        console.log(arrayObj + " 数组中最后一个元素为: " + arrayObj[arrayObj.length - 1]);
+
+        // 数组遍历
+        for (var arrayObjKey in arrayObj) {
+            console.log("数组中第 " + arrayObjKey + "个元素为: " + arrayObj[arrayObjKey]);
+        }
+    </script>
+</head> 9
+<body>
+
+</body>
+</html>

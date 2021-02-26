@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符函数</title>
+    <script type="text/javascript">
+        var str1 = "5201314jaimezeng";
+        var startindex1 = 0, endindex1 = 6, strlen1 = 7;
+        var startindex2 = 7, endindex2 = 15, strlen2 = 9;
+        console.log("str1 = " + str1);
+        console.log("从起始位置 " + startindex1 + " 开始长度为 " + strlen1 + " 的字符串: " + str1.substr(startindex1, strlen1));
+        console.log("从起始位置 " + startindex2 + " 开始长度为 " + strlen2 + " 的字符串: " + str1.substr(startindex2, strlen2));
+        console.log("从起始位置 " + startindex1 + " 开始到结束位置  " + endindex1 + " 的字符串: " + str1.substring(startindex1, endindex1));
+        console.log("从起始位置 " + startindex2 + " 开始到结束位置  " + endindex2 + " 的字符串: " + str1.substring(startindex2, endindex2));
+
+        console.log("");
+        var name1 = "Brian0", name2 = "Taylor1";
+        console.log(name1.substr(0, 5) + " Sex: " + (name1.charAt(5) % 2 === 0 ? "male" : "female"));
+        console.log(name2.substr(0, 6) + " Sex: " + (name2.charAt(6) % 2 === 0 ? "male" : "female"));
+
+        console.log("");
+        console.log(str1 + " length = " + str1.length);
+        console.log(name1 + " length = " + name1.length);
+        console.log(name2 + " length = " + name2.length);
+
+        console.log("");
+        console.log(str1 + " 中字符 1 第一次出现的位置: " + str1.indexOf("1"));
+        console.log(str1 + " 中字符 1 第二次出现的位置: " + str1.indexOf("1", (str1.indexOf("1") + 1)));
+    </script>
+</head>
+<body>
+<h1>字符函数</h1>
+<ul>
+    <li>String.substr( from: number, length?: number): string <br>
+        Gets a substring beginning at the specified location and having the specified length.
+    </li>
+    <li>String.substring( start: number, end?: number): string <br>
+        Returns the substring at the specified location within a String object.
+    </li>
+    <li>
+        String.charAt( pos: number): string <br>
+        Returns the character at the specified index.
+    </li>
+    <li>String.length: number <br>
+        Returns the length of a String object.
+    </li>
+    <li>String.indexOf( searchString: string, position?: number): number <br>
+        Returns the position of the first occurrence of a substring.
+    </li>
+</ul>
+</body>
+</html>

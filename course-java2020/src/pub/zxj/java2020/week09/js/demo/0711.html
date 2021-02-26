@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 对表单元素进行设置6</title>
+    <script type="text/javascript">
+        function initHeadLogo() {
+            for (let i = 1; i < 9; i++) {
+                document.getElementById("headLogo").options.add(new Option(i, i));
+            }
+        }
+
+        function selectLogoImg() {
+            let headLogo = document.getElementById("headLogo");
+            let headLogoId = headLogo.value;
+            let headLogoImg = document.getElementById("headLogoImg");
+            headLogoImg.src = "avatar/avatar-" + headLogoId + ".png";
+        }
+    </script>
+</head>
+<body onload="initHeadLogo()">
+<form method="post">
+    <label for="headLogo"> 头像
+        <img id="headLogoImg" src="avatar/avatar-1.png" alt="headLogo"/>
+        <select name="headLogo" id="headLogo" onchange="selectLogoImg()"></select>
+    </label>
+</form>
+</body>
+</html>

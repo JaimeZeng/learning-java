@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 对表单元素进行设置2</title>
+    <script type="text/javascript">
+        function show() {
+            if (document.getElementsByName("sex")[0].checked) {
+                console.log(document.getElementsByName("sex")[0].value);
+            } else {
+                console.log(document.getElementsByName("sex")[1].value);
+            }
+        }
+    </script>
+</head>
+<body>
+<form method="post">
+    <label for="userName">
+        <input type="text" id="userName" name="userName" placeholder="Jaime"/>
+    </label>
+    <label for="maleSex">
+        <input type="radio" id="maleSex" name="sex" value="male" checked/>
+        男
+    </label>
+    <label for="femaleSex">
+        <input type="radio" id="femaleSex" name="sex" value="female"/>
+        女<br>
+    </label>
+    <input type="button" id="submitBtn" name="submitBtn" value="Submit" onclick="show()"/> <br>
+</form>
+</body>
+</html>

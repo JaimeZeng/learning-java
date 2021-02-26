@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数学函数</title>
+    <script type="text/javascript">
+        function mathfun(num) {
+            console.log(num + " 四舍五入取整: " + Math.round(num));
+            console.log(num + " 四舍五入保留两位小数: " + num.toFixed(2));
+            console.log(num + " 绝对值: " + Math.abs(num));
+        }
+
+        mathfun(456.789);
+        mathfun(-456.789);
+        console.log("(98,87,76,65,54,43,32,21,12,23,45,56,78,89) 中最大数: " + Math.max(98, 87, 76, 65, 54, 43, 32, 21, 12, 23, 45, 56, 78, 89));
+        console.log("(98,87,76,65,54,43,32,21,12,23,45,56,78,89) 中最小数: " + Math.min(98, 87, 76, 65, 54, 43, 32, 21, 12, 23, 45, 56, 78, 89));
+        console.log("");
+
+    </script>
+</head>
+<body>
+<h1>数学函数</h1>
+<ul>
+    <li>Math.round( x: number): number
+        Returns a supplied numeric expression rounded to the nearest integer.
+    </li>
+    <li>Number.toFixed( fractionDigits?: number): string
+        Returns a string representing a number in fixed-point notation.
+    </li>
+    <li>Math.abs(x: number): number
+        Returns the absolute value of a number (the value without regard to whether it is positive or negative).
+        For example, the absolute value of -5 is the same as the absolute value of 5.
+    </li>
+    <li>Math.max(...values: number[]): number
+        Returns the larger of a set of supplied numeric expressions.
+    </li>
+    <li>Math.min(...values: number[]): number
+        Returns the smaller of a set of supplied numeric expressions.
+    </li>
+    <li></li>
+</ul>
+</body>
+</html>

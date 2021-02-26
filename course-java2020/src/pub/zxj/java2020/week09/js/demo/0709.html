@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 对表单元素进行设置5</title>
+    <script type="text/javascript">
+        function deleteoption() {
+            let hobby = document.getElementById("hobby");
+            for (let i = hobby.length; i >= 0; i--) {
+                hobby.options.remove(hobby.value);
+            }
+        }
+    </script>
+</head>
+<body>
+<form method="post">
+    <label for="hobby">爱好
+        <select name="hobby" id="hobby">
+            <option value="climb">爬山</option>
+            <option value="swim">游泳</option>
+            <option value="photography">摄影</option>
+            <option value="tennis">网球</option>
+            <option value="parachuting">跳伞</option>
+        </select>
+    </label>
+    <input type="button" name="deleteBtn" id="deleteBtn" value="DeleteHobbyOption" onclick="deleteoption()"/>
+</form>
+</body>
+</html>

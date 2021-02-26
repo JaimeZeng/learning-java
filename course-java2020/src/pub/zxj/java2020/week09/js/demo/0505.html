@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日期函数</title>
+    <script type="text/javascript">
+        console.log("日期和时间: " + Date());
+        var date = new Date();
+        console.log("在这月里的天数: " + date.getDate());
+        console.log("在这周里的天数: " + date.getDay());
+        console.log("月份: " + (date.getMonth() + 1));
+        console.log("年份: " + date.getFullYear());
+        console.log("小时: " + date.getHours());
+        console.log("分钟: " + date.getMinutes());
+        console.log("秒数: " + date.getSeconds());
+        console.log("毫秒: " + date.getMilliseconds());
+        console.log("本地时间与格林威治标准时间 (GMT) 的分钟差: " + date.getTimezoneOffset());
+        console.log("在这月里的天数 UTC: " + date.getUTCDate());
+        console.log("小时 UTC: " + date.getUTCHours());
+        console.log("日期时间转换为字符串: " + date.toString());
+        console.log("日期转换为字符串: " + date.toDateString());
+        console.log("时间转换为字符串: " + date.toTimeString());
+        console.log("日期时间转换为字符串 UTC: " + date.toUTCString());
+        console.log("日期时间转换为字符串 local: " + date.toLocaleString());
+        console.log("日期转换为字符串 local: " + date.toLocaleDateString());
+        console.log("时间转换为字符串 local: " + date.toLocaleTimeString());
+    </script>
+</head>
+<body>
+<h1>日期函数</h1>
+<ul>
+    <li>Date() 返回当日的日期和时间。</li>
+    <li>Date.getDate(): number
+        Gets the day-of-the-month(1 ~ 31), using local time.
+    </li>
+    <li>Date.getDay(): number
+        Gets the day of the week(0 ~ 6), using local time.
+    </li>
+    <li>Date.getMonth(): number
+        Gets the month (0 ~ 11), using local time.
+    </li>
+    <li>Date.getFullYear(): number
+        Gets the year, using local time.
+    </li>
+    <li>Date.getHours(): number
+        Gets the hours in a date, using local time.
+    </li>
+    <li>Date.getMinutes(): number
+        Gets the minutes of a Date object, using local time.
+    </li>
+    <li>Date.getSeconds(): number
+        Gets the seconds of a Date object, using local time.
+    </li>
+    <li>Date.getMilliseconds(): number
+        Gets the milliseconds of a Date, using local time.
+    </li>
+    <li>Date.getTimezoneOffset(): number
+        Gets the difference in minutes between the time on the local computer and Universal Coordinated Time (UTC).
+    </li>
+    <li>Date.getUTCDate(): number
+        Gets the day-of-the-month, using Universal Coordinated Time (UTC).
+    </li>
+    <li>
+        Date.getUTCHours(): number
+        Gets the hours value in a Date object using Universal Coordinated Time (UTC).
+    </li>
+    <li>Date.toString(): string
+        Returns a string representation of a date. The format of the string depends on the locale.
+    </li>
+    <li>Date.toDateString(): string
+        Returns a date as a string value.
+    </li>
+    <li>Date.toTimeString(): string
+        Returns a time as a string value.
+    </li>
+    <li>Date.toUTCString(): string
+        Returns a date converted to a string using Universal Coordinated Time (UTC).
+    </li>
+    <li>Date.toLocaleString( locales?: string | string[], options?: Intl.DateTimeFormatOptions): string
+        Converts a date and time to a string by using the current or specified locale.
+    </li>
+    <li>Date.toLocaleDateString( locales?: string | string[], options?: Intl.DateTimeFormatOptions): string
+        Converts a date to a string by using the current or specified locale.
+    </li>
+    <li>Date.toLocaleTimeString( locales?: string | string[], options?: Intl.DateTimeFormatOptions): string
+        Converts a time to a string by using the current or specified locale.
+    </li>
+</ul>
+</body>
+</html>
