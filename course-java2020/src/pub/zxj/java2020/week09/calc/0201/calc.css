@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#calc {
+    top: 66px;
+    left: 66px;
+    position: absolute;
+}
+
+div {
+    width: 180px;
+}
+
+input[type = "button"] {
+    width: 32px;
+    margin-right: 6px;
+}
+
+input[type = "text"] {
+    width: 152px;
+    text-align: right;
+}

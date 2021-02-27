@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calc - 0102</title>
+    <script type="text/javascript">
+        function printMsg() {
+            console.log("Hello Jaime~");
+        }
+
+        function alertMsg() {
+            document.getElementById("testBtn2").onclick = function () {
+                alert("hello World, Hello Jaime ~");
+                printMsg();
+            }
+        }
+    </script>
+</head>
+<body onload="alertMsg()">
+<form>
+    <input type="button" id="testBtn1" value="test1" onclick="printMsg()">
+    <input type="button" id="testBtn2" value="test2">
+</form>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calc - 0203</title>
+    <link rel="stylesheet" type="text/css" href="calc.css">
+    <script type="text/javascript" src="calc.js"></script>
+</head>
+<body onload="init()">
+<!-- (文本框) + (0-9) + (+-*/%) + (.) + (DEL 退位) + (+-正负号) + (=) + (C清屏) -->
+<!-------------------------------------------------------------------------->
+<!--          文本框          -->
+<!--CE         DEL          %-->
+<!--7       8       9       /-->
+<!--4       5       6       *-->
+<!--1       2       3       --->
+<!--0       .      +/-      +-->
+<!--    m               =    -->
+<!------------------------------------------------------------------------->
+<div id="calc">
+    <div id="display">
+        <label for="monitor">
+            <input type="text" id="monitor" name="monitor" placeholder="0">
+            <!--<input type="text" id="monitor" name="monitor" placeholder="0" disabled>-->
+            <!-- disabled 禁用文本框-->
+        </label>
+    </div>
+    <div id="keyboard">
+        <table id="numTable">
+            <tr>
+                <td><input type="button" id="clearKey" name="clearKey" value="CE"></td>
+                <td><input type="button" id="deleteKey" name="deleteKey" value="DEL"></td>
+                <td><input type="button" id="sign" name="sign" value="+/-"></td>
+                <td><input type="button" id="modulus" name="modulus" value="%"></td>
+            </tr>
+            <tr>
+                <td><input type="button" id="num7" name="num7" value="7"></td>
+                <td><input type="button" id="num8" name="num8" value="8"></td>
+                <td><input type="button" id="num9" name="num9" value="9"></td>
+                <td><input type="button" id="division" name="division" value="/"></td>
+            </tr>
+            <tr>
+                <td><input type="button" id="num4" name="num4" value="4"></td>
+                <td><input type="button" id="num5" name="num5" value="5"></td>
+                <td><input type="button" id="num6" name="num6" value="6"></td>
+                <td><input type="button" id="multiply" name="multiply" value="*"></td>
+            </tr>
+            <tr>
+                <td><input type="button" id="num1" name="num1" value="1" onclick="num1_click()"></td>
+                <td><input type="button" id="num2" name="num2" value="2" onclick="num2_click()"></td>
+                <td><input type="button" id="num3" name="num3" value="3" onclick="num3_click()"></td>
+                <td><input type="button" id="subtract" name="subtract" value="-"></td>
+            </tr>
+            <tr>
+                <td><input type="button" id="num0" name="num0" value="0"></td>
+                <td><input type="button" id="point" name="point" value="."></td>
+                <td><input type="button" id="equal" name="equal" value="="></td>
+                <!--<td><input type="button" id="sign" name="sign" value="+/-"></td>-->
+                <td><input type="button" id="add" name="add" value="+"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" id="imooc" name="imooc" value="m"></td>
+                <!--<td colspan="2"><input type="button" id="equal" name="equal" value="="></td>-->
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
