@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量作用域</title>
+    <script type="text/javascript">
+        let name = 'xm';
+
+        function fn() {
+            let name = 'xh';
+            console.log(name);
+        }
+
+        fn(); //xh
+        console.log(name);//xm
+    </script>
+</head>
+<body>
+
+</body>
+</html>

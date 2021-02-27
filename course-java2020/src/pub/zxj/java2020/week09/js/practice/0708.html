@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        function address() {
+            let province = document.getElementById("province");
+            let downtown = document.getElementById("downtown");
+            let array1 = ["北京市", "天津市", "河北省", "河南省"];
+            let array2 = ["朝阳区", "西城区"];
+            addOption(province, array1);
+            addOption(downtown, array2);
+        }
+
+        function addOption(obj, array) {
+            for (let arrayKey in array) {
+                obj.options.add(new Option(array[arrayKey], array[arrayKey]));
+            }
+        }
+
+        function addSelectedOption() {
+            let province = document.getElementById("province");
+            let downtown = document.getElementById("downtown");
+            let array;
+            downtown.options.length = 0;
+            switch (province.value) {
+                case "北京市":
+                    array = ["朝阳区", "西城区"];
+                    addOption(downtown, array);
+                    break;
+                case "天津市":
+                    array = ["西青区", "武清区"];
+                    addOption(downtown, array);
+                    break;
+                case "河北省":
+                    array = ["石家庄", "邯郸市"];
+                    addOption(downtown, array);
+                    break;
+                default:
+                    array = ["郑州市", "开封市"];
+                    addOption(downtown, array);
+            }
+        }
+    </script>
+</head>
+<body onload="address()">
+<form>
+    <label for="province">省份
+        <select name="province" id="province" onchange="addSelectedOption()"></select>
+    </label>
+    <label for="downtown">市/区
+        <select name="downtown" id="downtown"></select>
+    </label>
+</form>
+</body>
+</html>

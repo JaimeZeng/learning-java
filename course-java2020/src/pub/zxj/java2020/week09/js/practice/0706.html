@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        function address() {
+            let province = document.getElementById("province");
+            let downtown = document.getElementById("downtown");
+            let array1 = ["北京市", "天津市", "河北省", "河南省"];
+            let array2 = ["朝阳区", "西城区", "石家庄", "邯郸市", "武清区", "郑州市", "开封市"];
+            addOption(province, array1);
+            addOption(downtown, array2);
+        }
+
+        function addOption(obj, array) {
+            for (let arrayKey in array) {
+                obj.options.add(new Option(array[arrayKey], array[arrayKey]));
+            }
+        }
+    </script>
+</head>
+<body onload="address()">
+<form>
+    <label for="province">省份
+        <select name="province" id="province"></select>
+    </label>
+    <label for="downtown">市/区
+        <select name="downtown" id="downtown"></select>
+    </label>
+</form>
+</body>
+</html>

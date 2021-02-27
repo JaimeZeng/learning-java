@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复选框</title>
+</head>
+<body>
+<form method="post">
+    <label for="climb">
+        <input type="checkbox" id="climb" name="hobby" value="climb">爬山
+    </label>
+    <label for="swim">
+        <input type="checkbox" id="swim" name="hobby" value="swim">游泳
+    </label>
+    <label for="photography">
+        <input type="checkbox" id="photography" name="hobby" value="photography">摄影
+    </label>
+    <label for="tennis">
+        <input type="checkbox" id="tennis" name="hobby" value="tennis">网球
+    </label>
+    <label for="parachuting">
+        <input type="checkbox" id="parachuting" name="hobby" value="parachuting">跳伞
+    </label>
+    <input type="button" id="selectAllBtn" value="全选" onclick="selectAll()">
+    <input type="button" id="deselectAllBtn" value="反选" onclick="deselectAll()">
+</form>
+</body>
+</html>
