@@ -50,7 +50,7 @@ function init() {
                         operator = "%";
                         break;
                     case ".":
-                        console.log(".");
+                        monitor.value = monitor_add_point(monitor.value);
                         break;
                     case "CE":
                         console.log("CE");
@@ -133,4 +133,13 @@ function isNumber(num) {
 function isNull(num) {
     // return (num === "0" || num.length === 0) ? true : false;
     return (num === "0" || num.length === 0);
+}
+
+/**
+ * 给文本框内的数值添加小数点。如果原文本框内数值没有小数点则在原数值后添加小数点。反之直接返回原数值。
+ * @param num 文本框内的数值
+ * @returns {string|*} 如果原文本框内数值没有小数点则在原数值后添加小数点。反之直接返回原数值。
+ */
+function monitor_add_point(num) {
+    return (num.indexOf(".") === -1) ? (num + ".") : num;
 }

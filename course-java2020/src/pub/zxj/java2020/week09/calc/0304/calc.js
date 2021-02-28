@@ -50,16 +50,16 @@ function init() {
                         operator = "%";
                         break;
                     case ".":
-                        console.log(".");
+                        monitor.value = monitor_add_point(monitor.value);
                         break;
                     case "CE":
-                        console.log("CE");
+                        monitor.value = 0;
                         break;
                     case "DEL":
-                        console.log("DEL");
+                        monitor.value = del(monitor.value);
                         break;
                     case "+/-":
-                        console.log("+/-");
+                        monitor.value = sign(monitor.value);
                         break;
                     case "=":
                         switch (operator) {
@@ -91,7 +91,6 @@ function init() {
         }
     }
 }
-
 
 // function num1_click() {
 //     let monitor = document.getElementById("monitor");
@@ -133,4 +132,34 @@ function isNumber(num) {
 function isNull(num) {
     // return (num === "0" || num.length === 0) ? true : false;
     return (num === "0" || num.length === 0);
+}
+
+/**
+ * 小数点 . 功能。给文本框内的数值添加小数点。如果原文本框内数值没有小数点则在原数值后添加小数点。反之直接返回原数值。
+ * @param num 文本框内的数值
+ * @returns {string|*} 如果原文本框内数值没有小数点则在原数值后添加小数点。反之直接返回原数值。
+ */
+function monitor_add_point(num) {
+    return (num.indexOf(".") === -1) ? (num + ".") : num;
+}
+
+/**
+ * 退位键 del 功能。如果文本框内的数值为 0 或者为空返回 0，反之返回截取到的文本框内数值的总长度-1的子串。
+ * @param num 本框内的数值
+ * @returns {number|string} 文本框内的数值为 0 或者为空返回 0，反之返回截取到的文本框内数值的总长度-1的子串。
+ */
+function del(num) {
+    num = num.substr(0, num.length - 1);
+    return (isNull(num)) ? 0 : num;
+}
+
+/**
+ * 正负号 +- 功能。如果文本框内的数值为正数就在数值前添加负号并返回，否则返回数值的绝对值（或者从字符串位置 1 开始截取长度为字符串长度的子串并返回）。
+ * @param num 文本框内的数值
+ * @returns {string|number} 文本框内的数值为正数就在数值前添加负号再返回，否则返回数值的绝对值。
+ */
+function sign(num) {
+    return Number(num) * (-1);
+    // return (num.indexOf("-") === -1) ? ("-" + num) : Math.abs(num);
+    // return (num.indexOf("-") === -1) ? ("-" + num) : num.substr(1, num.length);
 }
