@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    margin: 25px auto 0 50px;
+}
+
+.header .logo {
+    float: left;
+    position: relative;
+}
+
+.header #menu {
+    float: left;
+    position: relative;
+    margin-top: 12px;
+    margin-left: 16px;
+}
+
+.header #menu #menu_title {
+    border-bottom: 1px solid #000000;
+    padding-bottom: 20px;
+    width: 80px;
+    text-align: center;
+    color: #000000;
+}
+
+.header #menu #menu_title a {
+    text-decoration: none;
+}
+
+.header #menu ul {
+    display: none;
+    list-style: none;
+}
+
+/*!*菜单折叠、显示*!*/
+/*.header #menu:hover ul{*/
+/*  display: block;*/
+/*}*/
+
+.header #menu ul li {
+    margin-top: 20px;
+    width: 80px;
+    text-align: center;
+}
