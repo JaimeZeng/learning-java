@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.header {
+    margin: 25px auto;
+    width: 1200px;
+}
+
+.header .logo {
+    float: left;
+    position: relative;
+}
+
+.header #menu {
+    float: left;
+    position: relative;
+    margin-top: 12px;
+    margin-left: 16px;
+}
+
+.header #menu #menu_title {
+    border-bottom: 1px solid #000000;
+    padding-bottom: 20px;
+    width: 80px;
+    text-align: center;
+}
+
+.header #menu #menu_title a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.header #menu ul {
+    display: none;
+    list-style: none;
+    position: absolute;
+    width: 80px;
+    text-align: center;
+    opacity: 0.6;
+    background-color: #ffffff;
+}
+
+/*!*菜单折叠、显示*!*/
+/*.header #menu:hover ul{*/
+/*  display: block;*/
+/*}*/
+
+.header #menu ul li {
+    margin-top: 20px;
+}
+
+.header #sign_in_up {
+    float: right;
+
+}
+
+.header #sign_in_up ul li {
+    float: left;
+    position: relative;
+    margin-right: 60px;
+    list-style: none;
+    margin-top: 12px;
+}
+
+.header #sign_in_up ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.content {
+    margin: 25px auto;
+    width: 1200px;
+}
+
+.content .banner .banner_img {
+    margin-top: 20px;
+}
+
+.content .gl_list ul {
+    width: 1260px;
+}
+
+.content .gl_list ul li {
+    width: 361px;
+    height: 500px;
+    float: left;
+    list-style: none;
+    margin: 30px 59px 60px 0;
+    box-shadow: 0 0 6px 6px #cccccc;
+    -webkit-box-shadow: 0 0 6px 6px #cccccc; /*chrome*/
+    -moz-box-shadow: 0 0 6px 6px #cccccc; /*firefox*/
+    background-color: #ffffff;
+}
+
+.content .gl_list .gl_info {
+    margin: auto 30px;
+}
+
+.content .gl_list .gl_info h3 {
+    font-size: 24px;
+    color: #ff0000;
+    margin: 20px auto 20px 0;
+}
+
+.content .gl_list .gl_info p {
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+.content .gl_list .gl_info .gl_panel {
+    width: 300px;
+}
+
+.content .gl_list .gl_info .gl_panel .gl_price {
+    /*margin-top: 20px;*/ /*还需要调节 .gl_cart*/
+    color: #ff0000;
+    font-size: 20px;
+    float: left;
+}
+
+.content .gl_list .gl_info .gl_panel .gl_link_basket .gl_cart {
+    width: 60px;
+    height: 30px;
+    background-color: #ff0000;
+    position: relative;
+    border-radius: 6px;
+    float: right;
+}
+
+.content .gl_list .gl_info .gl_panel .gl_link_basket .gl_cart img {
+    width: 25px;
+    height: 20px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
