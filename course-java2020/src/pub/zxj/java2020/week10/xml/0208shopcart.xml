@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shop-cart>
+    <item sn="771938" category="Appliance">
+        <name>Gree Air-conditioners</name>
+        <price>2000.00</price>
+        <num>1</num>
+    </item>
+    <item sn="890321" category="Food">
+        <name>Daliyuan Mini French bread</name>
+        <price>50</price>
+        <num>3</num>
+    </item>
+</shop-cart>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- hr xml -->
+<!DOCTYPE hr SYSTEM "0303hr.dtd">
+<hr>
+    <employee no="3309">
+        <name>Jaime</name>
+        <age>24</age>
+        <salary>4000</salary>
+        <department>
+            <dname>Accounting</dname>
+            <address>PINGAN IFC B103</address>
+        </department>
+    </employee>
+    <employee no="3310">
+        <name>Ryanjie</name>
+        <age>29</age>
+        <salary>1000</salary>
+        <department>
+            <dname>Testing</dname>
+            <address>PINGAN IFC B104</address>
+        </department>
+    </employee>
+</hr>

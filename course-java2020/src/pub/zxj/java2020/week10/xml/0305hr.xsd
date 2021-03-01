@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+    <element name="hr">
+        <!-- complexType 复杂节点，包含子节点时必须使用这个标签。 -->
+        <complexType>
+            <!-- sequence 序列，里面的节点必须按照顺序严格书写 -->
+            <sequence>
+                <element name="employee" maxOccurs="999">
+                    <complexType>
+                        <sequence>
+                            <element name="name" type="string"></element>
+                            <!--<element name="age" type="integer"></element>-->
+                            <element name="age">
+                                <simpleType>
+                                    <restriction base="integer">
+                                        <minExclusive value="18"></minExclusive>
+                                        <maxExclusive value="60"></maxExclusive>
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                            <element name="salary" type="integer"></element>
+                            <element name="department">
+                                <complexType>
+                                    <sequence>
+                                        <element name="dname" type="string"></element>
+                                        <element name="address" type="string"></element>
+                                    </sequence>
+                                </complexType>
+                            </element>
+                        </sequence>
+                        <attribute name="no" type="string" use="required"></attribute>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

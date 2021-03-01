@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 人力资源管理系统 -->
+<hr>
+    <employee no="3301">
+        <name>李铁柱</name>
+        <age>37</age>
+        <salary>3600</salary>
+        <department>
+            <dname>人事部</dname>
+            <address>XX大厦-B105</address>
+        </department>
+    </employee>
+    <employee no="3302">
+        <name>林海</name>
+        <age>50</age>
+        <salary>7000</salary>
+        <department>
+            <dname>财务部</dname>
+            <address>XX大厦-B106</address>
+        </department>
+    </employee>
+    <employee no="3303">
+        <name>安娜</name>
+        <age>24</age>
+        <salary>4600</salary>
+        <department>
+            <dname>人事部</dname>
+            <address>XX大厦-B105</address>
+        </department>
+    </employee>
+    <employee no="3304">
+        <name>张晓宇</name>
+        <age>29</age>
+        <salary>3000</salary>
+        <department>
+            <dname>后勤部</dname>
+            <address>XX大厦-B108</address>
+        </department>
+    </employee>
+
+    <employee no="3305">
+        <name>赵子轩</name>
+        <age>19</age>
+        <salary>1500</salary>
+        <department>
+            <dname>后勤部</dname>
+            <address>XX大厦-B108</address>
+        </department>
+    </employee>
+
+    <employee no="3306">
+        <name>张晓璇</name>
+        <age>20</age>
+        <salary>1700</salary>
+        <department>
+            <dname>后勤部</dname>
+            <address>XX大厦-B108</address>
+        </department>
+    </employee>
+    <employee no="3307">
+        <name>张檬</name>
+        <age>43</age>
+        <salary>8700</salary>
+        <department>
+            <dname>会计部</dname>
+            <address>XX大厦-B103</address>
+        </department>
+    </employee>
+    <employee no="3308">
+        <name>李梅</name>
+        <age>33</age>
+        <salary>8700</salary>
+        <department>
+            <dname>工程部</dname>
+            <address>XX大厦-B104</address>
+        </department>
+    </employee>
+    <employee no="3309">
+        <name>张三</name>
+        <age>31</age>
+        <salary>4000</salary>
+        <department>
+            <dname>会计部</dname>
+            <address>XX大厦-B103</address>
+        </department>
+    </employee>
+    <employee no="3310">
+        <name>李四</name>
+        <age>23</age>
+        <salary>3000</salary>
+        <department>
+            <dname>工程部</dname>
+            <address>XX大厦-B104</address>
+        </department>
+    </employee>
+</hr>

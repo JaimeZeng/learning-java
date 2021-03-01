@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-reference>
+    <!--    在 XML 中有 5 个预定义的实体引用：
+    &lt;	<	小于
+    &gt;	>	大于
+    &amp;	&	和号
+    &apos;	'	省略号
+    &quot;	"	引号
+    注释：严格地讲，在 XML 中仅有字符 "<"和"&" 是非法的。省略号、引号和大于号是合法的，但是把它们替换为实体引用是个好的习惯。-->
+    <exam>
+        <!--<question>1 + 4 < 3 is true?</question>-->
+        <!--<question>3 + 5 > 3 is true?</question>-->
+        <question>1 + 4 &lt; 3 is true?</question>
+        <question>3 + 5 &gt; 3 is true?</question>
+    </exam>
+</entity-reference>

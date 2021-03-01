@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 人力资源管理系统 -->
+<!DOCTYPE hr [
+        <!--&lt;!&ndash;定义 hr 节点下只允许出现 1 个 employee 子节点。&ndash;&gt;-->
+        <!--<!ELEMENT hr (employee)>-->
+        <!--&lt;!&ndash;employee 节点下必须包含以下四个节点， 且按顺序出现。&ndash;&gt;-->
+        <!--<!ELEMENT employee (name, age, salary, department)>-->
+        <!--&lt;!&ndash;定义 name 标签体只能是文本，#PCDATA 代表文本元素。&ndash;&gt;-->
+        <!--<!ELEMENT name (#PCDATA)>-->
+        <!--&lt;!&ndash;如某个子节点需要多次重复出现，则需要在子节点后增加相应的描述符。&ndash;&gt;-->
+        <!--&lt;!&ndash;hr节点下最少出现 1 个 employee 子节点&ndash;&gt;-->
+        <!--<!ELEMENT hr (employee+)>-->
+        <!--&lt;!&ndash;hr 节点下可出现 0...n 个 employee 子节点。&ndash;&gt;-->
+        <!--<!ELEMENT hr (employee*)>-->
+        <!--&lt;!&ndash;hr 节点下最多出现 1 个 employee 子节点。&ndash;&gt;-->
+        <!--< ELEMENT hr(employee?)>-->
+        <!ELEMENT hr (employee+)>
+        <!ELEMENT employee (name, age, salary, department)>
+        <!ATTLIST employee no CDATA "">
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT age (#PCDATA)>
+        <!ELEMENT salary (#PCDATA)>
+        <!ELEMENT department (dname, address)>
+        <!ELEMENT dname (#PCDATA)>
+        <!ELEMENT address (#PCDATA)>
+        ]>
+<hr>
+    <employee no="3309">
+        <name>Jaime</name>
+        <age>24</age>
+        <salary>4000</salary>
+        <department>
+            <dname>Accounting</dname>
+            <address>PINGAN IFC B103</address>
+        </department>
+    </employee>
+    <employee no="3310">
+        <name>Ryanjie</name>
+        <age>29</age>
+        <salary>1000</salary>
+        <department>
+            <dname>Testing</dname>
+            <address>PINGAN IFC B104</address>
+        </department>
+    </employee>
+</hr>

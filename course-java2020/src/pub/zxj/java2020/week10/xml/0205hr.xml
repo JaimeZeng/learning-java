@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 人力资源管理系统 -->
+<hr>
+    <employee no="3309">
+        <name>Jaime</name>
+        <age>24</age>
+        <salary>4000</salary>
+        <department>
+            <dname>Accounting</dname>
+            <address>PINGAN IFC B103</address>
+        </department>
+    </employee>
+    <employee no="3310">
+        <name>Ryanjie</name>
+        <age>29</age>
+        <salary>1000</salary>
+        <department>
+            <dname>Testing</dname>
+            <address>PINGAN IFC B104</address>
+        </department>
+    </employee>
+</hr>
