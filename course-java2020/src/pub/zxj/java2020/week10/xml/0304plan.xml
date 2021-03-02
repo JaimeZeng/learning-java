@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 教学计划课程信息 -->
+<!DOCTYPE teaching-plan SYSTEM "0304plan.dtd">
+<teaching-plan>
+    <course>
+        <course-name>大学英语</course-name>
+        <class-hour>36</class-hour>
+        <exam-form>考试</exam-form>
+    </course>
+    <course>
+        <course-name>高等数学</course-name>
+        <class-hour>70</class-hour>
+        <exam-form>考试</exam-form>
+    </course>
+    <course>
+        <course-name>计算机应用基础</course-name>
+        <class-hour>108</class-hour>
+        <exam-form>上机考试</exam-form>
+    </course>
+</teaching-plan>

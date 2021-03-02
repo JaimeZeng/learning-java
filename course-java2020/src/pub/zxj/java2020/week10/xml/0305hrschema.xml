@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- 人力资源管理系统 -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 人力资源管理系统 -->
 <hr xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="0305hr.xsd">
     <employee no="3309">

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!-- plan.xml 文件定义语义约束 -->
+        <!ELEMENT teaching-plan (course+)>
+        <!ELEMENT course (course-name, class-hour, exam-form)>
+        <!ELEMENT course-name (#PCDATA)>
+        <!ELEMENT class-hour (#PCDATA)>
+        <!ELEMENT exam-form (#PCDATA)>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 教学计划课程信息 -->
+<teaching-plan>
+    <course id="001">
+        <course-name>大学英语</course-name>
+        <class-hour>36</class-hour>
+        <exam-form>考试</exam-form>
+    </course>
+    <course id="002">
+        <course-name>高等数学</course-name>
+        <class-hour>70</class-hour>
+        <exam-form>考试</exam-form>
+    </course>
+    <course id="003">
+        <course-name>计算机应用基础</course-name>
+        <class-hour>108</class-hour>
+        <exam-form>上机考试</exam-form>
+    </course>
+    <course id="004">
+        <course-name>Java 入门到放弃</course-name>
+        <class-hour>88</class-hour>
+        <exam-form>上机考试</exam-form>
+    </course>
+</teaching-plan>
