@@ -41,4 +41,13 @@
         <servlet-name>requestMethod</servlet-name>
         <url-pattern>/request_method</url-pattern>
     </servlet-mapping>
+
+    <!--<servlet>-->
+    <!--    <servlet-name>annotation</servlet-name>-->
+    <!--    <servlet-class>pub.zxj.servlet.AnnotationServlet</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+    <!--    <servlet-name>annotation</servlet-name>-->
+    <!--    <url-pattern>/annotation</url-pattern>-->
+    <!--</servlet-mapping>-->
 </web-app>
