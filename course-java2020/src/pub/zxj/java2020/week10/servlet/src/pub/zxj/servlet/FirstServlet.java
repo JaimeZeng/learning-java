@@ -1,5 +1,6 @@
 package pub.zxj.servlet;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,6 +11,27 @@ import java.io.PrintWriter;
  * @author Jaime
  */
 public class FirstServlet extends HttpServlet {
+
+    /**
+     * Servlet 生命周期：
+     * 1. 装载 web.xml 文件
+     * 2. 通过构造函数创建 Servlet 类对象
+     * 3. 通过 init() 初始化 Servlet 类对象
+     * 4. 通过 service()/doGet()/doPost() 提供服务
+     * 5. 在应用重启/关闭时销毁 Servlet 类对象
+     *
+     * 对于一个 Servlet 类来说，有且只有一个对象来提供服务，绝不会出现多个情况。
+     */
+
+    public FirstServlet() {
+        System.out.println("Create FirstServlet Object~");
+    }
+
+    @Override
+    public void init(ServletConfig config) {
+        System.out.println("Init FirstServlet Object~");
+    }
+
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
@@ -23,5 +45,10 @@ public class FirstServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         // 通过 out 对象将 html 发送回浏览器
         out.println(html);
+    }
+
+    @Override
+    public void destroy() {
+        System.out.println("Destory FirstServlet Object~");
     }
 }
