@@ -32,4 +32,13 @@
         <servlet-name>sample</servlet-name>
         <url-pattern>/sample</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>requestMethod</servlet-name>
+        <servlet-class>pub.zxj.servlet.RequestMethodServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>requestMethod</servlet-name>
+        <url-pattern>/request_method</url-pattern>
+    </servlet-mapping>
 </web-app>
