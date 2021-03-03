@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
+ * 0205 编程练习
  * 使用 Servlet 在页面输出商品类别名称，商品类别名称通过 url 地址进行传递，在 Servlet 中获取类别名称并输出。
  * url地址如下所示：/ShopServlet?category=book
  *
