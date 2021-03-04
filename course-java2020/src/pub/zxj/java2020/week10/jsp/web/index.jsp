@@ -11,6 +11,7 @@
 <body>
 <ul>
     <li><a href="salary.jsp">公司薪资制度</a></li>
+    <li><a href="prime.jsp">质数 prime</a></li>
 </ul>
 </body>
 </html>
