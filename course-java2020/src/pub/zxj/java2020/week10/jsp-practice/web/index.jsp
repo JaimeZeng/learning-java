@@ -11,6 +11,7 @@
 <body>
 <ul>
     <li><a href="sum.jsp">求和运算 Sum</a></li>
+    <li><a href="jspTest01.jsp">根据 x 的值进行判断并得出 y 的值，并将结果在浏览器中显示</a></li>
 </ul>
 </body>
 </html>
