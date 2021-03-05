@@ -16,6 +16,7 @@ public class IndexServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.getWriter().println("This is index page~");
+        String username = (String) request.getAttribute("username");
+        response.getWriter().println("Hi " + username + ", This is index page ~");
     }
 }

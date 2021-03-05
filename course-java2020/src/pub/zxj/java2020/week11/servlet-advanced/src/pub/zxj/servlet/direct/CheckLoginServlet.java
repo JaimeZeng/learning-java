@@ -21,6 +21,7 @@ public class CheckLoginServlet extends HttpServlet {
         response.setContentType("text/html;charset=utf-8");
         response.getWriter().println("用户登录成功~");
         System.out.println("用户登录成功~");
+        request.setAttribute("username", "Jaime");
         //请求转发
         request.getRequestDispatcher("/direct/index").forward(request, response);
     }
