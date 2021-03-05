@@ -12,6 +12,8 @@
 <ul>
     <li><a href="ua">请求头 UserAgent</a></li>
     <li><a href="ct">内容类型 ContentType</a></li>
+    <li><a href="direct/check">请求转发 request.getRequestDispatcher</a></li>
+    <li><a href="direct/check_resp">响应重定向 response.sendRedirect</a></li>
 </ul>
 </body>
 </html>
