@@ -22,6 +22,13 @@
     <li><a href="servlet_context/default">Web 应用全局对象 ServletContext - default</a></li>
     <li><a href="charset_form_post.html">Post 请求中文乱码问题</a></li>
     <li><a href="charset_form_get.html">Get 请求中文乱码问题</a></li>
+    <li>url 模式匹配
+        <ul>
+            <li><a href="pattern/1">1 - Jaime</a></li>
+            <li><a href="pattern/6">6 - RyanJie</a></li>
+            <li><a href="pattern/8">8 - Other</a></li>
+        </ul>
+    </li>
 </ul>
 </body>
 </html>
