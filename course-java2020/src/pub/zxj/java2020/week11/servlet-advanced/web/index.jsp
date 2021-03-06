@@ -14,8 +14,10 @@
     <li><a href="ct">内容类型 ContentType</a></li>
     <li><a href="direct/check">请求转发 request.getRequestDispatcher().forward()</a></li>
     <li><a href="direct/check_resp">响应重定向 response.sendRedirect</a></li>
-    <li><a href="cookies/login">设置浏览器 Cookie</a></li>
-    <li><a href="cookies/index">获取浏览器 Cookie</a></li>
+    <li><a href="cookies/login">设置浏览器 Cookie - login</a></li>
+    <li><a href="cookies/index">获取浏览器 Cookie - index</a></li>
+    <li><a href="session/login">用户会话 Session 对象 - login</a></li>
+    <li><a href="session/index">用户会话 Session 对象 - index</a></li>
 </ul>
 </body>
 </html>
