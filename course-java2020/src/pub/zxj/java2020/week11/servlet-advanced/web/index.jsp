@@ -21,6 +21,7 @@
     <li><a href="servlet_context/init">Web 应用全局对象 ServletContext - init</a></li>
     <li><a href="servlet_context/default">Web 应用全局对象 ServletContext - default</a></li>
     <li><a href="charset_form_post.html">Post 请求中文乱码问题</a></li>
+    <li><a href="charset_form_get.html">Get 请求中文乱码问题</a></li>
 </ul>
 </body>
 </html>

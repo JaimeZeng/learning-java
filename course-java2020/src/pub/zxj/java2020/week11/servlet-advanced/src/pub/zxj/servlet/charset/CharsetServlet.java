@@ -26,4 +26,12 @@ public class CharsetServlet extends HttpServlet {
         System.out.println("username: " + utf8Username + ", address: " + utf8Address);
     }
 
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        String username = req.getParameter("username");
+        String address = req.getParameter("address");
+        resp.setContentType("text/html;charset=utf-8");
+        resp.getWriter().println("username: " + username + ", address: " + address + "<br/>");
+        System.out.println("username: " + username + ", address: " + address);
+    }
 }
