@@ -16,8 +16,10 @@
     <li><a href="direct/check_resp">响应重定向 response.sendRedirect</a></li>
     <li><a href="cookies/login">设置浏览器 Cookie - login</a></li>
     <li><a href="cookies/index">获取浏览器 Cookie - index</a></li>
-    <li><a href="session/login">用户会话 Session 对象 - login</a></li>
-    <li><a href="session/index">用户会话 Session 对象 - index</a></li>
+    <li><a href="session/login">用户会话 HttpSession 对象 - login</a></li>
+    <li><a href="session/index">用户会话 HttpSession 对象 - index</a></li>
+    <li><a href="servlet_context/init">Web 应用全局对象 ServletContext - init</a></li>
+    <li><a href="servlet_context/default">Web 应用全局对象 ServletContext - default</a></li>
 </ul>
 </body>
 </html>
