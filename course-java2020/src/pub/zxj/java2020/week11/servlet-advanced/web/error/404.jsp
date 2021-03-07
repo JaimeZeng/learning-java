@@ -12,9 +12,9 @@
 </head>
 <body>
 <h4>404 Errors</h4>
-Error Message:
+<p>Error Message:</p>
 <%
-    out.println(exception.getClass().getSimpleName() + " : " + exception.getMessage());
+    out.println("<br/>" + exception.getClass().getSimpleName() + " : " + exception.getMessage());
 %>
 </body>
 </html>
