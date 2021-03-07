@@ -29,6 +29,7 @@
             <li><a href="pattern/8">8 - Other</a></li>
         </ul>
     </li>
+    <li><a href="built_in_objects.jsp">JSP 内置对象</a></li>
 </ul>
 </body>
 </html>
