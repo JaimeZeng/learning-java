@@ -12,4 +12,26 @@
         <welcome-file>default.htm</welcome-file>
         <welcome-file>default.jsp</welcome-file>
     </welcome-file-list>
+    <!--context-param 初始化参数-->
+    <context-param>
+        <param-name>title</param-name>
+        <param-value>Stay Simple.(web.xml)</param-value>
+    </context-param>
+    <context-param>
+        <param-name>author</param-name>
+        <param-value>Jaime(web.xml)</param-value>
+    </context-param>
+    <context-param>
+        <param-name>copyright</param-name>
+        <param-value>© 2018-present zxj.pub 京ICP备12345678号-2(web.xml)</param-value>
+    </context-param>
+    <!--指定 404, 500 错误页面-->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error/404.html</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error/500.html</location>
+    </error-page>
 </web-app>
