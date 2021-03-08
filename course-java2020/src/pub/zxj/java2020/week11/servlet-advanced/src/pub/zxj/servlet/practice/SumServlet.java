@@ -17,7 +17,10 @@ public class SumServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int num = Integer.parseInt(request.getParameter("num"));
         int sum = num * (num + 1) / 2;
-        request.getRequestDispatcher("/practice/sum_display?num=" + num + "&sum=" + sum).forward(request, response);
+        request.setAttribute("num", num);
+        request.setAttribute("sum", sum);
+        request.getRequestDispatcher("/practice/sum_display").forward(request, response);
+        // request.getRequestDispatcher("/practice/sum_display?num=" + num + "&sum=" + sum).forward(request, response);
         // response.sendRedirect("/servlet_advanced_war_exploded/practice/sum_display?num=" + num + "&sum=" + sum");
     }
 }

@@ -13,8 +13,10 @@ import java.io.IOException;
 public class SumDisplayServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String num = request.getParameter("num");
-        String sum = request.getParameter("sum");
+        // String num = request.getParameter("num");
+        // String sum = request.getParameter("sum");
+        String num = String.valueOf(request.getAttribute("num"));
+        String sum = String.valueOf(request.getAttribute("sum"));
         response.setContentType("text/html;charset=utf-8");
         response.getWriter().println("1 + 2 + .. + " + num + " = " + sum);
         // response.getWriter().println(sum);
