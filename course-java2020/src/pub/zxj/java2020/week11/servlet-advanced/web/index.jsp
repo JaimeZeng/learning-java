@@ -31,5 +31,9 @@
     </li>
     <li><a href="built_in_objects.jsp">JSP 内置对象</a></li>
 </ul>
+
+<ul>
+    <li><a href="sum.html">0206 - 累加和</a></li>
+</ul>
 </body>
 </html>
