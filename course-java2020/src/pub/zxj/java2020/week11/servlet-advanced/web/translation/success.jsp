@@ -13,7 +13,8 @@
 <body>
 <%
     response.setContentType("text/html;charset=UTF-8");
-    out.println("<h4 style='color: blue;'>" + request.getParameter("value") + "</h4>");
+    out.println("<h4 style='color: blue;'>" + request.getAttribute("value") + "</h4>");
+    // out.println("<h4 style='color: blue;'>" + request.getParameter("value") + "</h4>");
 %>
 </body>
 </html>
