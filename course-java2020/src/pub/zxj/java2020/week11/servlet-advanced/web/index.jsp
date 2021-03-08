@@ -34,6 +34,7 @@
 
 <ul>
     <li><a href="sum.html">0206 - 累加和</a></li>
+    <li><a href="translation/translation.html">0603 - 单词翻译</a></li>
 </ul>
 </body>
 </html>
