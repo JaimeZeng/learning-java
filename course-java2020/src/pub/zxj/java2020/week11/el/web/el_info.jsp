@@ -8,6 +8,7 @@
     <li>StuName = ${student.name}</li>
     <li>StuName = ${student.mobile}</li>
     <li>StuName = ${grade}</li>
+    <li>Stu = ${student}</li>
 </ul>
 </body>
 </html>
