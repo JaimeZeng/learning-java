@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
+ * pageScope < requestScope < sessionScope < applicationScope
+ *
  * @author Jaime
  */
 @WebServlet(name = "StudentRespServlet")
