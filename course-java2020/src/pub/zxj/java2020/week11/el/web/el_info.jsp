@@ -7,8 +7,9 @@
 <ul>
     <li>StuName = ${student.name}</li>
     <li>StuName = ${student.mobile}</li>
-    <li>StuName = ${grade}</li>
-    <li>Stu = ${student}</li>
+    <li>teacher = ${param.teacher}</li>
+    <li>grade = ${grade}</li>
+    <li>student = ${student}</li>
 </ul>
 </body>
 </html>
